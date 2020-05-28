@@ -21,9 +21,7 @@ window.onload = function () {
     }
 
     let scrollPos = 0;
-
-
-        $(window).scroll(function(){
+    $(window).scroll(function(){
             if (document.documentElement.clientWidth > 752) {
                 var st = $(this).scrollTop();
                 if (st > scrollPos || scrollPos < 160) {
@@ -34,6 +32,19 @@ window.onload = function () {
                 scrollPos = st;
             }
         });
+
+    $('.pcategory__slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: "#slider-prev",
+        nextArrow: "#slider-next",
+        dots: false,
+        centerMode: true,
+        infinite: false,
+        focusOnSelect: true,
+        initialSlide: 3,
+
+    });
 
 
 }
