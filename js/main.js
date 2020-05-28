@@ -21,17 +21,19 @@ window.onload = function () {
     }
 
     let scrollPos = 0;
-    console.log(document.documentElement.clientWidth)
-    if (document.documentElement.clientWidth > 752) {
+
+
         $(window).scroll(function(){
-            var st = $(this).scrollTop();
-            if (st > scrollPos){
-                navbar.className = 'navbar';
-            } else {
-                navbar.className='navbar navbar-scrollup';
+            if (document.documentElement.clientWidth > 752) {
+                var st = $(this).scrollTop();
+                if (st > scrollPos || scrollPos < 160) {
+                    navbar.className = 'navbar';
+                } else if (scrollPos > 160 ) {
+                    navbar.className = 'navbar navbar-scrollup';
+                }
+                scrollPos = st;
             }
-            scrollPos = st;
         });
-    }
+
 
 }

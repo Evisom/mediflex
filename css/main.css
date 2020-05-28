@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: "Cera Pro";
 }
 
 .wrapper {
@@ -38,7 +39,7 @@
 }
 
 .navbar__r1-link {
-    font-family: Cera Pro;
+    
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -71,7 +72,7 @@
 }
 
 .navbar__r2__phone-link {
-    font-family: Cera Pro;
+    
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -101,7 +102,7 @@
 }
 
 .navbar__r2__buttons__cart-price {
-    font-family: Cera Pro;
+    
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -125,7 +126,7 @@
 }
 
 .navbar__r3-link {
-    font-family: Cera Pro;
+    
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -190,6 +191,98 @@
 
 
 
+.article {
+    padding: 160px 115px 1px 115px;
+}
+
+.index-hcard {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.index-hcard__discount {
+    width: 69%;
+    height: 100%;
+    background-color: #8DD7F7;
+    background-repeat: no-repeat;
+    background-image: url("./../img/img1.png");
+    background-position-y: 100%;
+    background-position-x: 80%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    text-align: left;
+    word-spacing: 9999999px;
+}
+
+.index-hcard__discount-text {
+    margin-top: 49px;
+    margin-left: 39px;
+    line-height: 100%;
+}
+
+
+.index-hcard__supply {
+    width: 31%;
+    height: 100%;
+    background: rgba(238,239,239);
+}
+
+.index-hcard__supply-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 100%;
+    color: #4FBBEB;
+    margin-top: 42px;
+    margin-left: 35px;
+    margin-right: 30%;
+}
+.index-hcard__supply-subtext {
+    margin-top: 19px;
+    margin-left: 35px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    margin-right: 15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1260px) {
     .navbar {
         padding: 0 50px;
@@ -203,6 +296,12 @@
 
     .navbar__r3-link:last-child {
         margin-right: 50px;
+    }
+    .article {
+        padding: 160px 50px 1px 50px;
+    }
+    .index-hcard__supply-text {
+        margin-right: 10px;
     }
 }
 
@@ -226,6 +325,20 @@
     }
     .navbar.navbar-scrollup>.navbar__r2>.navbar__r2__scrollup {
         left: 26%;
+    }
+    .article {
+        padding: 160px 25px 1px 25px;
+    }
+
+    .index-hcard__discount {
+        width: 60%;
+        background-position-y: 110%;
+        background-position-x: 95%;
+        background-size: 40%;
+    }
+
+    .index-hcard__supply {
+        width: 40%;
     }
 }
 
@@ -310,7 +423,7 @@
         border-radius: 0px 0px 20px 20px;
     }
     .hidden__phone-popup-text {
-        font-family: Cera Pro;
+
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
@@ -318,7 +431,7 @@
         color: black;
     }
     .hidden__phone-popup-phonelink {
-        font-family: Cera Pro;
+
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -352,5 +465,44 @@
     }
     .navbar__r2__phone-ico-mobile.hidden__phone-popup-active  > path {
         fill: #0094D9;
+    }
+    .article {
+        padding-top: 56px;
+    }
+    .index-hcard {
+        flex-direction: column;
+        margin-top: 0;
+        height: auto;
+    }
+    .index-hcard__supply {
+        width: 96vw;
+        height: 56px;
+    }
+
+    .index-hcard__discount {
+        width: 96vw;
+        height: 112px;
+        background-position-y: 100%;
+        background-position-x: 85%;
+        background-size: 105px;
+    }
+
+    .index-hcard__discount-text {
+        font-size: 20px;
+        margin-top: 19px;
+        margin-left: 24px;
+    }
+
+    .index-hcard__supply-text {
+        font-size: 14px;
+        margin-top: 8px;
+        margin-left: 24px;
+    }
+
+    .index-hcard__supply-subtext {
+        font-size: 14px;
+        margin-top: 8px;
+        margin-left: 24px;
+        margin-right: 0;
     }
 }
