@@ -18,7 +18,7 @@
   display: flex
   flex-direction: row
   justify-content: space-between
-  width: 15%
+  width: 11%
 
 .pcategory__buttons-btn
   width: 48px
@@ -36,7 +36,64 @@
   background: wheat
   margin: 0px 15px
   border-radius: 8px
+  background-repeat: no-repeat !important
+  background-position-x: 95% !important
+  background-position-y: 100% !important
 
 .pcategory__slider
   width: 100%
   margin-top: 24px
+
+.pcategory__slider-element-text
+  font-style: normal
+  font-weight: bold
+  font-size: 22px
+  line-height: 130%
+  margin-top: 32px
+  margin-left: 32px
+  margin-right: 100px
+
+.pcategory__slider-element-subtext
+  font-size: 16px
+  margin-top: 7px
+  margin-left: 32px
+  margin-right: 100px
+  line-height: 150%
+  color: rgba(51, 51, 51, 0.64)
+
+.pcategory__slider-element:first-child
+  margin-left: -15px
+
+@media (max-width: 1260px)
+  .pcategory__buttons
+    width: 13%
+  .pcategory-r
+    margin: 0 50px
+
+@media (max-width: 1024px)
+  .pcategory__buttons
+    width: 17%
+
+@media (max-width: 768px)
+  .pcategory__slider-element
+    width: 296px !important
+    height: 137px
+    margin: 0 8px
+    background-size: 40% !important
+  .pcategory__buttons
+    display: none
+  .pcategory-text
+    font-size: 24px
+    line-height: 110%
+  .pcategory-r
+    margin: 0 25px
+  .pcategory__slider-element-text
+    font-size: 18px
+    line-height: 130%
+    margin-top: 10px
+    margin-left: 10px
+  .pcategory__slider-element-subtext
+    margin-top: 8px
+    margin-left: 10px
+    font-size: 14px
+    line-height: 150%
