@@ -1,0 +1,114 @@
+.reviews
+  height: 500px
+
+.reviews-r1
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin: 0 115px
+
+.reviews-buttons
+  width: 11%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-content: center
+
+.reviews-buttons-el
+  width: 48px
+  height: 48px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #FFFFFF
+  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.15)
+  border-radius: 50%
+
+.reviews-text
+  font-weight: bold
+  font-size: 32px
+  line-height: 100%
+  width: 45%
+
+.reviews__slider-element
+  width: 270px
+  height: auto
+  display: flex
+  flex-direction: column
+  margin: 0 20px
+
+.reviews__slider-element:first-child
+  padding-left: 40px
+
+.reviews__slider-element__info
+  display: flex
+  flex-direction: row
+
+.reviews__slider-element__info-text
+  margin-left: 20px
+  margin-right: 7px
+
+.reviews__slider-element-name
+  margin-top: 16px
+  font-size: 16px
+  line-height: 150%
+  color: #929497
+
+.reviews__slider-element-rating
+  margin-top: 10px
+
+.reviews__slider-element-rating-star:not(:first-child)
+  margin-left: 3px
+
+.reviews__slider-element-text
+  margin-top: 10px
+  font-weight: normal
+  font-size: 16px
+  line-height: 150%
+
+.reviews__slider-element-date
+  margin-top: 10px
+  font-weight: normal
+  font-size: 16px
+  line-height: 150%
+  color: #929497
+
+.reviews__slider-element__info-text
+  font-size: 16px
+  line-height: 150%
+  color: #0094D9
+
+.reviews__slider
+  margin-top: 32px
+  margin-bottom: 32px
+
+.flickity-viewport
+  height: 500px !important
+
+@media (max-width: 1260px)
+  .reviews-r1
+    margin: 0 50px
+  .reviews-buttons
+    width: 13%
+
+@media (max-width: 1024px)
+  .reviews-buttons
+    width: 17%
+  .reviews__slider-element:first-child
+    padding-left: 0
+    margin-left: 0
+
+@media (max-width: 768px)
+  .reviews-buttons
+    display: none
+  .reviews-text
+    font-size: 24px
+    line-height: 110%
+    width: 100%
+  .reviews__slider-element
+    margin-right: 0px
+  .reviews-r1
+    margin-top: 48px
+    margin-left: 20px
+    margin-right: 20px

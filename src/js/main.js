@@ -16,6 +16,8 @@ window.onload = function () {
         index, button;
     let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
 
+    const reviewsSlider = new Flickity('#reviewsSlider');
+
     let scrollPos = 0;
 
     mobileMenuPhoneButton.onclick = function ( ) { // Поп-ап с телефоном
