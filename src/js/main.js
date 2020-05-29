@@ -9,6 +9,9 @@ window.onload = function () {
     const pcategorySliderPrev = document.getElementById("pcslider-prev");
     const customerChoiceSliderNext = document.getElementById("customerchoise-slider-next");
     const customerChoiceSliderPrev = document.getElementById("customerchoise-slider-prev");
+    const reviewsNext = document.getElementById("reviewsNext")
+    const reviewsPrev = document.getElementById("reviewsPrev")
+
     const pcategorySlider = new Flickity('.pcategory__slider');
     const customerChoiceSlider = new Flickity('.customerchoice__slider');
 
@@ -60,6 +63,13 @@ window.onload = function () {
     }
     customerChoiceSliderPrev.onclick = function ( ) {
         customerChoiceSlider.previous();
+    }
+
+    reviewsNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+        reviewsSlider.next();
+    }
+    reviewsPrev.onclick = function ( ) {
+        reviewsSlider.previous();
     }
 
 
