@@ -1,0 +1,225 @@
+.customerchoice
+  height: 531px
+  margin-top: 30px
+  background: linear-gradient(0deg, #F9FCFE, #F9FCFE);
+  display: flex
+  flex-direction: column
+  padding-top: 40px
+
+.customerchoice__r1
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin: 0 115px
+
+.customerchoice__r1__buttons
+  width: 11%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-content: center
+
+.customerchoice__r1__button-btn
+  width: 48px
+  height: 48px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #FFFFFF
+  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.15)
+  border-radius: 50%
+
+.customerchoice__r1-text
+  font-weight: bold
+  font-size: 32px
+  line-height: 100%
+
+.customerchoice__slider-element
+  width: 270px
+  height: 420px
+  background: white
+  margin: 0 15px
+  display: flex
+  flex-direction: column
+
+.customerchoice__slider-element:hover
+  cursor: pointer
+
+.customerchoice__slider
+  margin-top: 24px
+
+.customerchoice__slider-element-photo
+  height: 262px
+  width: 100%
+
+.customerchoice__slider-element-compare
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 99999
+
+.customerchoice__slider-element__info
+  padding: 16px
+
+.customerchoice__slider-element__info-maininfo-name
+  font-weight: bold
+  font-size: 20px
+  line-height: 26px
+
+.customerchoice__slider-element__info-maininfo-rate
+  display: flex
+  flex-direction: row
+  align-items: center
+
+.customerchoice__slider-element__info-maininfo-rate-star
+  margin: 0 1px
+
+.customerchoice__slider-element__info-maininfo-rate-num
+  font-size: 14px
+  line-height: 12px
+  color: #929497
+  margin: 0 4px
+
+.customerchoice__slider-element__info-maininfo-rate-comment
+  margin-bottom: -2px
+
+.customerchoice__slider-element__info-price-discount
+  font-size: 16px
+  line-height: 28px
+  text-decoration-line: line-through
+  color: #929497
+  margin-bottom: -2px
+  margin-top: 13px
+  content: ""
+  height: 28px
+
+.customerchoice__slider-element__info-price-current
+  font-weight: 500
+  font-size: 20px
+  line-height: 28px
+
+.customerchoice-discountprice
+  color: #DD2333
+
+.customerchoice__slider-element-photo
+  position: relative
+  text-align: center
+
+.customerchoice__slider-element__info-price
+  position: absolute
+  bottom: 18px
+.customerchoice__slider-element-photo-el
+  margin-top: 24px
+.customerchoice__slider-element__info-specs
+  display: none
+.customerchoice__slider-element__info.customerchoice-element-open > .customerchoice__slider-element__info-specs
+  display: flex
+  flex-direction: column
+  margin-top: 10px
+  font-style: normal
+  margin-bottom: 20px
+  font-weight: normal
+  font-size: 14px
+  line-height: 150%
+.customerchoice__slider-element__info.customerchoice-element-open
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+  height: 247px
+  background: white
+
+.customerchoice-compare-active
+  background: rgba(141,215,247,0.3)
+
+.customerchoice-compare-active > path
+  fill: #0094D9
+.customerchoice__slider-element__info-showmore
+  display: none
+
+.customerchoice__slider-element__info.customerchoice-element-open .customerchoice__slider-element__info-showmore
+  position: absolute
+  bottom: 16px
+  right: 16px
+  padding: 4px 9px
+  background: #4FBBEB
+  font-weight: bold
+  font-size: 16px
+  line-height: 24px
+  color: white
+  border-radius: 4px
+  display: block
+
+.customerchoice__slider-element-photo-panel
+  position: absolute
+  bottom: 0
+  left: 16px
+  padding: 10px 16px
+  font-weight: bold
+  font-size: 14px
+  line-height: 13px
+  text-transform: uppercase
+
+
+.customerchoice__slider-element-prize
+  background: #DD2333
+  color: white
+
+.customerchoice__slider-element-hit
+  color: black
+  background: #F7C43B
+@media (max-width: 1260px)
+  .customerchoice__r1__buttons
+    width: 13%
+  .customerchoice__r1
+    margin: 0 50px
+
+@media (max-width: 1024px)
+  .customerchoice__r1__buttons
+    width: 17%
+
+@media (max-width: 768px)
+  .customerchoice
+    background: #FAFAFC
+  .customerchoice
+    height: 360px
+  .customerchoice__r1__buttons
+    display: none
+  .customerchoice__r1
+    margin: 0 25px
+  .customerchoice__slider-element
+    width: 140px
+    height: 295px
+    background: #FAFAFC
+  .customerchoice__slider-element__info
+    background: #FAFAFC
+  .customerchoice__slider-element-photo-el
+    margin-top: 2px
+    width: 140px
+    height: 140px
+  .customerchoice__slider-element-photo
+    background: white
+    height: 152px
+  .customerchoice__slider-element__info-showmore
+    display: none
+  .customerchoice__slider-element-compare
+    display: none
+  .customerchoice__slider-element__info
+    padding-left: 0
+    padding-top: 8px
+    padding-bottom: 0
+    padding-right: 16px
+  .customerchoice__r1-text
+    font-size: 24px
+  .customerchoice__slider-element__info-maininfo-name
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+  .customerchoice__slider-element__info-price
+    bottom: 0
+  .customerchoice__slider-element-photo-panel
+    left: 0
+    padding: 6px 12px
+    font-size: 12px
+    line-height: 13px

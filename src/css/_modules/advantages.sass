@@ -1,0 +1,39 @@
+.advantages
+  display: flex
+  flex-direction: row
+  margin: 48px 115px
+
+
+.advantages-element
+  flex-grow: 1
+  display: flex
+  justify-content: center
+  height: 73px
+  align-items: center
+  background: rgba(0,148,217, 0.1)
+  border-radius: 8px
+
+.advantages-element:not(:first-child)
+  margin-left: 30px
+
+.advantages-element-text
+  font-size: 16px
+  line-height: 150%
+  margin-left: 10px
+@media (max-width: 1260px)
+  .advantages
+    margin: 48px 50px
+
+@media (max-width: 1024px)
+  .advantages-element:not(:first-child)
+    margin-left: 15px
+  .advantages
+    margin: 48px 25px
+  .advantages-element-text
+    font-size: 12px
+  .advantages-element
+    height: 60px
+
+@media (max-width: 768px)
+  .advantages
+    display: none

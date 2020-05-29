@@ -2,13 +2,23 @@ window.onload = function () {
 
     const mobileMenuPhoneButton = document.getElementById("mobileMenuPhoneButton");
     const phonePopup = document.getElementById("phonePopup");
-    const wrapper = document.getElementById("wrapper");
     const phonePopupBlackout = document.getElementById("phonePopupBlackout");
     const navbar = document.getElementById("navbar");
-    const sliderNext = document.getElementById("slider-next");
-    const sliderPrev = document.getElementById("slider-prev");
 
-    mobileMenuPhoneButton.onclick = function ( ) {
+    const pcategorySliderNext = document.getElementById("pcslider-next");
+    const pcategorySliderPrev = document.getElementById("pcslider-prev");
+    const customerChoiceSliderNext = document.getElementById("customerchoise-slider-next");
+    const customerChoiceSliderPrev = document.getElementById("customerchoise-slider-prev");
+    const pcategorySlider = new Flickity('.pcategory__slider');
+    const customerChoiceSlider = new Flickity('.customerchoice__slider');
+
+    let customerChoiceCardCompare = document.querySelectorAll('.customerchoice__slider-element-compare'),
+        index, button;
+    let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
+
+    let scrollPos = 0;
+
+    mobileMenuPhoneButton.onclick = function ( ) { // Поп-ап с телефоном
         if ( phonePopup.classList.length == 1 ) {
             phonePopup.classList += " hidden__phone-popup-active";
             phonePopupBlackout.classList += " hidden__phone-popup-active";
@@ -22,8 +32,8 @@ window.onload = function () {
         }
     }
 
-    let scrollPos = 0;
-    $(window).scroll(function(){
+
+    $(window).scroll(function(){ // Поведение меню при скролле
             if (document.documentElement.clientWidth > 752) {
                 var st = $(this).scrollTop();
                 if (st > scrollPos || scrollPos < 160) {
@@ -35,47 +45,37 @@ window.onload = function () {
             }
         });
 
-    // $('.pcategory__slider').slick({
-    //     slidesToShow: 2,
-    //     slidesToScroll: 1,
-    //     prevArrow: "#slider-prev",
-    //     nextArrow: "#slider-next",
-    //     dots: false,
-    //     centerMode: true,
-    //     infinite: false,
-    //     // focusOnSelect: true,
-    //     // initialSlide: 3,
-    //
-    // });
 
-    // var swiper = new Swiper('.swiper-container', {
-    //     slidesPerView: 3,
-    //     centeredSlides: true,
-    //     spaceBetween: 30,
-    //     grabCursor: true,
-    //     // pagination: {
-    //     //     el: '.swiper-pagination',
-    //     //     clickable: true,
-    //     // },
-    // });
-    const slider = document.getElementById('slider');
+    pcategorySliderNext.onclick = function ( ) { // Кнопки управления слайдера Популярные категории
+        pcategorySlider.next();
+    }
+    pcategorySliderPrev.onclick = function ( ) {
+        pcategorySlider.previous();
+    }
 
-    // if (slider) {
-    //
-    //     var glide = new Glide(slider, {});
-    //     console.log(slider.className)
-    //     glide.mount();
-    // }
-var flkty = new Flickity('.pcategory__slider');
-
-sliderNext.onclick = function ( ) {
-    flkty.next()
-}
-sliderPrev.onclick = function ( ) {
-    flkty.previous()
-}
+    customerChoiceSliderNext.onclick = function ( ) { // Кнопки управления слайдера Выбор покупателей
+        customerChoiceSlider.next();
+    }
+    customerChoiceSliderPrev.onclick = function ( ) {
+        customerChoiceSlider.previous();
+    }
 
 
+    for (index = 0; index < customerChoiceCardCompare.length; index++) { // Меню карточек товара
+        button = customerChoiceCardCompare[index];
+        button.addEventListener('click', {handleEvent: clickHandler, index: index});
+    }
+    function clickHandler(event) {
+        console.log(this.index);
+            if (customerChoiceCardCompare[this.index].classList.length == 1 ) {
+                customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
+                customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
+            } else {
+                customerChoiceCardCompare[this.index].classList = 'customerchoice__slider-element-compare'
+                customerChoiceCardInfo[this.index].classList = 'customerchoice__slider-element__info';
+            }
+        event.preventDefault();
+    }
 
 
 }
