@@ -93,7 +93,7 @@ window.onload = function () {
     }
 
     if (catalogcategory1Next) {
-        catalogcategory1Next.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+        catalogcategory1Next.onclick = function ( ) { // Кнопки управления слайдера каталога
             catalogcategory1.next();
         }
         catalogcategory1Prev.onclick = function ( ) {
@@ -102,7 +102,7 @@ window.onload = function () {
     }
 
     if (catalogcategory2Next) {
-        catalogcategory2Next.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+        catalogcategory2Next.onclick = function ( ) { // Кнопки управления слайдера каталога
             catalogcategory2.next();
         }
         catalogcategory2Prev.onclick = function ( ) {
@@ -110,8 +110,8 @@ window.onload = function () {
         }
     }
 
-    if (needtoknowSlider) {
-        needtoknowNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+    if (needtoknowPrev) {
+        needtoknowNext.onclick = function ( ) { // Кнопки управления слайдера Нужно знать
             needtoknowSlider.next();
         }
         needtoknowPrev.onclick = function ( ) {
