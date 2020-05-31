@@ -17,6 +17,7 @@ window.onload = function () {
     const catalogcategory1 = new Flickity('#catalogcategory1');
     const pcategorySlider = new Flickity('.pcategory__slider');
     const customerChoiceSlider = new Flickity('#ccslider');
+    const needtoknowSlider = new Flickity('#needtoknowSlider');
 
     let customerChoiceCardCompare = document.querySelectorAll('.customerchoice__slider-element-compare'),
         index, button;
