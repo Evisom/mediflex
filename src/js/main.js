@@ -13,8 +13,14 @@ window.onload = function () {
     const reviewsPrev = document.getElementById("reviewsPrev")
     const catalogcategory1Next = document.getElementById("catalogcategory1Next")
     const catalogcategory1Prev = document.getElementById("catalogcategory1Prev")
+    const catalogcategory2Next = document.getElementById("catalogcategory2Next")
+    const catalogcategory2Prev = document.getElementById("catalogcategory2Prev")
+
+    const needtoknowPrev = document.getElementById("needtoknowPrev")
+    const needtoknowNext = document.getElementById("needtoknowNext")
 
     const catalogcategory1 = new Flickity('#catalogcategory1');
+    const catalogcategory2 = new Flickity('#catalogcategory2');
     const pcategorySlider = new Flickity('.pcategory__slider');
     const customerChoiceSlider = new Flickity('#ccslider');
     const needtoknowSlider = new Flickity('#needtoknowSlider');
@@ -92,6 +98,24 @@ window.onload = function () {
         }
         catalogcategory1Prev.onclick = function ( ) {
             catalogcategory1.previous();
+        }
+    }
+
+    if (catalogcategory2Next) {
+        catalogcategory2Next.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+            catalogcategory2.next();
+        }
+        catalogcategory2Prev.onclick = function ( ) {
+            catalogcategory2.previous();
+        }
+    }
+
+    if (needtoknowSlider) {
+        needtoknowNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+            needtoknowSlider.next();
+        }
+        needtoknowPrev.onclick = function ( ) {
+            needtoknowSlider.previous();
         }
     }
 

@@ -30,7 +30,7 @@
   font-size: 32px
   line-height: 100%
 
-.needtoknow-slider-elemet
+.needtoknow-slider-element
   display: flex
   flex-direction: column
   width: 370px
@@ -38,9 +38,15 @@
   margin-right: 30px
 
 .needtoknow-slider-element-photo
+  position: relative
   width: 370px
   height: 260px
 
+
+.needtoknow-slider-element-photo-button
+  position: absolute
+  top: 145px
+  left: 15px
 
 .needtoknow-slider-element-photo-el
   //margin: auto auto !important
@@ -51,7 +57,7 @@
   line-height: 13px
   text-transform: uppercase
   color: #828282
-  margin-top: 8px
+  margin-top: 24px
 
 
 .needtoknow-slider-element-text
@@ -65,6 +71,9 @@
   margin-top: 35px
   margin-bottom: 40px
 
+
+.needtoknow-slider > div
+  height: 400px !important
 
 @media (max-width: 1260px)
   .needtoknow-r1-buttons
@@ -81,8 +90,19 @@
   .needtoknow-r1-text
     font-size: 24px
 
-  .needtoknow-slider-elemet
+  .needtoknow-r1
+    margin: 0 25px
+
+  .needtoknow-slider-element-photo-button
+    top: 100px
+    left: 10px
+  .needtoknow-slider-element-photo-button > svg
+    width: 56px
+    height: 56px
+
+  .needtoknow-slider-element
     width: 257px
+    margin-right: 16px
   .needtoknow-slider-element-photo > img
     width: 257px
 
@@ -94,3 +114,6 @@
   .needtoknow-slider-element-text
     font-size: 18px
     margin-top: 10px
+
+  .needtoknow-slider
+    height: 295px !important
