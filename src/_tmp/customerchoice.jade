@@ -1,17 +1,17 @@
 .customerchoice
     .customerchoice__r1
         p.customerchoice__r1-text
-            Выбор покупателей
+            != text
         .customerchoice__r1__buttons
-                #customerchoise-slider-prev.customerchoice__r1__button-btn
+                .customerchoice__r1__button-btn(id != buttonPrev)
                     svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
                         path(d='M2 10L10 2', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
                         path(d='M2 10L9.99985 18', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-                #customerchoise-slider-next.customerchoice__r1__button-btn
+                .customerchoice__r1__button-btn(id != buttonNext)
                     svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
                         path(d='M10 10.0002L2 18.0002', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
                         path(d='M10 10.0002L2.00016 2.00028', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-    .customerchoice__slider#slider(data-flickity='{ "groupCells": true , "wrapAround": false , "pageDots" : false , "prevNextButtons" : false }')
+    .customerchoice__slider( id != sliderId , data-flickity='{ "groupCells": true , "wrapAround": false , "pageDots" : false , "prevNextButtons" : false }')
         != partial("item-card", { panel: "<div class=\"customerchoice__slider-element-photo-panel customerchoice__slider-element-prize\">+ подарок</div>"})
         != partial("item-card", { panel: "<div class=\"customerchoice__slider-element-photo-panel customerchoice__slider-element-hit\">хит</div>"})
         != partial("item-card")

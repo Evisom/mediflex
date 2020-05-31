@@ -7,13 +7,16 @@ window.onload = function () {
 
     const pcategorySliderNext = document.getElementById("pcslider-next");
     const pcategorySliderPrev = document.getElementById("pcslider-prev");
-    const customerChoiceSliderNext = document.getElementById("customerchoise-slider-next");
-    const customerChoiceSliderPrev = document.getElementById("customerchoise-slider-prev");
+    const customerChoiceSliderNext = document.getElementById("ccsliderNext");
+    const customerChoiceSliderPrev = document.getElementById("ccsliderPrev");
     const reviewsNext = document.getElementById("reviewsNext")
     const reviewsPrev = document.getElementById("reviewsPrev")
+    const catalogcategory1Next = document.getElementById("catalogcategory1Next")
+    const catalogcategory1Prev = document.getElementById("catalogcategory1Prev")
 
+    const catalogcategory1 = new Flickity('#catalogcategory1');
     const pcategorySlider = new Flickity('.pcategory__slider');
-    const customerChoiceSlider = new Flickity('.customerchoice__slider');
+    const customerChoiceSlider = new Flickity('#ccslider');
 
     let customerChoiceCardCompare = document.querySelectorAll('.customerchoice__slider-element-compare'),
         index, button;
@@ -23,19 +26,22 @@ window.onload = function () {
 
     let scrollPos = 0;
 
-    mobileMenuPhoneButton.onclick = function ( ) { // Поп-ап с телефоном
-        if ( phonePopup.classList.length == 1 ) {
-            phonePopup.classList += " hidden__phone-popup-active";
-            phonePopupBlackout.classList += " hidden__phone-popup-active";
-            mobileMenuPhoneButton.classList += " hidden__phone-popup-active";
+    if (mobileMenuPhoneButton) {
+        mobileMenuPhoneButton.onclick = function ( ) { // Поп-ап с телефоном
+            if ( phonePopup.classList.length == 1 ) {
+                phonePopup.classList += " hidden__phone-popup-active";
+                phonePopupBlackout.classList += " hidden__phone-popup-active";
+                mobileMenuPhoneButton.classList += " hidden__phone-popup-active";
 
-        } else {
-            phonePopup.classList = "hidden__phone-popup";
-            phonePopupBlackout.classList = "hidden_phone-popup-blackout";
-            mobileMenuPhoneButton.classList = "navbar__r2__phone-ico-mobile";
+            } else {
+                phonePopup.classList = "hidden__phone-popup";
+                phonePopupBlackout.classList = "hidden_phone-popup-blackout";
+                mobileMenuPhoneButton.classList = "navbar__r2__phone-ico-mobile";
 
+            }
         }
     }
+
 
 
     $(window).scroll(function(){ // Поведение меню при скролле
@@ -50,27 +56,44 @@ window.onload = function () {
             }
         });
 
-
-    pcategorySliderNext.onclick = function ( ) { // Кнопки управления слайдера Популярные категории
-        pcategorySlider.next();
-    }
-    pcategorySliderPrev.onclick = function ( ) {
-        pcategorySlider.previous();
-    }
-
-    customerChoiceSliderNext.onclick = function ( ) { // Кнопки управления слайдера Выбор покупателей
-        customerChoiceSlider.next();
-    }
-    customerChoiceSliderPrev.onclick = function ( ) {
-        customerChoiceSlider.previous();
+    if (pcategorySliderNext) {
+        pcategorySliderNext.onclick = function ( ) { // Кнопки управления слайдера Популярные категории
+            pcategorySlider.next();
+        }
+        pcategorySliderPrev.onclick = function ( ) {
+            pcategorySlider.previous();
+        }
     }
 
-    reviewsNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
-        reviewsSlider.next();
+
+    if (customerChoiceSliderNext) {
+        customerChoiceSliderNext.onclick = function ( ) { // Кнопки управления слайдера Выбор покупателей
+            customerChoiceSlider.next();
+        }
+        customerChoiceSliderPrev.onclick = function ( ) {
+            customerChoiceSlider.previous();
+        }
     }
-    reviewsPrev.onclick = function ( ) {
-        reviewsSlider.previous();
+
+
+    if (reviewsNext) {
+        reviewsNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+            reviewsSlider.next();
+        }
+        reviewsPrev.onclick = function ( ) {
+            reviewsSlider.previous();
+        }
     }
+
+    if (catalogcategory1Next) {
+        catalogcategory1Next.onclick = function ( ) { // Кнопки управления слайдера Отзывы
+            catalogcategory1.next();
+        }
+        catalogcategory1Prev.onclick = function ( ) {
+            catalogcategory1.previous();
+        }
+    }
+
 
 
     for (index = 0; index < customerChoiceCardCompare.length; index++) { // Меню карточек товара

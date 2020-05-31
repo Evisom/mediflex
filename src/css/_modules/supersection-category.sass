@@ -1,0 +1,21 @@
+.supersection-category
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  padding: 61px 100px
+  background: #F9FCFE
+
+.supersection-category > div
+  margin: auto auto !important
+
+@media (max-width: 1372px)
+  .supersection-category
+    grid-template-columns: repeat(2, 1fr)
+    grid-row-gap: 30px
+
+
+
+@media (max-width: 1024px)
+  .supersection-category
+    grid-template-columns: 1fr
+    grid-row-gap: 16px
+    padding: 32px 24px
