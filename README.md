@@ -9,4 +9,4 @@
 
 #### or
 
-`` ~$ harp compile ./src ./build ``
+`` ~$ harp compile ./src ./docs ``
