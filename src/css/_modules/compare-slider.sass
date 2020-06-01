@@ -34,8 +34,7 @@
   line-height: 100%
   word-wrap: normal
 
-
-.switch 
+.switch
   position: relative
   display: inline-block
   width: 60px
@@ -70,8 +69,6 @@
   height: 64px
   padding: 0
 
-
-
 .compare-slider-el-spec-t
   position: absolute
   top: 19px
@@ -85,14 +82,11 @@
   margin-bottom: 2px
   margin-left: 13px
 
-/* Hide default HTML checkbox */
 .switch input 
   opacity: 0
   width: 0
   height: 0
 
-
-/* The slider */
 .slider 
   position: absolute
   cursor: pointer
@@ -103,7 +97,6 @@
   background-color: #ccc
   -webkit-transition: .4s
   transition: .4s
-
 
 .slider:before 
   position: absolute
@@ -116,30 +109,91 @@
   -webkit-transition: .4s
   transition: .4s
 
-
 input:checked + .slider 
   background-color: #2196F3
-
 
 input:focus + .slider 
   box-shadow: 0 0 1px #2196F3
 
-
-input:checked + .slider:before 
+input:checked + .slider:before
   -webkit-transform: translateX(26px)
   -ms-transform: translateX(26px)
   transform: translateX(26px)
 
-
-/* Rounded sliders */
-.slider.round 
+.slider.round
   border-radius: 34px
 
-
-.slider.round:before 
+.slider.round:before
   border-radius: 50%
 
+.compare-popup-wrapper
+  display: none
 
+.compare-popup-wrapper.compare-popup-active
+  display: block
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 9999999999
+
+.compare-popup
+  top: 100px
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+  right: 10%
+  height: 462px
+  width: 332px
+  position: fixed
+  background: white
+  z-index: 999999999999999999999999999999
+
+.compare-popup-arrow
+  position: absolute
+  left: 50%
+  right: 50%
+  top: -10px
+
+.compare-popup-container
+  margin-left: 20px
+  margin-top: 27px
+  margin-right: 25px
+  display: flex
+  flex-direction: column
+  overflow-y: scroll
+  height: 360px
+  width: 94%
+
+.compare-popup-element
+  display: flex
+  flex-direction: row
+  height: 70px
+  align-items: center
+
+.compare-popup-c3
+  //position: absolute
+  //right: 25px
+  margin-left: auto
+  margin-right: 25px
+
+.compare-popup-text
+  font-size: 16px
+  line-height: 150%
+
+.compare-popup-button
+  height: 40px
+  width: 284px
+  background: #4FBBEB
+  font-size: 16px
+  line-height: 24px
+  color: #FFFFFF
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 20px
+  margin-left: 24px
+  margin-right: 24px
+  border-radius: 4px
 
 
 @media (max-width: 1260px)

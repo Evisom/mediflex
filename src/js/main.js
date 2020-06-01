@@ -17,6 +17,9 @@ window.onload = function () {
     const catalogcategory2Prev = document.getElementById("catalogcategory2Prev")
     const compareSliderPrev = document.getElementById("compareSliderPrev")
     const compareSliderNext = document.getElementById("compareSliderNext")
+    const compareNavbarButton = document.getElementById("compareNavbarButton")
+    const compareWrapper = document.getElementById("compareWrapper")
+    const comparePopup = document.getElementById("comparePopup")
 
     const needtoknowPrev = document.getElementById("needtoknowPrev")
     const needtoknowNext = document.getElementById("needtoknowNext")
@@ -122,23 +125,33 @@ window.onload = function () {
         }
     }
     if (compareSliderNext) {
-        compareSliderNext.onclick = function ( ) { // Кнопки управления слайдера сравнений
+        compareSliderNext.onclick = function () { // Кнопки управления слайдера сравнений
             compareSlider.next();
         }
-        compareSliderPrev.onclick = function ( ) {
+        compareSliderPrev.onclick = function () {
             compareSlider.previous();
         }
     }
 
+    if (compareNavbarButton && compareWrapper) {
+        compareNavbarButton.onclick = function () {
+            compareWrapper.classList += ' compare-popup-active'
+        }
+        compareWrapper.onclick = function () {
+            if (event.target.classList[0] == 'compare-popup-wrapper')
+                compareWrapper.classList = 'compare-popup-wrapper'
+        }
+    }
 
 
     for (index = 0; index < customerChoiceCardCompare.length; index++) { // Меню карточек товара
         button = customerChoiceCardCompare[index];
         button.addEventListener('click', {handleEvent: clickHandler, index: index});
     }
+
     function clickHandler(event) {
         console.log(this.index);
-            if (customerChoiceCardCompare[this.index].classList.length == 1 ) {
+        if (customerChoiceCardCompare[this.index].classList.length == 1) {
                 customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
                 customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
             } else {
