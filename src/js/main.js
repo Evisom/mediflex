@@ -20,11 +20,14 @@ window.onload = function () {
     const compareNavbarButton = document.getElementById("compareNavbarButton")
     const compareWrapper = document.getElementById("compareWrapper")
     const comparePopup = document.getElementById("comparePopup")
+    const lettersSliderPrev = document.getElementById("letterSliderPrev")
+    const letterSliderNext = document.getElementById("lettersSliderNext")
 
     const needtoknowPrev = document.getElementById("needtoknowPrev")
     const needtoknowNext = document.getElementById("needtoknowNext")
 
     const catalogcategory1 = new Flickity('#catalogcategory1');
+    const lettersSlider = new Flickity('#lettersSlider');
     const compareSlider = new Flickity('#compareSlider');
     const catalogcategory2 = new Flickity('#catalogcategory2');
     const pcategorySlider = new Flickity('.pcategory__slider');
@@ -130,6 +133,14 @@ window.onload = function () {
         }
         compareSliderPrev.onclick = function () {
             compareSlider.previous();
+        }
+    }
+    if (letterSliderNext) {
+        letterSliderNext.onclick = function () { // Кнопки управления слайдера с письмами
+            lettersSlider.next();
+        }
+        letterSliderPrev.onclick = function () {
+            lettersSlider.previous();
         }
     }
 
