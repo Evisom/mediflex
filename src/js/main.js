@@ -15,11 +15,14 @@ window.onload = function () {
     const catalogcategory1Prev = document.getElementById("catalogcategory1Prev")
     const catalogcategory2Next = document.getElementById("catalogcategory2Next")
     const catalogcategory2Prev = document.getElementById("catalogcategory2Prev")
+    const compareSliderPrev = document.getElementById("compareSliderPrev")
+    const compareSliderNext = document.getElementById("compareSliderNext")
 
     const needtoknowPrev = document.getElementById("needtoknowPrev")
     const needtoknowNext = document.getElementById("needtoknowNext")
 
     const catalogcategory1 = new Flickity('#catalogcategory1');
+    const compareSlider = new Flickity('#compareSlider');
     const catalogcategory2 = new Flickity('#catalogcategory2');
     const pcategorySlider = new Flickity('.pcategory__slider');
     const customerChoiceSlider = new Flickity('#ccslider');
@@ -116,6 +119,14 @@ window.onload = function () {
         }
         needtoknowPrev.onclick = function ( ) {
             needtoknowSlider.previous();
+        }
+    }
+    if (compareSliderNext) {
+        compareSliderNext.onclick = function ( ) { // Кнопки управления слайдера сравнений
+            compareSlider.next();
+        }
+        compareSliderPrev.onclick = function ( ) {
+            compareSlider.previous();
         }
     }
 

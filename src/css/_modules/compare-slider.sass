@@ -1,0 +1,177 @@
+.compare-slider
+  background: #F9FCFE
+  padding-top: 56px
+  padding-bottom: 40px
+
+.compare-slider-r1
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin: 0 115px
+  padding-bottom: 40px
+
+.compare-slider-r1-buttons
+  width: 11%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-content: center
+
+.compare-slider-r1-buttons-btn
+  width: 48px
+  height: 48px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #FFFFFF
+  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.15)
+  border-radius: 50%
+
+.compare-slider-r1-text
+  font-weight: bold
+  font-size: 32px
+  line-height: 100%
+  word-wrap: normal
+
+
+.switch 
+  position: relative
+  display: inline-block
+  width: 60px
+  height: 34px
+
+.compare-slider-r1-showdif
+  display: flex
+  align-items: center
+  font-size: 18px
+  line-height: 130%
+  width: 40%
+
+.compare-slider-r1-showdif > p
+  margin-left: 15px
+
+.compare-slider-sl-element-card
+  padding-right: 0px
+  padding-bottom: 32px
+  border-bottom: 1px solid #D9D9D9
+
+.compare-slider-el-element-spec
+  font-weight: 500
+  font-size: 20px
+  line-height: 28px
+  padding-top: 56px
+  padding-bottom: 16px
+  padding-left: 16px
+  border-bottom: 1px solid #D9D9D9
+  position: relative
+
+.compare-slider-el-element-spec:last-child
+  height: 64px
+  padding: 0
+
+
+
+.compare-slider-el-spec-t
+  position: absolute
+  top: 19px
+  left: 16px
+  font-weight: 500
+  font-size: 20px
+  line-height: 26px
+  color: #929497
+
+.compare-slider-el-spec-t > svg
+  margin-bottom: 2px
+  margin-left: 13px
+
+/* Hide default HTML checkbox */
+.switch input 
+  opacity: 0
+  width: 0
+  height: 0
+
+
+/* The slider */
+.slider 
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  -webkit-transition: .4s
+  transition: .4s
+
+
+.slider:before 
+  position: absolute
+  content: ""
+  height: 26px
+  width: 26px
+  left: 4px
+  bottom: 4px
+  background-color: white
+  -webkit-transition: .4s
+  transition: .4s
+
+
+input:checked + .slider 
+  background-color: #2196F3
+
+
+input:focus + .slider 
+  box-shadow: 0 0 1px #2196F3
+
+
+input:checked + .slider:before 
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+
+/* Rounded sliders */
+.slider.round 
+  border-radius: 34px
+
+
+.slider.round:before 
+  border-radius: 50%
+
+
+
+
+@media (max-width: 1260px)
+  .compare-slider-r1-buttons
+    width: 13%
+  .compare-slider-r1
+    margin: 0 50px
+
+@media (max-width: 1024px)
+  .compare-slider-r1-buttons
+    width: 17%
+  .compare-slider-r1-showdif
+    width: 52%
+
+@media (max-width: 768px)
+  .compare-slider-r1-buttons
+    display: none
+  .compare-slider-r1
+    margin: 0 25px
+
+  .compare-slider-r1-text
+    font-size: 24px
+
+  .compare-slider-el-element-spec
+    //padding-left: 0
+    font-size: 16px
+
+  .compare-slider-el-spec-t
+    font-size: 16px
+    //left: 4px
+
+  .compare-slider-el-spec-t > svg
+    margin-left: 5px
+  .compare-slider-r1-showdif
+    display: none
