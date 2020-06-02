@@ -1,0 +1,95 @@
+.navbar-menu-wrapper
+  display: none
+
+  top: 160px
+  background: white
+  left: 0
+  right: 0
+  background: rgba(0, 0, 0, 0.3)
+  bottom: 0
+  z-index: 99999999999
+
+.navbar-menu-wrapper.navbar-menu-active
+  display: flex
+  position: fixed
+
+.navbar-menu-wrapper.navbar-menu-active-l
+  display: flex
+  position: fixed
+
+.navbar-menu-wrapper.navbar-menu-active.navbar-menu-scrollup
+  top: 58px
+
+.navbar-menu
+  //position: absolute
+  height: 475px
+  background: white
+  width: 100%
+  display: flex
+  flex-direction: row
+  z-index: 99999
+
+.navbar-menu-c1
+  width: 25%
+  height: 100%
+  position: relative
+
+
+.navbar-menu-c1-link
+  font-weight: bold
+  text-decoration: none
+  color: black
+  font-size: 18px
+  line-height: 110%
+  display: block
+  margin-left: 5vw
+  margin-top: 20px
+  padding-right: 20px
+  display: flex
+  flex-direction: row
+  align-items: center
+
+.navbar-menu-c1-link:first-child
+  margin-top: 36px
+
+.navbar-menu-c2
+  width: 75%
+  height: 100%
+
+  position: relative
+
+.navbar-menu-c1-link > svg
+  display: none
+
+.navbar-menu-wrapper.navbar-menu-active-l > div > div:first-child
+  width: 0
+
+.navbar-menu-wrapper.navbar-menu-active-l > div > div:last-child
+  width: 100%
+
+
+.navbar-menu-c1-link:hover
+  color: #0094D9
+
+.navbar-menu-c1-link:hover > svg
+  display: block
+  position: absolute
+  right: 8px
+
+.navbar-menu-c2-slide:first-child
+  z-index: 9999
+
+.navbar-menu-c2-slide
+  z-index: 9990
+  position: absolute
+  background: white
+  top: 0
+  right: 0
+  bottom: 0
+
+  left: 0
+
+
+@media (max-width: 768px)
+  .navbar-menu-wrapper.navbar-menu-active
+    top: 56px
