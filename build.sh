@@ -1,2 +1,2 @@
-rm build/**.*
+rm docs/**.*
 harp compile ./src ./docs
