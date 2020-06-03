@@ -25,7 +25,7 @@ window.onload = function () {
     const navbarr3links = document.getElementsByClassName('navbar__r3-link')
     const aboutreviewsPrev = document.getElementById("aboutReviewsPrev")
     const aboutreviewsNext = document.getElementById("aboutReviewsNext")
-
+    const navbarMenuTopCLose = document.getElementsByClassName('navbar-menu-c2-slide-top-close')
     const navbarmenuLinks = document.getElementsByClassName('navbar-menu-c1-link')
     const navbarmenuSlide = document.getElementsByClassName('navbar-menu-c2-slide')
 
@@ -199,15 +199,33 @@ window.onload = function () {
     }
 
     if (navbarmenuLinks) {
-        var zindex = 9999
 
-        function navbarMenuOnHover(index) {
+        function navbarMenuOnclickMobile(index) {
             console.log(this.id[4])
-            navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++)
+            for (let i = 0; i < navbarmenuSlide.length; i++) {
+                navbarmenuSlide[i].removeAttribute('style')
+            }
+            navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++ + "; display: block")
         }
 
-        for (let i = 0; i < navbarmenuLinks.length; i++) {
-            navbarmenuLinks[i].addEventListener("mouseover", navbarMenuOnHover)
+
+        function navbarMenuOnHover(index) {
+            for (let i = 0; i < navbarmenuSlide.length; i++) {
+                navbarmenuSlide[i].removeAttribute('style')
+            }
+            console.log(this.id[4])
+            navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: 9999")
+        }
+
+
+        if (document.documentElement.clientWidth < 752) {
+            for (let i = 0; i < navbarmenuLinks.length; i++) {
+                navbarmenuLinks[i].addEventListener("click", navbarMenuOnclickMobile)
+            }
+        } else {
+            for (let i = 0; i < navbarmenuLinks.length; i++) {
+                navbarmenuLinks[i].addEventListener("mouseover", navbarMenuOnHover)
+            }
         }
     }
 
@@ -230,6 +248,17 @@ window.onload = function () {
         for (let i = 1; i < navbarr3links.length; i++) {
             navbarr3links[i].addEventListener("click", navbarMenuOnclick)
         }
+    }
+
+    function navbarMenuTopCLoseHandler() {
+        console.log(1)
+        for (let i = 0; i < navbarMenuTopCLose.length; i++) {
+            navbarmenuSlide[i].removeAttribute("style")
+        }
+    }
+
+    for (let i = 0; i < navbarMenuTopCLose.length; i++) {
+        navbarMenuTopCLose[i].addEventListener('click', navbarMenuTopCLoseHandler);
     }
 
 
