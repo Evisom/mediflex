@@ -1,3 +1,7 @@
+!= partial("phone-popup")
+!= partial("navbar-menu")
+!= partial("compare-popup")
+
 #navbar.navbar
     .navbar__r1
         a.navbar__r1-link(href='#') Сервис
@@ -29,7 +33,7 @@
     .navbar__r3
         a.navbar__r3-link.navbar__r3-menu(href='#')#navbar-menu-burger
             img(src='./img/menu-ico.svg', alt='').navbar-menu-burger-ico
-        a.navbar__r3-link.navbar__r3-link-active(href='#')#nr3l0 Кислородная терапия
+        a.navbar__r3-link(href='#')#nr3l0 Кислородная терапия
         a.navbar__r3-link(href='#')#nr3l1 СРАР/ВРАР
         a.navbar__r3-link(href='#')#nr3l2 Вентиляция легких
         a.navbar__r3-link(href='#')#nr3l3 Откашливатели

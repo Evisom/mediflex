@@ -22,13 +22,17 @@ window.onload = function () {
     const comparePopup = document.getElementById("comparePopup")
     const lettersSliderPrev = document.getElementById("letterSliderPrev")
     const letterSliderNext = document.getElementById("lettersSliderNext")
-
+    const navbarr3links = document.getElementsByClassName('navbar__r3-link')
     const aboutreviewsPrev = document.getElementById("aboutReviewsPrev")
     const aboutreviewsNext = document.getElementById("aboutReviewsNext")
+    const navbarMenuTopCLose = document.getElementsByClassName('navbar-menu-c2-slide-top-close')
+    const navbarmenuLinks = document.getElementsByClassName('navbar-menu-c1-link')
+    const navbarmenuSlide = document.getElementsByClassName('navbar-menu-c2-slide')
+
 
     const needtoknowPrev = document.getElementById("needtoknowPrev")
     const needtoknowNext = document.getElementById("needtoknowNext")
-
+    const navbarBurgerIco = document.getElementsByClassName('navbar-menu-burger-ico')
     const aboutreviewsSlider = new Flickity('#aboutreviewsSlider');
     const catalogcategory1 = new Flickity('#catalogcategory1');
     const lettersSlider = new Flickity('#lettersSlider');
@@ -37,7 +41,9 @@ window.onload = function () {
     const pcategorySlider = new Flickity('.pcategory__slider');
     const customerChoiceSlider = new Flickity('#ccslider');
     const needtoknowSlider = new Flickity('#needtoknowSlider');
-
+    const navbarmenu = document.getElementById("navbar-menu")
+    const navbarMenuBurger = document.getElementById("navbar-menu-burger")
+    const navbarMenuBurgerScrollup = document.getElementById("navbar-menu-burger-scrollup")
     let customerChoiceCardCompare = document.querySelectorAll('.customerchoice__slider-element-compare'),
         index, button;
     let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
@@ -68,8 +74,10 @@ window.onload = function () {
             var st = $(this).scrollTop();
             if (st > scrollPos || scrollPos < 160) {
                 navbar.className = 'navbar';
+                navbarmenu.classList.remove('navbar-menu-scrollup')
             } else if (scrollPos > 160) {
                 navbar.className = 'navbar navbar-scrollup';
+                navbarmenu.classList.add('navbar-menu-scrollup');
             }
             scrollPos = st;
         }
@@ -164,6 +172,102 @@ window.onload = function () {
             if (event.target.classList[0] == 'compare-popup-wrapper')
                 compareWrapper.classList = 'compare-popup-wrapper'
         }
+    }
+
+    if (navbarMenuBurger) {
+        navbarMenuBurger.onclick = function (navbarMenuBurger) {
+            navbarMenuScrollupFunc()
+        }
+        navbarMenuBurgerScrollup.onclick = function (navbarMenuBurgerScrollup) {
+            navbarMenuScrollupFunc()
+        }
+
+        function navbarMenuScrollupFunc(button) {
+            if (navbarmenu.className === 'navbar-menu-wrapper' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-scrollup' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-active-l navbar-menu-scrollup' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-active-l') {
+                navbarmenu.className = 'navbar-menu-wrapper navbar-menu-active'
+                navbarBurgerIco[0].setAttribute('src', './img/close-ico.svg')
+                navbarBurgerIco[1].setAttribute('src', './img/close-ico.svg')
+
+            } else {
+                console.log("1")
+                navbarmenu.className = 'navbar-menu-wrapper'
+                navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+                navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+            }
+        }
+    }
+    document.getElementById("navbarMenuSlideTopClose").onclick = function () {
+        navbarmenu.className = 'navbar-menu-wrapper'
+        navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+        navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+    }
+
+    if (navbarmenuLinks) {
+
+        function navbarMenuOnclickMobile(index) {
+            console.log(this.id[4])
+            for (let i = 0; i < navbarmenuSlide.length; i++) {
+                navbarmenuSlide[i].removeAttribute('style')
+            }
+            navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++ + "; display: block")
+        }
+
+
+        function navbarMenuOnHover(index) {
+            for (let i = 0; i < navbarmenuSlide.length; i++) {
+                navbarmenuSlide[i].removeAttribute('style')
+            }
+            console.log(this.id[4])
+            navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: 9999")
+        }
+
+
+        if (document.documentElement.clientWidth < 752) {
+            for (let i = 0; i < navbarmenuLinks.length; i++) {
+                navbarmenuLinks[i].addEventListener("click", navbarMenuOnclickMobile)
+            }
+        } else {
+            for (let i = 0; i < navbarmenuLinks.length; i++) {
+                navbarmenuLinks[i].addEventListener("mouseover", navbarMenuOnHover)
+            }
+        }
+    }
+
+    if (navbarr3links) {
+        var zindex = 9999
+
+        function navbarMenuOnclick(index) {
+            for (let i = 1; i < navbarr3links.length; i++) {
+                navbarr3links[i].className = 'navbar__r3-link'
+            }
+            if (this.id[4] == 'a') {
+                navbarmenu.classList.add('navbar-menu-active');
+                navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
+
+            } else {
+
+                navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
+                navbarmenu.classList.add('navbar-menu-active-l');
+
+                navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++)
+            }
+
+        }
+
+        for (let i = 1; i < navbarr3links.length; i++) {
+            navbarr3links[i].addEventListener("click", navbarMenuOnclick)
+        }
+    }
+
+    function navbarMenuTopCLoseHandler() {
+        console.log(1)
+        for (let i = 0; i < navbarMenuTopCLose.length; i++) {
+            navbarmenuSlide[i].removeAttribute("style")
+        }
+    }
+
+    for (let i = 0; i < navbarMenuTopCLose.length; i++) {
+        navbarMenuTopCLose[i].addEventListener('click', navbarMenuTopCLoseHandler);
     }
 
 

@@ -21,7 +21,6 @@
   top: 58px
 
 .navbar-menu
-  //position: absolute
   height: 475px
   background: white
   width: 100%
@@ -61,10 +60,10 @@
 .navbar-menu-c1-link > svg
   display: none
 
-.navbar-menu-wrapper.navbar-menu-active-l > div > div:first-child
+.navbar-menu-wrapper.navbar-menu-active-l > div > div.navbar-menu-c1
   width: 0
 
-.navbar-menu-wrapper.navbar-menu-active-l > div > div:last-child
+.navbar-menu-wrapper.navbar-menu-active-l > div > div.navbar-menu-c2
   width: 100%
 
 
@@ -82,19 +81,104 @@
 .navbar-menu-c2-slide
   z-index: 9990
   position: absolute
-  background: white
+  background: rgb(250, 250, 252)
   top: 0
   right: 0
   bottom: 0
 
   left: 0
 
+.navbar-menu-c2-slide-top
+  display: none
+
+.navbar-menu-c2-slide
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding-top: 36px
+  padding-left: 46px
+  padding-right: 7%
+
+.navbar-menu-c2-slide-links
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+
+.navbar-menu-c2-slide-collumn
+  display: flex
+  flex-direction: column
+  margin-right: 30px
+
+.navbar-menu-c2-slide-collumn-element-h
+  font-weight: bold
+  font-size: 18px
+  line-height: 110%
+  margin-bottom: 9px
+
+.navbar-menu-c2-slide-collumn-element:not(:first-child)
+  margin-top: 28px
+
+.navbar-menu-c2-slide-collumn-element-text
+  font-size: 16px
+  line-height: 150%
+  color: #4F4F4F
+  margin-bottom: 3px
+  text-decoration: none
+
+.navbar-menu-c2-slide-collumn-element
+  display: flex
+  flex-direction: column
+  width: 270px
+
+.navbar-menu-c2-slide-item-photo
+  position: relative
+
+.navbar-menu-c2-slide-item-photo-panel
+  position: absolute
+  bottom: 5px
+  left: 0
+  padding: 10px 16px
+  background: #4FBBEB
+  color: white
+  font-weight: bold
+  font-size: 14px
+  line-height: 13px
+  text-transform: uppercase
+
+
+.navbar-menu-c2-slide-item-h
+  font-weight: bold
+  font-size: 20px
+  line-height: 130%
+  margin-top: 20px
+
+.navbar-menu-c2-slide-item-text
+  font-size: 16px
+  line-height: 150%
+  color: #272727
+  margin-top: 4px
+
+.navbar-menu-c2-slide-item
+  width: 270px
+
+.navbar-menu-c0
+  display: none
+
+.navbar-menu-c3
+  display: none
+
+@media (max-width: 1280px)
+  .navbar-menu-c2-slide-item
+    display: none
+
+@media (max-width: 1024px)
+  .navbar-menu-c2-slide-collumn-element
+    width: 240px
 
 @media (max-width: 768px)
   .navbar-menu-wrapper.navbar-menu-active
     top: 0
   .navbar-menu-c2
-    //display: none
     width: 0%
   .navbar-menu-c2-slide
     top: 0
@@ -105,3 +189,171 @@
     display: none
     background: white
     z-index: 999999999999999999999
+    padding-right: 9%
+  .navbar-menu-c2-slide-top
+    display: block
+  .navbar-menu
+    height: 100vh
+    overflow-y: scroll
+    flex-direction: column
+
+  .navbar-menu-c1
+    width: 94%
+    padding-left: 6%
+  .navbar-menu-c1-link > svg
+    position: absolute
+    display: block
+    right: 30px
+  .navbar-menu-c1-link
+    position: relative
+  .navbar-menu-c1-link:hover
+    color: inherit
+  .navbar-menu-c1-link:hover > svg
+    right: 30px !important
+  .navbar-menu-c1-link
+    margin-top: 30px
+  .navbar-menu-c0
+    display: block
+  .navbar-menu-c0 > svg
+    margin-left: 9%
+    margin-top: 16px
+    transform: rotate(180deg)
+    width: 32px
+    height: 32px
+
+  .navbar-menu-c3
+    display: block
+    width: 100%
+
+  .navbar-menu-c3-links
+    margin-left: 11vw
+    display: flex
+    flex-direction: column
+
+  .navbar-menu-c3-link-el
+    font-weight: bold
+    font-size: 18px
+    line-height: 130%
+    color: #929497
+    text-decoration: none
+    margin-top: 28px
+
+  .navbar-menu-c3-advantages
+    margin-top: 45px
+    background: #E6F4FB
+    height: 104px
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    padding: 20px 0
+
+  .navbar-menu-c3-advantages-el
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 14px
+    line-height: 150%
+
+  .navbar-menu-c3-advantages-el > svg
+    margin-right: 14px
+
+  .navbar-menu-c3-contacts
+    display: flex
+    align-items: center
+    padding-top: 37px
+    flex-direction: column
+
+  .navbar-menu-c3-contacts-text
+    font-size: 16px
+    line-height: 150%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+  .navbar-menu-c3-contacts-phone
+    font-weight: bold
+    font-size: 18px
+    line-height: 150%
+    margin-top: 5px
+    color: black
+    text-decoration: none
+
+  .navbar-menu-c3-contacts-mt
+    margin-top: 3px
+    font-size: 16px
+    line-height: 150%
+    color: #929497
+
+  hr.navbar-menu-c3-contacts-hr
+    margin-top: 39px
+    width: 57%
+    height: 1px
+    background: #929497
+    margin-bottom: 37px
+
+  .navbar-menu-c3-contacts-mtext
+    font-size: 14px
+    line-height: 150%
+    color: #929497
+    margin-bottom: 8px
+    text-decoration: none
+
+  .navbar-menu-c3-contacts-sm
+    width: 100px
+    display: flex
+    align-items: center
+    flex-direction: row
+    justify-content: space-between
+    margin-top: 10px
+
+  .navbar-menu-c3-contacts-copyright
+    margin-top: 27px
+    margin-bottom: 50px
+    font-size: 14px
+    line-height: 150%
+
+  .navbar-menu-c3-contacts-text > svg
+    margin-left: 17px
+
+  .navbar-menu-c2-slide-top
+    padding-top: 16px
+    display: flex
+    flex-direction: row
+    align-items: center
+    top: 0
+    margin-left: 9%
+    left: 0
+    position: absolute
+
+  .navbar-menu-c2-slide-top-h
+    margin-left: 23vw
+    font-weight: bold
+    font-size: 16px
+    line-height: 150%
+  .navbar-menu-c2-slide-collumn-element-text
+    display: none
+
+  .navbar-menu-c2-slide-links
+    flex-direction: column
+    margin-top: 53px
+  .navbar-menu-c2-slide-collumn-element
+    width: 100%
+  .navbar-menu-c2-slide-collumn-element:not(:first-child)
+    margin-top: 0
+  .navbar-menu-c2-slide-collumn-element
+    margin-bottom: 28px
+
+  .navbar-menu-c2-slide-top-close > svg
+    transform: rotate(180deg)
+    width: 32px
+    height: 32px
+  .navbar-menu-c2-slide-top-close
+    font-weight: bold
+    font-size: 16px
+    line-height: 150%
+
+  .navbar-menu-c2-slide-collumn-element-h
+    margin-left: 3vw

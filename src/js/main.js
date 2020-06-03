@@ -197,6 +197,11 @@ window.onload = function () {
             }
         }
     }
+    document.getElementById("navbarMenuSlideTopClose").onclick = function () {
+        navbarmenu.className = 'navbar-menu-wrapper'
+        navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+        navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+    }
 
     if (navbarmenuLinks) {
 
@@ -233,11 +238,16 @@ window.onload = function () {
         var zindex = 9999
 
         function navbarMenuOnclick(index) {
-            console.log(this.id[4])
+            for (let i = 1; i < navbarr3links.length; i++) {
+                navbarr3links[i].className = 'navbar__r3-link'
+            }
             if (this.id[4] == 'a') {
                 navbarmenu.classList.add('navbar-menu-active');
+                navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
+
             } else {
 
+                navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
                 navbarmenu.classList.add('navbar-menu-active-l');
 
                 navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++)
