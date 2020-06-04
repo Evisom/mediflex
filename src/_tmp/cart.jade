@@ -4,45 +4,84 @@
         .cart-code
             .cart-code-r1
                 .cart-code-r1-ico
+                    svg(width='38', height='38', viewBox='0 0 38 38', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M12.4551 25.546L25.546 12.4551', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                        path(fill-rule='evenodd', clip-rule='evenodd', d='M16.5458 14.0913C16.5458 15.4478 15.4462 16.5458 14.0913 16.5458C12.7364 16.5458 11.6367 15.4478 11.6367 14.0913C11.6367 12.7364 12.7364 11.6367 14.0913 11.6367C15.4462 11.6367 16.5458 12.7364 16.5458 14.0913V14.0913Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                        path(fill-rule='evenodd', clip-rule='evenodd', d='M26.3642 23.9096C26.3642 25.2662 25.2645 26.3642 23.9096 26.3642C22.5547 26.3642 21.4551 25.2662 21.4551 23.9096C21.4551 22.5547 22.5547 21.4551 23.9096 21.4551C25.2645 21.4551 26.3642 22.5547 26.3642 23.9096V23.9096Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                        path(fill-rule='evenodd', clip-rule='evenodd', d='M37 19C37 28.9409 28.9425 37 19 37C9.06073 37 1 28.9409 1 19C1 9.05909 9.06073 1 19 1C28.9425 1 37 9.05909 37 19V19Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linejoin='round')
                 .cart-code-r1-text
                     p.cart-code-t1-text-h Промокод
                     p.cart-code-t1-text-p Код, который вы получили в наших рекламных материалах
             .card-code-r2
-                input.card-code-r2-input
-                button.card-code-r2-button
+                input.card-code-r2-input(placeholder="Введите номер")
+                button.card-code-r2-button Применить
 
         .cart-element
             .cart-element-c1
-                img.cart-element-c1-ico
+                img.cart-element-c1-ico(src="./img/img71.png")
             .cart-element-c2
                 .cart-element-c2-name Кислородный концентратор Philips SimplyGo
-                .cart-element-c2-calc
-                    .cart-element-c2-calc-input
-                        .cart-element-c2-calc-input-minus
-                        .cart-element-c2-calc-input-el
-                        .cart-element-c2-calc-input-plus
-                    .cart-element-c2-calc-price 135 000 ₽/шт
-                .cart-element-c2-price
-                    .cart-element-c2-price-discount 150 000 ₽
-                    .cart-element-c2-price-last 160 000 ₽
-            .cart-element-c3
+                .cart-element-c2-r
+                    .cart-element-c2-calc
+                        .cart-element-c2-calc-input
+                            .cart-element-c2-calc-input-minus -
+                            .cart-element-c2-calc-input-el 1
+                            .cart-element-c2-calc-input-plus +
+                        .cart-element-c2-calc-price 135 000 ₽/шт
+                    .cart-element-c2-price
+                         .cart-element-c2-price-discount 150 000 ₽
+                         .cart-element-c2-price-last 160 000 ₽
+                .cart-element-c2-r2 + Добавить необходимый аксессуар
+            .cart-element-remove
+                svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M10 13L10 25H22V13', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    path(d='M19 10L19 7L13 7L13 10', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    path(d='M24 10H8', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    path(d='M14 13L14 21', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                    path(d='M18 13L18 21', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+
 
         p.cart-kit Комплект:
-
-        .cart-subelement
-            .cart-subelement-ico
-            .cart-subelement-name Кислородный концентратор Philips SimplyGo
+        div
+            .cart-subelement
+                img.cart-subelement-ico(src="./img/img71.png")
+                .cart-subelement-name Кислородный концентратор Philips SimplyGo
+            .cart-subelement
+                img.cart-subelement-ico(src="./img/img71.png")
+                .cart-subelement-name Кислородный концентратор Philips SimplyGo
+            .cart-subelement
+                img.cart-subelement-ico(src="./img/img71.png")
+                .cart-subelement-name Кислородный концентратор Philips SimplyGo
 
         .cart-kit-total
-
-            .cart-kit-total-calc
+            .cart-kit-total-wr
                 .cart-kit-total-calc-p Комплектов:
-                .cart-kit-total-calc-minus
-                .cart-kit-total-calc-el
-                .cart-kit-total-calc-plus
+                .cart-kit-total-calc
+                    .cart-kit-total-calc-minus -
+                    .cart-kit-total-calc-el 1
+                    .cart-kit-total-calc-plus +
             .cart-kit-total-price
-                .cart-kit-total-price-discount
-                .cart-kit-total-price-last
+                .cart-kit-total-price-discount 150 000 ₽
+                .cart-kit-total-price-last 160 000 ₽
+        .cart-element
+            .cart-element-c1
+                img.cart-element-c1-ico(src="./img/img71.png")
+            .cart-element-c2
+                .cart-element-c2-name Кислородный концентратор Philips SimplyGo
+                .cart-element-c2-r
+                    .cart-element-c2-calc
+                        .cart-element-c2-calc-input
+                            .cart-element-c2-calc-input-minus -
+                            .cart-element-c2-calc-input-el 1
+                            .cart-element-c2-calc-input-plus +
+                        .cart-element-c2-calc-price 135 000 ₽/шт
+                    .cart-element-c2-price
+                        .cart-element-c2-price-price 160 000 ₽
+                .cart-element-c2-r2 + Добавить необходимый аксессуар
+
+
+
+
 
     .cart-total
         p.cart-total-h Мой заказ
@@ -52,10 +91,12 @@
                 .cart-total-table-r-value 279 150 ₽
             .cart-total-table-r
                 .cart-total-table-r-key Скидка на товары
-                .cart-total-table-r-value -27 050 ₽
+                .cart-total-table-r-value.cart-total-table-r-value-red -27 050 ₽
             .cart-total-table-r
                 .cart-total-table-r-key Доставка
                 .cart-total-table-r-value Бесплатно
-        .cart-total-total Итого
+        .cart-total-total
+            .cart-total-total-h Итого:
+            .cart-total-total-price 252 100 ₽
         button.cart-total-checkout Оформить
         button.cart-total-checkout-manager Оформить с помощью менеджера
