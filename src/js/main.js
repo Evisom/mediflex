@@ -215,9 +215,14 @@ window.onload = function () {
 
 
         function navbarMenuOnHover(index) {
+            console.log(this.id[4], navbarmenuLinks[0].className)
             for (let i = 0; i < navbarmenuSlide.length; i++) {
                 navbarmenuSlide[i].removeAttribute('style')
             }
+            for (let i = 0; i < navbarmenuLinks.length; i++) {
+                navbarmenuLinks[i].className = 'navbar-menu-c1-link'
+            }
+            navbarmenuLinks[(this.id[4])].classList += ' navbar-menu-c1-link-active'
             console.log(this.id[4])
             navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: 9999")
         }
@@ -256,8 +261,15 @@ window.onload = function () {
         }
 
         for (let i = 1; i < navbarr3links.length; i++) {
-            navbarr3links[i].addEventListener("click", navbarMenuOnclick)
+            navbarr3links[i].addEventListener("mouseover", navbarMenuOnclick)
         }
+    }
+
+    navbarmenu.onclick = function () {
+        if (event.target.classList[0] == 'navbar-menu-wrapper')
+            navbarmenu.classList = 'navbar-menu-wrapper'
+        navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+        navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
     }
 
     function navbarMenuTopCLoseHandler() {

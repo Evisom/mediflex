@@ -3,7 +3,7 @@
   padding-left: 315px
   padding-right: 315px
 
-.article-heading
+.article-heading, .article-a > h
   font-weight: bold
   font-size: 52px
   line-height: 100%
@@ -13,13 +13,7 @@
   height: auto
   margin-top: 40px
 
-
-.article-text
-  font-size: 18px
-  line-height: 150%
-  margin-top: 32px
-
-.article-quote
+.article-quote > blockquote, .article-quote
 
   font-weight: bold
   font-size: 32px
@@ -28,14 +22,20 @@
   padding: 56px 200px
   margin: 0 115px
   background: #F9FCFE
+
 .article-quote-wrapper
   width: 100%
 
 .article-quote-wrapper
   margin-top: 32px
 
-.article-text:last-child
+.article-a > p:last-child, .article-text:last-child
   margin-bottom: 50px
+
+.article-a > p, .article-text
+  font-size: 18px
+  line-height: 150%
+  margin-top: 32px
 
 
 @media (max-width: 1260px)
@@ -52,13 +52,13 @@
     padding-right: 25px
     padding-left: 25px
     padding-top: 32px
-  .article-heading
+  .article-heading, .article-a > h
     font-size: 36px
     line-height: 100%
   .article-image
     margin-top: 24px
 
-  .article-text
+  .article-a > p, .article-text
     font-size: 16px
   .article-quote
     margin: 0 10px

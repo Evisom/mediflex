@@ -1,6 +1,6 @@
 .search
     .search-input
-        input.search-input-el(placeholder="Хочу найти", type="text")
+        input.search-input-el(placeholder="Хочу найти", type="text" autofocus)
         .search-input-close
             svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M0.991224 0.994719C1.53865 0.445351 2.4262 0.445351 2.97362 0.994719L30.8956 29.0158C31.443 29.5652 31.443 30.4559 30.8955 31.0053C30.3481 31.5547 29.4606 31.5547 28.9132 31.0053L0.991224 2.98416C0.443801 2.43479 0.443801 1.54409 0.991224 0.994719Z', fill='#D9DADB')
@@ -8,12 +8,12 @@
 
     .search-info
         .search-hints
-            a.search-hint-el Кислородная терапия
-            a.search-hint-el СРАР/BPAP аппараты
-            a.search-hint-el Портативные концентраторы
-            a.search-hint-el Откашливатели и инфузоматы
-            a.search-hint-el Вспомогательная вентиляция легких
-            a.search-hint-el Наполнительные станции и баллоны
+            a.search-hint-el(href="#") Кислородная терапия
+            a.search-hint-el(href="#") СРАР/BPAP аппараты
+            a.search-hint-el(href="#") Портативные концентраторы
+            a.search-hint-el(href="#") Откашливатели и инфузоматы
+            a.search-hint-el(href="#") Вспомогательная вентиляция легких
+            a.search-hint-el(href="#") Наполнительные станции и баллоны
         .search-result
             != partial("item-card")
             != partial("item-card")
