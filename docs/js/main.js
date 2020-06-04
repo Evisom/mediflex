@@ -54,7 +54,7 @@ window.onload = function () {
 
     if (mobileMenuPhoneButton) {
         mobileMenuPhoneButton.onclick = function () { // Поп-ап с телефоном
-            if (phonePopup.classList.length == 1) {
+            if ( phonePopup.classList.length == 1 ) {
                 phonePopup.classList += " hidden__phone-popup-active";
                 phonePopupBlackout.classList += " hidden__phone-popup-active";
                 mobileMenuPhoneButton.classList += " hidden__phone-popup-active";
@@ -69,72 +69,73 @@ window.onload = function () {
     }
 
 
-    $(window).scroll(function () { // Поведение меню при скролле
-        if (document.documentElement.clientWidth > 752) {
-            var st = $(this).scrollTop();
-            if (st > scrollPos || scrollPos < 160) {
-                navbar.className = 'navbar';
-                navbarmenu.classList.remove('navbar-menu-scrollup')
-            } else if (scrollPos > 160) {
-                navbar.className = 'navbar navbar-scrollup';
-                navbarmenu.classList.add('navbar-menu-scrollup');
+
+    $(window).scroll(function(){ // Поведение меню при скролле
+            if (document.documentElement.clientWidth > 752) {
+                var st = $(this).scrollTop();
+                if (st > scrollPos || scrollPos < 160) {
+                    navbar.className = 'navbar';
+                    navbarmenu.classList.remove('navbar-menu-scrollup')
+                } else if (scrollPos > 160 ) {
+                    navbar.className = 'navbar navbar-scrollup';
+                    navbarmenu.classList.add('navbar-menu-scrollup');
+                }
+                scrollPos = st;
             }
-            scrollPos = st;
-        }
-    });
+        });
 
     if (pcategorySliderNext) {
-        pcategorySliderNext.onclick = function () { // Кнопки управления слайдера Популярные категории
+        pcategorySliderNext.onclick = function ( ) { // Кнопки управления слайдера Популярные категории
             pcategorySlider.next();
         }
-        pcategorySliderPrev.onclick = function () {
+        pcategorySliderPrev.onclick = function ( ) {
             pcategorySlider.previous();
         }
     }
 
 
     if (customerChoiceSliderNext) {
-        customerChoiceSliderNext.onclick = function () { // Кнопки управления слайдера Выбор покупателей
+        customerChoiceSliderNext.onclick = function ( ) { // Кнопки управления слайдера Выбор покупателей
             customerChoiceSlider.next();
         }
-        customerChoiceSliderPrev.onclick = function () {
+        customerChoiceSliderPrev.onclick = function ( ) {
             customerChoiceSlider.previous();
         }
     }
 
 
     if (reviewsNext) {
-        reviewsNext.onclick = function () { // Кнопки управления слайдера Отзывы
+        reviewsNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
             reviewsSlider.next();
         }
-        reviewsPrev.onclick = function () {
+        reviewsPrev.onclick = function ( ) {
             reviewsSlider.previous();
         }
     }
 
     if (catalogcategory1Next) {
-        catalogcategory1Next.onclick = function () { // Кнопки управления слайдера каталога
+        catalogcategory1Next.onclick = function ( ) { // Кнопки управления слайдера каталога
             catalogcategory1.next();
         }
-        catalogcategory1Prev.onclick = function () {
+        catalogcategory1Prev.onclick = function ( ) {
             catalogcategory1.previous();
         }
     }
 
     if (catalogcategory2Next) {
-        catalogcategory2Next.onclick = function () { // Кнопки управления слайдера каталога
+        catalogcategory2Next.onclick = function ( ) { // Кнопки управления слайдера каталога
             catalogcategory2.next();
         }
-        catalogcategory2Prev.onclick = function () {
+        catalogcategory2Prev.onclick = function ( ) {
             catalogcategory2.previous();
         }
     }
 
     if (needtoknowPrev) {
-        needtoknowNext.onclick = function () { // Кнопки управления слайдера Нужно знать
+        needtoknowNext.onclick = function ( ) { // Кнопки управления слайдера Нужно знать
             needtoknowSlider.next();
         }
-        needtoknowPrev.onclick = function () {
+        needtoknowPrev.onclick = function ( ) {
             needtoknowSlider.previous();
         }
     }
@@ -291,12 +292,12 @@ window.onload = function () {
     function clickHandler(event) {
         console.log(this.index);
         if (customerChoiceCardCompare[this.index].classList.length == 1) {
-            customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
-            customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
-        } else {
-            customerChoiceCardCompare[this.index].classList = 'customerchoice__slider-element-compare'
-            customerChoiceCardInfo[this.index].classList = 'customerchoice__slider-element__info';
-        }
+                customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
+                customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
+            } else {
+                customerChoiceCardCompare[this.index].classList = 'customerchoice__slider-element-compare'
+                customerChoiceCardInfo[this.index].classList = 'customerchoice__slider-element__info';
+            }
         event.preventDefault();
     }
 
