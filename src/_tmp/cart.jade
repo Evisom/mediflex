@@ -83,20 +83,4 @@
 
 
 
-    .cart-total
-        p.cart-total-h Мой заказ
-        .cart-total-table
-            .cart-total-table-r
-                .cart-total-table-r-key Товары (5)
-                .cart-total-table-r-value 279 150 ₽
-            .cart-total-table-r
-                .cart-total-table-r-key Скидка на товары
-                .cart-total-table-r-value.cart-total-table-r-value-red -27 050 ₽
-            .cart-total-table-r
-                .cart-total-table-r-key Доставка
-                .cart-total-table-r-value Бесплатно
-        .cart-total-total
-            .cart-total-total-h Итого:
-            .cart-total-total-price 252 100 ₽
-        button.cart-total-checkout Оформить
-        button.cart-total-checkout-manager Оформить с помощью менеджера
+    != partial("cart-total")

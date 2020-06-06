@@ -1,0 +1,271 @@
+.checkout-wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding: 24px 115px 250px 115px
+  align-items: center
+  background: rgb(249,252,254)
+.checkout-back
+  font-size: 14px
+  line-height: 150%
+  color: #828282
+  display: flex
+  align-items: center
+  text-decoration: none
+.checkout-back > svg
+  margin-right: 7px
+  margin-bottom: 2px
+
+.checkout-h
+  margin-top: 27px
+  font-weight: bold
+  font-size: 36px
+  line-height: 100%
+  margin-bottom: 56px
+
+.checkout-stage-h
+  font-weight: bold
+  font-size: 24px
+  line-height: 110%
+
+.checkout-stage-fraction
+  color: #828282
+  margin-right: 7px
+
+.checkout-stage-p
+  font-size: 18px
+  line-height: 130%
+  margin-top: 2px
+  color: #929497
+
+.checkout-stage-container
+  margin-top: 15px
+  background: #FFFFFF
+  border: 1px solid #D9DADB
+  border-radius: 4px
+  margin-bottom: 48px
+
+.checkout
+  width: 58.1%
+
+.checkout-stage-button-active
+  background: #4FBBEB !important
+
+
+
+.checkout-stage-container-inputs
+  display: flex
+  flex-direction: column
+
+.checkout-stage-container-main
+  padding: 32px 42px
+
+.checkout-stage-container-inputs-c-input
+  padding-top: 4px
+  height: 50px
+  background: #FAFAFA
+  border: 1px solid #D9DADB
+  border-radius: 4px
+  width: 100%
+  outline: none
+  padding-left: 5%
+
+
+.checkout-stage-container-inputs-c-input::placeholder
+  font-size: 18px
+  line-height: 130%
+
+.checkout-stage-container-inputs-c-einput
+  height: 54px
+  width: 100%
+  background: #FAFAFA
+  border: 1px solid #D9DADB
+  border-radius: 4px
+  display: flex
+  flex-direction: column
+  margin-top: 24px
+  padding-left: 5%
+.checkout-stage-container-inputs-c-einput-el
+  margin-top: 2px
+  outline: none
+  height: 19px
+  background: #FAFAFA
+.checkout-stage-container-inputs-c-einput-p
+  margin-top: 5px
+  font-size: 12px
+  line-height: 150%
+  color: #86888B
+
+#checkoutPhone
+  font-size: 18px
+  line-height: 130%
+  color: #86888B
+
+.checkout-stage-container-inputs-c-einput-el[type="phone"] , .checkout-stage-container-inputs-c-einput-el[type="mail"] , .checkout-stage-container-inputs-c-input
+  font-size: 18px
+  line-height: 130%
+  color: black !important
+
+.checkout-stage-container-inputs-p
+  margin-top: 8px
+  font-size: 14px
+  line-height: 150%
+  color: #828282
+
+.checkout-stage-button
+  width: 65%
+  height: 48px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: bold
+  color: white
+  margin-top: 18px
+  font-size: 16px
+  line-height: 24px
+  background: #D9DADB
+  outline: none
+
+.checkout-stage-checkbox
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-top: 24px
+  align-items: center
+
+.checkout-stage-checkbox-el
+  width: 24px !important
+  height: 24px !important
+  border: 2px solid #DEDFE0
+  box-sizing: border-box
+  border-radius: 4px
+  appearance: none
+  outline: none
+
+.checkout-stage-checkbox-el:checked
+  background: url("./../img/checkbox.svg")
+  background-position: center center
+  background-repeat: no-repeat
+
+
+.checkout-stage-checkbox-p
+  font-size: 14px
+  margin-left: 13px
+  line-height: 150%
+  margin-top: 3px
+
+.checkout-stage-container-inputs-r > div
+  width: 48%
+
+.checkout-stage-container-inputs-r > div > input
+  width: 95%
+
+.checkout-stage-container-inputs-r > div > div
+  width: 95%
+
+.checkout-stage-container-inputs-r
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 100%
+
+.checkout-stage-container.checkout-hidden
+  display: none
+
+.checkout-stage-container-hidden
+  display: none
+
+.checkout-stage-container-hidden.checkout-hidden-active
+  display: flex !important
+  flex-direction: row
+  background: #FFFFFF
+  height: 45px
+  width: 85%
+  border: 1px solid #D9DADB
+  border-radius: 4px
+  padding: 24px 42px
+  justify-content: space-between
+  margin-top: 15px
+  margin-bottom: 48px
+
+#checkoutPhone
+  font-size: 18px
+  line-height: 130%
+  color: black
+.checkout-stage-container-hidden-c1-customer > span:first-child
+  color: #929497
+  margin-right: 5px
+
+.checkout-stage-container-hidden-c1
+  width: 70%
+
+.checkout-stage-container-hidden-c2-edit
+  color: #0094D9
+  font-size: 16px
+  line-height: 150%
+  text-decoration: none
+
+@media (max-width: 1280px)
+  .checkout-stage-container-main
+    padding: 16px 16px!important
+  .checkout-stage-container-inputs
+    grid-column-gap: 8px
+  .checkout-stage-container-inputs-c:first-child
+    //margin-left: 8px
+  .checkout-stage-container-inputs-c:last-child
+    width: 95%
+  .checkout-wrapper
+    padding: 24px 50px 250px 50px
+  .checkout-stage-checkbox-p
+    width: 90%
+
+@media (max-width: 1024px)
+  .checkout-stage-container-inputs-r
+    flex-direction: column
+  .checkout-stage-container-inputs-r > div
+    width: 100%
+  .checkout-stage-container-inputs-r > div > input:last-child
+    margin-top: 12px
+  .checkout
+    width: 61%
+  .checkout-wrapper
+    padding: 24px 25px 250px 25px
+  .checkout-stage-button
+    width: 100%
+  .checkout-stage-container-inputs-p
+    margin-bottom: 5px
+
+  .checkout-stage-container-inputs-c-einput
+    margin-top: 12px
+
+  .checkout-stage-checkbox
+    align-items: normal
+
+@media (max-width: 768px)
+  .checkout-wrapper
+    flex-direction: column
+  .checkout
+    width: 100%
+  .checkout-wrapper
+    padding: 16px 8px 8px 8px
+  .checkout-stage-h
+    font-size: 18px
+  .checkout-h
+    font-size: 24px
+    margin-bottom: 32px
+    margin-top: 14px
+  .checkout-stage-p
+    font-size: 16px
+  .checkout-stage-container-inputs-p
+    width: 105%
+  .checkout-stage-container-hidden-c1-customer > span
+    font-size: 18px
+  .checkout-stage-container-hidden.checkout-hidden-active
+    width: 90%
+    padding: 24px 17px
+    flex-direction: column
+    height: 150px
+  .checkout-stage-container-hidden-c2-edit
+    margin-top: 16px
+    margin-bottom: 24px
+

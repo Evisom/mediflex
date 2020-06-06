@@ -1,0 +1,95 @@
+script.
+    function checkout () {
+        const info  = [
+            document.getElementsByClassName("checkout-stage-container-inputs-c-input")[0].value,
+            document.getElementsByClassName("checkout-stage-container-inputs-c-einput-el")[0].value,
+            document.getElementsByClassName("checkout-stage-container-inputs-c-input")[1].value,
+            document.getElementsByClassName("checkout-stage-container-inputs-c-einput-el")[1].value
+        ]
+
+        console.log(info[0] , info[1] , info[2], info[3])
+        for(let i = 0 ; i < info.length ; i ++ ) {
+            if (info[i] == '' || info[i] == undefined) {
+                return
+            }
+        }
+        document.getElementById("checkoutButton").className = 'checkout-stage-button checkout-stage-button-active'
+        return info
+    }
+
+    window.onload = function () {
+
+        const checkoutButton = document.getElementById("checkoutButton")
+        checkoutButton.onclick = function () {
+            let info = checkout()
+            document.getElementById("checkoutCustomer").innerHTML = (info[0] + ' ' + info[2] + ',')
+            document.getElementById("checkoutPhone").innerHTML = (info[1])
+            document.getElementById('checkoutHidden').classList = 'checkout-stage-container-hidden checkout-hidden-active'
+            document.getElementById('checkoutStage').classList = 'checkout-stage-container checkout-hidden'
+        }
+    }
+
+
+
+
+
+.checkout-wrapper
+    .checkout
+        a.checkout-back(href="#")
+            svg(width='7', height='12', viewBox='0 0 7 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M5.24264 10.7426L1 6L5.24264 1.25735', stroke='#828282', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+            | Вернуться в корзину
+        .checkout-h Оформление заказа
+        .checkout-stage
+            .checkout-stage-h
+                span.checkout-stage-fraction 1/3
+                | Получатель
+            .checkout-stage-p
+                | На кого оформляется заказ
+            .checkout-stage-container#checkoutStage
+                form.checkout-stage-container-main
+                    .checkout-stage-container-inputs
+                        .checkout-stage-container-inputs-r
+                            div
+                                input.checkout-stage-container-inputs-c-input(placeholder="Имя*" required onkeyup="checkout();")
+                            div
+                                input.checkout-stage-container-inputs-c-input(placeholder="Фамилия" required onkeyup="checkout();")
+
+                        .checkout-stage-container-inputs-r
+                            div
+                                .checkout-stage-container-inputs-c-einput
+                                    .checkout-stage-container-inputs-c-einput-p Номер телефона
+                                    input.checkout-stage-container-inputs-c-einput-el(type="phone" placeholder="+7" onkeyup="checkout();")
+                                .checkout-stage-container-inputs-p Для получения скидки плстоянным клиентам
+                            div
+                                .checkout-stage-container-inputs-c-einput
+                                    .checkout-stage-container-inputs-c-einput-p Почта
+                                    input.checkout-stage-container-inputs-c-einput-el#checkoutMail(type="mail" onkeyup="checkout();")
+                                .checkout-stage-container-inputs-p Пришлем информаицю о статусе заказа
+                    button.checkout-stage-button(type="submit" onkeyup="checkout();")#checkoutButton Продолжить
+                    .checkout-stage-checkbox
+                        input.checkout-stage-checkbox-el(type="checkbox")
+                        p.checkout-stage-checkbox-p Скидка 15% на последующие покупки, за подписку на новости о новинках.
+
+            .checkout-stage-container-hidden#checkoutHidden
+                .checkout-stage-container-hidden-c1
+                     .checkout-stage-container-hidden-c1-customer
+                         span Получатель:
+                         span#checkoutCustomer Текст
+                     .checkout-stage-container-hidden-c1-phone
+                         span#checkoutPhone
+                .checkout-stage-container-hidden-c2
+                    a.checkout-stage-container-hidden-c2-edit(href="#") Изменить
+
+        .checkout-stage
+            .checkout-stage-h
+                span.checkout-stage-fraction 2/3
+                | Адрес и доставка
+            .checkout-stage-p
+                | На кого оформляется заказ
+
+
+
+
+
+    != partial("cart-total")
