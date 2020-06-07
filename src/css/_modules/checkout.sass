@@ -3,8 +3,11 @@
   flex-direction: row
   justify-content: space-between
   padding: 24px 115px 250px 115px
-  align-items: center
+  align-items: end
   background: rgb(249,252,254)
+
+.checkout-wrapper >  .cart-total
+  margin-top: 145px
 .checkout-back
   font-size: 14px
   line-height: 150%
@@ -15,6 +18,9 @@
 .checkout-back > svg
   margin-right: 7px
   margin-bottom: 2px
+
+.checkout-stage-container-hidden.checkout-hidden-active
+  width: calc(100% - 84px) !important
 
 .checkout-h
   margin-top: 27px
@@ -205,6 +211,118 @@
   line-height: 150%
   text-decoration: none
 
+.checkokut-stage-container
+  display: flex
+  flex-direction: column
+  align-items: baseline
+  background: #FFFFFF
+  border: 1px solid #D9DADB
+  border-radius: 4px
+  padding: 24px 42px
+  width: calc(100%-84px) !important
+.checkout-stage-containerii-hidden
+  display: flex
+  flex-direction: row
+
+.checkout-stage-container-hidden-ico
+  margin-right: 22px
+  display: flex
+  align-items: center
+
+.checkout-stage-container-hidden-text-h
+  margin-bottom: 4px
+  font-weight: bold
+  font-size: 20px
+  line-height: 130%
+
+.checkout-stage-container-hidden-text-p
+  font-size: 18px
+  line-height: 130%
+
+.checkout-stage-container-hidden-text-p > span :first-child
+  color: #929497
+  margin-right: 5px
+
+.checkout-stage-container-hidden-text-p > span :last-child
+  color: black
+
+.checkout-stage-container-ii-info
+  display: flex
+  flex-direction: row
+  margin-top: 28px
+  justify-content: space-between
+
+
+.checkout-stage-container-ii-info-text
+  display: flex
+  flex-direction: column
+  width: 60%
+  flex-grow: 6
+.checkout-stage-container-ii-info-text-p
+  margin-top: 10px
+  font-size: 18px
+  line-height: 130%
+
+.checkout-stage-container-ii-info-map
+  flex-grow: 4
+  display: flex
+  justify-content: flex-end
+
+.checkout-stage-container-ii-info-text-p:first-child
+  margin-top: 0
+
+
+.checkout-stage-container-ii-info-text-p > span:first-child
+  color: #929497
+  margin-right: 5px
+
+.checkout-stage-container-ii-info-map-el
+  width: 188px
+  height: 188px
+  background: antiquewhite
+  position: relative
+
+.checkout-stage-container-ii-info-map-el-close
+  width: 32px
+  height: 32px
+  background: white
+  position: absolute
+  top: 7px
+  right: 7px
+
+.checkout-stage-container-ii-info-button
+  width: 100%
+  height: 48px
+  background: #4FBBEB
+  border-radius: 4px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: bold
+  font-size: 16px
+  line-height: 24px
+  color: white
+  margin-top: 80px
+
+.checkokut-stage-container:first-child
+  margin-top: 16px
+.checkokut-stage-container
+  margin-top: 8px
+
+.checkout-stage-container-ii
+  display: block
+.checkout-stage2-hidden > .checkout-stage-container-ii
+  display: none !important
+.checkout-stage2-hidden >.checkout-stage-h, .checkout-stage2-hidden >  .checkout-stage-p
+  color: #828282
+
+.checkout-stage-info-hidden
+  display: none
+
+.checkout-stage-container-hidden > .checkout-stage-container-ii-info
+  display: none
+
+
 @media (max-width: 1280px)
   .checkout-stage-container-main
     padding: 16px 16px!important
@@ -268,4 +386,28 @@
   .checkout-stage-container-hidden-c2-edit
     margin-top: 16px
     margin-bottom: 24px
-
+  .checkout-stage-container-ii-info
+    flex-direction: column
+    position: relative
+  .checkout-stage-container-ii-info-text
+    width: 100%
+  .checkout-stage-container-ii-info-map
+    margin-top: 32px
+    height: 234px
+    width: 100%
+    justify-content: center
+    margin-bottom: 75px
+  .checkout-stage-container-ii-info-map-el
+    height: 100%
+    width: 100%
+  .checkout-stage-container-ii-info-button
+    position: absolute
+    bottom: 0px
+  .checkokut-stage-container
+    position: relative
+  .checkokut-stage-container
+    padding: 24px 16px
+  .checkout-wrapper >  .cart-total
+    margin-top: 40px
+  .checkout-h, .checkout-stage-h, .checkout-stage-p
+    margin-left: 16px

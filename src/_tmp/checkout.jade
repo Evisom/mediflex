@@ -20,13 +20,22 @@ script.
     window.onload = function () {
 
         const checkoutButton = document.getElementById("checkoutButton")
+        const checkoutStage2 = document.getElementById("checkoutStage2")
+
         checkoutButton.onclick = function () {
             let info = checkout()
             document.getElementById("checkoutCustomer").innerHTML = (info[0] + ' ' + info[2] + ',')
             document.getElementById("checkoutPhone").innerHTML = (info[1])
             document.getElementById('checkoutHidden').classList = 'checkout-stage-container-hidden checkout-hidden-active'
             document.getElementById('checkoutStage').classList = 'checkout-stage-container checkout-hidden'
+            $(checkoutStage2).removeClass('checkout-stage2-hidden');
         }
+        const stageContainer = document.getElementById("checkoutStageContainer")
+        stageContainer.onclick = function () {
+            $("#checkoutStageContainer").removeClass("checkout-stage-container-hidden")
+        }
+
+
     }
 
 
@@ -81,13 +90,76 @@ script.
                 .checkout-stage-container-hidden-c2
                     a.checkout-stage-container-hidden-c2-edit(href="#") Изменить
 
-        .checkout-stage
+        .checkout-stage#checkoutStage2
+                //checkout-stage2-hidden
             .checkout-stage-h
                 span.checkout-stage-fraction 2/3
                 | Адрес и доставка
             .checkout-stage-p
                 | На кого оформляется заказ
+            .checkout-stage-container-ii
+                .checkokut-stage-container.checkout-stage-container-hidden#checkoutStageContainer
+                    .checkout-stage-containerii-hidden
+                        .checkout-stage-container-hidden-ico
+                            svg(width='38', height='37', viewBox='0 0 38 37', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M25.3354 19.3398L17.4326 28.3931L13.5195 24.48', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(fill-rule='evenodd', clip-rule='evenodd', d='M1 35.4353H37V11.957H1V35.4353Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(fill-rule='evenodd', clip-rule='evenodd', d='M26.042 8.04348C26.042 4.15391 22.8866 1 18.9986 1C15.1074 1 11.9551 4.15391 11.9551 8.04348V11.9565H26.042V8.04348V8.04348Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M29.1621 8.80078L33.6731 8.82582L36.9992 11.9563', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M15.0762 8.80078H22.9023', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M1 11.9563L4.52174 8.82582L8.81513 8.80078', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                        .checkout-stage-container-hidden-text
+                            .checkout-stage-container-hidden-text-h Самовывоз
+                            .checkout-stage-container-hidden-text-p
+                                span Можно забрать:
+                                span сегодня с 12:00, бесплатно
+                    .checkout-stage-container-ii-info
+                        .checkout-stage-container-ii-info-text
+                            .checkout-stage-container-ii-info-text-p
+                                span Адрес:
+                                span г. Москва, Смоленский бульвар,  д. 24, стр. 2, подьезд №3, офис «Медика Трейд»
+                            .checkout-stage-container-ii-info-text-p
+                                span Готов к выдаче:
+                                spam сегодня, 18 июня, 12:00-20:00
+                            .checkout-stage-container-ii-info-text-p
+                                span Стоимость:
+                                span Бесплатно
+                            .checkout-stage-container-ii-info-button Выбрать этот способ
 
+                        .checkout-stage-container-ii-info-map
+                            .checkout-stage-container-ii-info-map-el
+                                .checkout-stage-container-ii-info-map-el-close
+                                    svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                        rect(width='32', height='32', fill='white')
+                                        path(d='M14.5882 23.9984H8V17.4102', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                        path(d='M24.0003 14.5882V8H17.4121', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                        path(d='M8 24L24 8', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+
+
+
+
+                .checkokut-stage-container.checkout-stage-container-hidden
+                    .checkout-stage-containerii-hidden
+                        .checkout-stage-container-hidden-ico
+                            svg(width='38', height='27', viewBox='0 0 38 27', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M22.9141 7.26172H31.97L37.001 15.3114V21.3487H32.3054', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M11.7735 21.3478H22.913L22.8912 1H1', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M1 21.3477H5.69565', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(fill-rule='evenodd', clip-rule='evenodd', d='M32.3058 22.9117C32.3058 24.6397 30.9054 26.0421 29.1754 26.0421C27.4474 26.0421 26.0449 24.6397 26.0449 22.9117C26.0449 21.1816 27.4474 19.7812 29.1754 19.7812C30.9054 19.7812 32.3058 21.1816 32.3058 22.9117V22.9117Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(fill-rule='evenodd', clip-rule='evenodd', d='M11.9581 22.9117C11.9581 24.6397 10.5578 26.0421 8.8277 26.0421C7.0997 26.0421 5.69727 24.6397 5.69727 22.9117C5.69727 21.1816 7.0997 19.7812 8.8277 19.7812C10.5578 19.7812 11.9581 21.1816 11.9581 22.9117V22.9117Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M37.001 15.0859H22.9141', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M22.9141 21.3477H26.0445', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M1 5.80078L5.8 5.80678', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M3.40039 10.6016L5.80039 10.6076', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M4.59961 15.4023L5.79961 15.4083', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+
+                        .checkout-stage-container-hidden-text
+                            .checkout-stage-container-hidden-text-h Курьерская доставка
+                            .checkout-stage-container-hidden-text-p
+                                span Бесплатно от 20 000 ₽
+                                span
+
+                    .checkout-stage-container-ii-info
 
 
 
