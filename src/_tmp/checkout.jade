@@ -1,40 +1,95 @@
 script.
-    function checkout () {
+    function checkout1 () {
         const info  = [
             document.getElementsByClassName("checkout-stage-container-inputs-c-input")[0].value,
             document.getElementsByClassName("checkout-stage-container-inputs-c-einput-el")[0].value,
             document.getElementsByClassName("checkout-stage-container-inputs-c-input")[1].value,
-            document.getElementsByClassName("checkout-stage-container-inputs-c-einput-el")[1].value
+            document.getElementsByClassName("checkout-ainput-el")[0].value
         ]
 
-        console.log(info[0] , info[1] , info[2], info[3])
+        console.log(info)
         for(let i = 0 ; i < info.length ; i ++ ) {
             if (info[i] == '' || info[i] == undefined) {
                 return
             }
         }
-        document.getElementById("checkoutButton").className = 'checkout-stage-button checkout-stage-button-active'
+        document.getElementById("checkoutButton1").className = 'checkout-stage-button checkout-stage-button-active'
         return info
+    }
+
+    function checkout2 () {
+        const info = [
+            document.getElementById("checkoutDeliveryIndex").value,
+            document.getElementById("checkoutDeliveryTown").value,
+            document.getElementById("checkoutDeliveryStreet").value,
+            document.getElementById("checkoutDeliveryHouse").value,
+            document.getElementById("checkoutDeliveryApart").value,
+            document.getElementById("checkoutDeliveryComment").value
+        ]
+        console.log(info)
+        for (let i = 0; i < info.length; i++) {
+            if (info[i] == '' || info[i] == undefined) {
+                return
+            }
+        }
+        document.getElementById("checkoutButton2").className = 'checkout-stage-button checkout-stage-button-active'
+        return info
+
     }
 
     window.onload = function () {
 
-        const checkoutButton = document.getElementById("checkoutButton")
+        const checkoutButton = document.getElementById("checkoutButton1")
+        const checkoutButton2 = document.getElementById("checkoutButton2")
         const checkoutStage2 = document.getElementById("checkoutStage2")
+        const checkoutStage3 = document.getElementById("checkoutStage3")
+        const deliveryInfod = document.getElementById("deliveryInfod")
+        const deliveryInfo = document.getElementById("deliveryInfo")
 
         checkoutButton.onclick = function () {
-            let info = checkout()
+            let info = checkout1()
             document.getElementById("checkoutCustomer").innerHTML = (info[0] + ' ' + info[2] + ',')
             document.getElementById("checkoutPhone").innerHTML = (info[1])
             document.getElementById('checkoutHidden').classList = 'checkout-stage-container-hidden checkout-hidden-active'
             document.getElementById('checkoutStage').classList = 'checkout-stage-container checkout-hidden'
             $(checkoutStage2).removeClass('checkout-stage2-hidden');
         }
-        const stageContainer = document.getElementById("checkoutStageContainer")
+        let stageContainer = document.getElementById("checkoutStageContainer")
+        const stageContainer2 = document.getElementById("checkoutStageContainer2")
+        const stageMapButton = document.getElementById("checkoutStageMapButton")
+        const checkoutAdress = document.getElementById("checkoutAdress")
         stageContainer.onclick = function () {
-            $("#checkoutStageContainer").removeClass("checkout-stage-container-hidden")
+            if (event.target.classList[0] != "checkout-stage-container-ii-info-button") {
+                $("#checkoutStageContainer").removeClass("checkout-stage-container-hidden")
+                stageContainer2.setAttribute("style", "display: none");
+            }
+        }
+        stageMapButton.onclick = function () {
+            stageContainer.setAttribute("class",  "checkokut-stage-container checkout-stage-container-hidden")
+            $(checkoutStage3).removeClass('checkout-stage3-hidden');
+
+        }
+        stageContainer2.onclick = function () {
+            if (event.target.classList[0] != "checkout-stage-button")
+                $("#checkoutStageContainer2").removeClass("checkout-stage-container-hidden")
         }
 
+
+        checkoutButton2.onclick = function () {
+            let info = checkout2()
+            console.log(info)
+            $(checkoutStage2).removeClass('checkout-stage-container-hidden');
+            stageContainer.setAttribute("style" , "display: none");
+            if (document.documentElement.clientWidth < 752) {
+                deliveryInfod.setAttribute("style" , "display: block; margin-bottom: 100px");
+            }
+            checkoutAdress.innerHTML = info[0] + ', ' + info[1] + ', ' + info[2] + ', ' + info[3] + ', ' + info[4]
+            deliveryInfod.setAttribute("style" , "display: none");
+            deliveryInfo.className = 'checkout-stage-container-info'
+            stageContainer2.className = 'checkokut-stage-container checkout-stage-container-hidden'
+            $(checkoutStage3).removeClass('checkout-stage3-hidden');
+
+        }
 
     }
 
@@ -60,22 +115,25 @@ script.
                     .checkout-stage-container-inputs
                         .checkout-stage-container-inputs-r
                             div
-                                input.checkout-stage-container-inputs-c-input(placeholder="Имя*" required onkeyup="checkout();")
+                                input.checkout-stage-container-inputs-c-input(placeholder="Имя*" required onkeyup="checkout1();")
                             div
-                                input.checkout-stage-container-inputs-c-input(placeholder="Фамилия" required onkeyup="checkout();")
+                                input.checkout-stage-container-inputs-c-input(placeholder="Фамилия" required onkeyup="checkout1();")
 
                         .checkout-stage-container-inputs-r
                             div
-                                .checkout-stage-container-inputs-c-einput
-                                    .checkout-stage-container-inputs-c-einput-p Номер телефона
-                                    input.checkout-stage-container-inputs-c-einput-el(type="phone" placeholder="+7" onkeyup="checkout();")
-                                .checkout-stage-container-inputs-p Для получения скидки плстоянным клиентам
+                                    .checkout-stage-container-inputs-c-einput
+                                        .checkout-stage-container-inputs-c-einput-p Номер телефона
+                                        input.checkout-stage-container-inputs-c-einput-el(placeholder="+7" , required type="phone" onkeyup="checkout1();")
+
+                                    .checkout-stage-container-inputs-p Для получения скидки плстоянным клиентам
                             div
-                                .checkout-stage-container-inputs-c-einput
-                                    .checkout-stage-container-inputs-c-einput-p Почта
-                                    input.checkout-stage-container-inputs-c-einput-el#checkoutMail(type="mail" onkeyup="checkout();")
+
+
+                                .checkout-ainput-container
+                                    input.checkout-ainput-el(type='text', required onkeyup="checkout1();")
+                                    label.checkout-ainput-label Почта
                                 .checkout-stage-container-inputs-p Пришлем информаицю о статусе заказа
-                    button.checkout-stage-button(type="submit" onkeyup="checkout();")#checkoutButton Продолжить
+                    button.checkout-stage-button(type="submit" onkeyup="checkout()1;")#checkoutButton1 Продолжить
                     .checkout-stage-checkbox
                         input.checkout-stage-checkbox-el(type="checkbox")
                         p.checkout-stage-checkbox-p Скидка 15% на последующие покупки, за подписку на новости о новинках.
@@ -90,8 +148,7 @@ script.
                 .checkout-stage-container-hidden-c2
                     a.checkout-stage-container-hidden-c2-edit(href="#") Изменить
 
-        .checkout-stage#checkoutStage2
-                //checkout-stage2-hidden
+        .checkout-stage#checkoutStage2.checkout-stage2-hidden
             .checkout-stage-h
                 span.checkout-stage-fraction 2/3
                 | Адрес и доставка
@@ -124,7 +181,7 @@ script.
                             .checkout-stage-container-ii-info-text-p
                                 span Стоимость:
                                 span Бесплатно
-                            .checkout-stage-container-ii-info-button Выбрать этот способ
+                            .checkout-stage-container-ii-info-button#checkoutStageMapButton Выбрать этот способ
 
                         .checkout-stage-container-ii-info-map
                             .checkout-stage-container-ii-info-map-el
@@ -138,9 +195,9 @@ script.
 
 
 
-                .checkokut-stage-container.checkout-stage-container-hidden
-                    .checkout-stage-containerii-hidden
-                        .checkout-stage-container-hidden-ico
+                .checkokut-stage-container.checkout-stage-container-hidden#checkoutStageContainer2
+                    .checkout-stage-containerii-hidden.checkout-stage-containerii-hidden2
+                        .checkout-stage-container-hidden-ico#checkoutTruckico
                             svg(width='38', height='27', viewBox='0 0 38 27', fill='none', xmlns='http://www.w3.org/2000/svg')
                                 path(d='M22.9141 7.26172H31.97L37.001 15.3114V21.3487H32.3054', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
                                 path(d='M11.7735 21.3478H22.913L22.8912 1H1', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
@@ -154,12 +211,89 @@ script.
                                 path(d='M4.59961 15.4023L5.79961 15.4083', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
 
                         .checkout-stage-container-hidden-text
+                            .checkout-stage-container-ii-edit Изменить
                             .checkout-stage-container-hidden-text-h Курьерская доставка
-                            .checkout-stage-container-hidden-text-p
+                            .checkout-stage-container-hidden-text-p#deliveryInfod
                                 span Бесплатно от 20 000 ₽
                                 span
+                            .checkout-stage-container-info.checkout-stage-container-info-hidden#deliveryInfo
+                                .container-info-r
+                                    span.container-info-hidden-keys Служба доставки:
+                                    span.container-info-hidden-val DPD
+                                .container-info-r
+                                    span.container-info-hidden-keys Адрес:
+                                    span.container-info-hidden-val#checkoutAdress
+                                .container-info-r
+                                    span.container-info-hidden-keys Доставим:
+                                    span.container-info-hidden-val 18 августа
+                                .container-info-r
+                                    span.container-info-hidden-keys Стоимость:
+                                    span.container-info-hidden-val 3000₽
 
-                    .checkout-stage-container-ii-info
+                    .checkout-stage-container-ii-info-i
+                        .checkout-stage-container-ii-info-r-p Адрес доставки
+                        .checkout-stage-container-ii-info-i-r.checkout-stage-container-ii-info-i-ai
+                            .checkout-stage-container-ii-info-i-r-inpt#checkoutDeliveryIndexInpt
+                                .checkout-ainput-container
+                                    input.checkout-ainput-el(type='text', required='' onkeyup="checkout2();")#checkoutDeliveryIndex
+                                    label.checkout-ainput-label Индекс
+                            .checkout-stage-container-ii-info-i-r-inpt#checkoutDeliveryTownInpt
+                                .checkout-ainput-container
+                                    input.checkout-ainput-el(type='text', required='' onkeyup="checkout2();")#checkoutDeliveryTown
+                                    label.checkout-ainput-label Населенный пункт
+                        .checkout-stage-container-ii-info-i-r
+                            .checkout-stage-container-ii-info-i-r-inpt#checkoutDeliveryStreetInpt
+                                .checkout-ainput-container
+                                    input.checkout-ainput-el(type='text', required='' onkeyup="checkout2();")#checkoutDeliveryStreet
+                                    label.checkout-ainput-label Улица
+                            .checkout-stage-container-ii-info-i-rad
+                                .checkout-stage-container-ii-info-i-r-inpt#checkoutDeliveryHouseInpt
+                                    .checkout-ainput-container
+                                        input.checkout-ainput-el(type='text', required='' onkeyup="checkout2();")#checkoutDeliveryHouse
+                                        label.checkout-ainput-label Дом
+                                .checkout-stage-container-ii-info-i-r-inpt#checkoutDeliveryApartInpt
+                                    .checkout-ainput-container
+                                        input.checkout-ainput-el(type='text', required='' onkeyup="checkout2();")#checkoutDeliveryApart
+                                        label.checkout-ainput-label Квартира
+                        .checkout-stage-container-ii-info-i-r
+                            .checkout-stage-container-ii-info-i-r-inpt#checkoutDeliveryCommentInpt
+                                .checkout-ainput-container
+                                    input.checkout-ainput-el(type='text', required='' onkeyup="checkout2();")#checkoutDeliveryComment
+                                    label.checkout-ainput-label Комментарий для курьера
+                        .checkout-stage-container-ii-info-i-r
+                            button.checkout-stage-button(type="submit" onkeyup="checkout2();")#checkoutButton2 Продолжить
+
+
+
+
+        .checkout-stage#checkoutStage3.checkout-stage3-hidden
+
+            .checkout-stage-h
+                span.checkout-stage-fraction 3/3
+                | Оплата заказа
+            .checkout-stage-p
+                | Бонусы, сертификаты, промокоды
+            .cart-code
+                .cart-code-r1
+                    .cart-code-r1-ico
+                        svg(width='38', height='38', viewBox='0 0 38 38', fill='none', xmlns='http://www.w3.org/2000/svg')
+                            path(d='M12.4551 25.546L25.546 12.4551', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                            path(fill-rule='evenodd', clip-rule='evenodd', d='M16.5458 14.0913C16.5458 15.4478 15.4462 16.5458 14.0913 16.5458C12.7364 16.5458 11.6367 15.4478 11.6367 14.0913C11.6367 12.7364 12.7364 11.6367 14.0913 11.6367C15.4462 11.6367 16.5458 12.7364 16.5458 14.0913V14.0913Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                            path(fill-rule='evenodd', clip-rule='evenodd', d='M26.3642 23.9096C26.3642 25.2662 25.2645 26.3642 23.9096 26.3642C22.5547 26.3642 21.4551 25.2662 21.4551 23.9096C21.4551 22.5547 22.5547 21.4551 23.9096 21.4551C25.2645 21.4551 26.3642 22.5547 26.3642 23.9096V23.9096Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                            path(fill-rule='evenodd', clip-rule='evenodd', d='M37 19C37 28.9409 28.9425 37 19 37C9.06073 37 1 28.9409 1 19C1 9.05909 9.06073 1 19 1C28.9425 1 37 9.05909 37 19V19Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linejoin='round')
+                    .cart-code-r1-text
+                        p.cart-code-t1-text-h Промокод
+                        p.cart-code-t1-text-p Код, который вы получили в наших рекламных материалах
+                .card-code-r2
+                    input.card-code-r2-input(placeholder="Введите номер")
+                    button.card-code-r2-button Применить
+            .checkout-stage-checkbox#checkoutFinal
+                input.checkout-stage-checkbox-el(type="checkbox")
+                p.checkout-stage-checkbox-p Согласен с
+                    span условиями заказа и доставки
+                    | в этом магазине.
+            button.checkout-stage-button.checkout-stage-button-active(type="submit")#checkoutButtonFinal Заказать
+
 
 
 

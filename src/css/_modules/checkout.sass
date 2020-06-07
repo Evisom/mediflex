@@ -81,6 +81,26 @@
   font-size: 18px
   line-height: 130%
 
+.checkout-ainput-container
+  position: relative
+  background: #FAFAFA
+  border: 1px solid #D9DADB
+  box-sizing: border-box
+  border-radius: 4px
+  margin-top: 24px
+  width: 100% !important
+  height: 56px
+
+.checkout-ainput-el
+  width: 100%
+  height: 39px
+  padding-left: 16px
+  padding-top: 15px
+  outline: none
+  width: calc(100% - 30px)
+  background: #FAFAFA
+
+
 .checkout-stage-container-inputs-c-einput
   height: 54px
   width: 100%
@@ -102,15 +122,38 @@
   line-height: 150%
   color: #86888B
 
+.checkout-stage-container-inputs-c-einput-el[type="phone"] , .checkout-stage-container-inputs-c-einput-el[type="mail"] , .checkout-stage-container-inputs-c-input, input.checkout-ainput-el
+  font-size: 18px
+  line-height: 130%
+  color: black !important
+
+
+.checkout-ainput-el
+  &:focus ~ .checkout-ainput-label, &:not(:focus):valid ~  .checkout-ainput-label
+    top: 3px
+    font-size: 12px
+    line-height: 150%
+    color: #929497
+
+
+
+.checkout-ainput-label
+  position: absolute
+  pointer-events: none
+  left: 15px
+  top: 16px
+  line-height: 40px
+  transition: .3s
+  font-size: 18px
+  line-height: 130%
+  color: #86888B
+
+
 #checkoutPhone
   font-size: 18px
   line-height: 130%
   color: #86888B
 
-.checkout-stage-container-inputs-c-einput-el[type="phone"] , .checkout-stage-container-inputs-c-einput-el[type="mail"] , .checkout-stage-container-inputs-c-input
-  font-size: 18px
-  line-height: 130%
-  color: black !important
 
 .checkout-stage-container-inputs-p
   margin-top: 8px
@@ -223,11 +266,18 @@
 .checkout-stage-containerii-hidden
   display: flex
   flex-direction: row
+  align-items: end
+  width: 100%
+  position: relative
 
 .checkout-stage-container-hidden-ico
   margin-right: 22px
   display: flex
+  margin-top: 5px
   align-items: center
+
+.checkout-stage-container-info.checkout-stage-container-info-hidden
+  display: none
 
 .checkout-stage-container-hidden-text-h
   margin-bottom: 4px
@@ -252,6 +302,8 @@
   margin-top: 28px
   justify-content: space-between
 
+#checkoutTruckico
+  margin-top: 15px
 
 .checkout-stage-container-ii-info-text
   display: flex
@@ -316,13 +368,110 @@
 .checkout-stage2-hidden >.checkout-stage-h, .checkout-stage2-hidden >  .checkout-stage-p
   color: #828282
 
+.checkout-stage3-hidden > .cart-code
+  display: none !important
+.checkout-stage3-hidden >.checkout-stage-h, .checkout-stage3-hidden >  .checkout-stage-p
+  color: #828282
+
 .checkout-stage-info-hidden
   display: none
 
-.checkout-stage-container-hidden > .checkout-stage-container-ii-info
+.checkokut-stage-container.checkout-stage-container-hidden > .checkout-stage-container-ii-info
+   display: none !important
+
+.checkokut-stage-container.checkout-stage-container-hidden > .checkout-stage-container-ii-info-i
   display: none
 
+.checkout-stage-container-ii-info-i-r
+  display: flex
+  flex-direction: row
+  justify-content: space-between
 
+.checkout-stage-container-ii-info-i-r
+  width: 100%
+
+.checkout-stage-container-ii-info-i-r-inpt
+  width: 100%
+
+.checkout-stage-container-ii-info-i
+  width: 100%
+
+#checkoutDeliveryIndexInpt
+  width: 22%
+
+#checkoutDeliveryTownInpt
+  width: 74%
+
+#checkoutDeliveryStreetInpt
+  width: 48%
+
+#checkoutDeliveryHouseInpt
+  width: 45%
+
+#checkoutDeliveryApartInpt
+  width: 45%
+
+#checkoutDeliveryCommentInpt
+  width: 100%
+
+.cart-code
+  background: white
+
+.checkout-stage-container-ii-info-r-p
+  margin-top: 39px
+  font-weight: bold
+  font-size: 16px
+  line-height: 150%
+  color: #272727
+.checkout-stage-container-ii-info-i-ai
+  flex-direction: row-reverse
+
+.checkout-stage-container-ii-info-i-rad
+  width: 49%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.container-info-r
+  font-size: 18px
+  line-height: 130%
+
+.container-info-hidden-keys
+  margin-right: 5px
+  color: #929497
+
+.container-info-r
+  margin-top: 4px
+
+.checkout-stage-container-ii-edit
+  position: absolute
+  top: 0px
+  right: 0px
+  font-size: 16px
+  line-height: 150%
+  color: #0094D9
+
+#checkoutStageContainer2
+  //margin-bottom: 40px
+
+#checkoutStage3 > .cart-code
+  margin-bottom: 20px
+
+#checkoutFinal > p
+  color: #828282
+#checkoutFinal > p > span
+  color: black
+  text-decoration: underline
+  margin: 0 5px
+
+#checkoutFinal
+  margin-bottom: 50px
+
+.checkout-stage3-hidden > .checkout-stage-checkbox, .checkout-stage3-hidden > #checkoutButtonFinal
+  display: none !important
+
+#checkoutStage3 > .checkout-stage-h
+  margin-top: 40px
 @media (max-width: 1280px)
   .checkout-stage-container-main
     padding: 16px 16px!important
@@ -336,6 +485,8 @@
     padding: 24px 50px 250px 50px
   .checkout-stage-checkbox-p
     width: 90%
+  .checkokut-stage-container
+    padding: 24px 24px
 
 @media (max-width: 1024px)
   .checkout-stage-container-inputs-r
@@ -359,6 +510,16 @@
   .checkout-stage-checkbox
     align-items: normal
 
+  .checkout-stage-container-ii-info-i-r
+    flex-direction: column
+  .checkout-stage-container-ii-info-i-r > div
+    width: 100% !important
+    margin: 0
+  .checkout-stage-container-ii-info-i-r > div
+    margin: 0
+
+  .checkout-stage-container-ii-info-i-r > div > div
+    margin-top: 12px
 @media (max-width: 768px)
   .checkout-wrapper
     flex-direction: column
@@ -405,9 +566,35 @@
     bottom: 0px
   .checkokut-stage-container
     position: relative
-  .checkokut-stage-container
     padding: 24px 16px
+
+  #checkoutStageContainer2.checkokut-stage-container.checkout-stage-container-hidden
+    //min-height: 344px
+
   .checkout-wrapper >  .cart-total
     margin-top: 40px
   .checkout-h, .checkout-stage-h, .checkout-stage-p
     margin-left: 16px
+  .checkout-stage-container-inputs-r > div > .checkout-ainput-container
+    margin-top: 10px
+  .checkout-stage-container-ii-info-r-p
+    margin-top: 24px
+    font-size: 18px
+
+  #checkoutDeliveryHouseInpt, #checkoutDeliveryApartInpt
+    width: 48% !important
+  .checkout-stage-container-ii-info-i-rad > div > div
+    margin: 0
+  .checkout-stage-container-ii-edit
+    top: unset
+    bottom: 0 !important
+    left: 60px !important
+  .checkout-stage-containerii-hidden2
+    padding-bottom: 40px
+
+  #checkoutStageContainer2
+    margin-bottom: 40px
+  //.checkout-stage-container-info
+  //  position: absolute
+  //  top: 55px
+  //  left: 10px
