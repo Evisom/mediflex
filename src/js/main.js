@@ -326,7 +326,7 @@ window.onload = function () {
                 itemMenu.setAttribute("style", "")
             } else if (st < scrollPos2 && scrollPos2 > 800) {
                 console.log('up')
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -12px; z-index: 999999; border-top: 2px solid rgba(146,148,151, 0.3)')
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
             }
@@ -336,7 +336,7 @@ window.onload = function () {
                 itemMenu.setAttribute("style", "")
             } else if (st < scrollPos2 && scrollPos2 > 700) {
                 console.log('up')
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -72px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
             }

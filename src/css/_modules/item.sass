@@ -192,7 +192,7 @@
   margin-left: 5px
 
 .item-menu
-  margin-top: 70px
+  margin-top: 30px
   width: 58%
   padding: 0 21%
   display: flex
@@ -290,6 +290,7 @@
   flex-direction: column
   align-items: center
   padding-bottom: 40px
+  margin-top: 34px
 
 .item-saving-h
   font-weight: bold
@@ -426,6 +427,70 @@
 .article-specs-equipment
   margin-bottom: 80px
 
+.article-reviews
+  display: flex
+  flex-direction: column
+
+.article-reviews-rating
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+.article-reviews-rating-r3
+  width: 33%
+  height: 48px
+  background: #4FBBEB
+  border-radius: 4px
+  font-weight: bold
+  font-size: 16px
+  line-height: 24px
+  color: #FFFFFF
+  display: flex
+  justify-content: center
+  align-items: center
+
+.article-reviews-rating-r1-stars > svg
+  margin-right: 4px
+.article-reviews-rating-r1-title
+  margin-bottom: 4px
+  font-size: 16px
+  line-height: 150%
+
+.article-reviews-rating-r1
+  margin-bottom: 25px
+
+.article-reviews-element
+  display: flex
+  flex-direction: column
+  margin-top: 32px
+.article-reviews-element-r1
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.article-reviews-elememt-r1-name
+  font-size: 16px
+  line-height: 150%
+  color: #929497
+
+.article-reviews-elememt-r1-stars > svg
+  margin-right: 3px
+
+.article-reviews-element-r2
+  margin-top: 8px
+  font-size: 18px
+  line-height: 150%
+.article-reviews-button
+  margin-top: 46px
+  margin-bottom: 102px
+  font-weight: 500
+  font-size: 20px
+  padding-bottom: 6px
+  border-bottom: 1px solid #0094D9
+  line-height: 26px
+  margin-left: auto
+  margin-right: auto
 
 
 
@@ -489,7 +554,7 @@
     height: 18px
 
   .item-saving
-    min-height: 666px
+    //min-height: 666px
 
   .item-saving-container-action.item-saving-container-action-equal > svg
     height: 12px
@@ -519,6 +584,8 @@
     flex-direction: row
     margin-right: 17px
     justify-content: space-around
+  .article-reviews-rating-r2
+    width: 25%
 
 @media (max-width: 768px)
   .item
@@ -659,3 +726,32 @@
     font-size: 16px
   .article-specs-equipment
     margin-bottom: 40px
+
+  .article-reviews-rating
+    flex-direction: column
+
+  .article-reviews-rating-r2 , .article-reviews-rating-r1 , .article-reviews-rating-r3
+    //flex-direction: column
+    //width: 75%
+    justify-content: center
+    display: flex
+    align-items: center
+  .article-reviews-rating-r1
+    flex-direction: column
+    margin-bottom: 9px
+
+  .article-reviews-rating-r2
+    margin-bottom: 24px
+    width: 100%
+  .article-reviews-rating-r3
+    width: 270px
+  .article-reviews-element-r1
+    flex-direction: column
+  .article-reviews-element-r2
+    font-size: 16px
+  .article-reviews-elememt-r1-name
+    margin-bottom: 7px
+  .article-reviews-button
+    font-size: 16px
+  .item-main-info-checkout-info-price-current.item-main-info-checkout-info-price-normal
+    margin-top: 0
