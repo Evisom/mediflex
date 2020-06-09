@@ -213,7 +213,67 @@
   border-bottom: 2px solid #0094D9
 
 
+.article-video
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+.article-vide-play
+  height: 25%
+  width: 25%
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: auto
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+.article-video > img
+  margin: 0
 
+.article-links
+  margin-top: 24px
+  display: flex
+  flex-direction: column
+  padding-top: 32px
+  border-top: 1px solid #DEDFE0
+  margin-bottom: 49px
+
+.article-links-h
+  font-weight: bold
+  font-size: 18px
+  line-height: 130%
+
+.article-links-a
+  color: #0094D9
+  text-decoration: none
+
+.article-links > ul
+  margin-left: 15px
+
+.article-links > ul > li
+  margin-bottom: 3px
+
+.article-block
+  border: 4px solid #56CCF2
+  margin-bottom: 32px
+  padding: 32px
+
+.article-block-h
+  font-weight: bold
+  font-size: 32px
+  line-height: 100%
+.article-block-text
+  font-size: 18px
+  margin-top: 13px
+  line-height: 150%
+
+.article-block-a
+  color: #0094D9
+  margin-left: 5px
 
 @media (max-width: 1280px)
   .item
@@ -343,13 +403,32 @@
   .item-menu-link
     margin-left: 25px
     white-space: pre
+  .article-links > ul > li
+    margin-bottom: 5px
+
+  .article-vide-play
+    height: 48px
+    width: 48px
+    margin: 0
+    bottom: 16px
+    right: unset
+    top: unset
+    left: 16px
+  .article-vide-play > svg
+    height: 48px
+    width: 48px
 
 
+  .article-block
+    margin-bottom: 40px
+    padding: 24px
 
-
-
-
-
+  .article-block-h
+    font-size: 24px
+    line-height: 100%
+  .article-block-text
+    font-size: 16px
+    margin-top: 15px
 
 
 

@@ -3,6 +3,44 @@
 
 != partial("_tmp/item")
 
+.article-a
+
+    .article-block
+        .article-block-h Почему нам стоит доверять?
+        .article-block-text Потому что нам доверяют наши поставщики.
+            br
+            | Мы — официальные дистрибьюторы Philips в России,
+            a.article-block-a(href="#") посмотрите письма.
+            br
+            | Это означает качество, гарантийное обслуживание и цены без накруток.
+
+    .article-video
+        .article-vide-play
+            svg(width='70', height='70', viewBox='0 0 70 70', fill='none', xmlns='http://www.w3.org/2000/svg')
+                circle(cx='35', cy='35', r='34', fill='white', stroke='#4FBBEB', stroke-width='2')
+                path(d='M26.9805 27.8879C26.9805 25.2046 29.8757 23.5193 32.2089 24.8444L44.1934 31.6508C46.5625 32.9963 46.5536 36.4134 44.1776 37.7466L32.1931 44.471C29.8601 45.7801 26.9805 44.0939 26.9805 41.4187V27.8879Z', fill='#4FBBEB')
+
+        img.article-image(src="./img/img202.png")
+    != partial("_tmp/article-text")
+    img.article-image(src="./img/img201.png")
+    != partial("_tmp/article-text")
+
+    .article-links
+        .article-links-h Полезные ссылки:
+        ul
+          li
+              a.article-links-a(href="#") Рекомендации по выбору кислородного оборудования.
+          li
+            a.article-links-a(href="#") Информация по методикам терапии при различных заболеваниях.
+          li
+            a.article-links-a(href="#") Маски, канюли и кислородные шланги для кислородной терапии.
+          li
+            a.article-links-a(href="#") Аксессуары и расходные материалы для концентратора PHILIPS SimplyGo.
+          li
+            a.article-links-a(href="#") Авторизационное письмо официального дистрибутора Philips Respironics в России.
+
+
+
 
 != partial("_tmp/customerchoice", {sliderId: "ccslider",buttonPrev: "ccsliderPrev",buttonNext: "ccsliderNext",text: "Выбор покупателей"})
 != partial("_tmp/customerchoice", {sliderId: "ccslider",buttonPrev: "ccsliderPrev",buttonNext: "ccsliderNext",text: "Выбор покупателей"})
