@@ -343,6 +343,26 @@ window.onload = function () {
         }
         scrollPos2 = st;
     });
+    const createReview = document.getElementById("createReview");
+    if(createReview) {
+        createReview.onclick = function () {
+            console.log("11")
+            document.getElementById("createReviewHidden").classList += ' article-reviews-hidden-active'
+            createReview.setAttribute("style" , "opacity: 0")
+        }
+        function close() {
+            document.getElementById("createReviewHidden").classList = 'article-reviews-hidden'
+            createReview.setAttribute("style" , "opacity: 1")
+        }
+        document.getElementById("reviewClose").onclick = function () {
+            close()
+        }
+        document.getElementById("reviewCloseMobile").onclick = function () {
+            close()
+        }
+    }
+
+
 
 
 

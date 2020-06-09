@@ -24,8 +24,36 @@
             .article-reviews-rating-r2
                 b 4.2
                 |— на основании 64 оценок
-            .article-reviews-rating-r3
+            .article-reviews-rating-r3#createReview
                 | Написать отзыв
+
+        .article-reviews-hidden#createReviewHidden
+            .article-reviews-mobileonly
+                .article-reviews-mobileonly-text Написать отзыв
+                .article-reviews-mobileonly-close#reviewCloseMobile
+                    svg(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M2 14L14 2', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                        path(d='M2 2L13.9998 13.9999', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+            .article-reviews-hidden-r1
+                input.article-reviews-hidden-r1-input(placeholder="Введите ваше имя")
+                input.article-reviews-hidden-r1-input(placeholder="Возраст пациента")
+            textarea.article-reviews-hidden-r2(placeholder="Расскажите впечатления о товаре и процессе покупки в нашей компании")
+            .article-reviews-hidden-stars
+                div
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                span - Поставьте оценку
+            .article-reviews-hidden-buttons
+                .article-reviews-hidden-buttons-cancel#reviewClose Отменить
+                .article-reviews-hidden-buttons-send Отправить
         .article-reviews-element
             .article-reviews-element-r1
                 .article-reviews-elememt-r1-name Екатерина, 13 апр. 2020
