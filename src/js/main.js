@@ -268,12 +268,16 @@ window.onload = function () {
         }
     }
 
-    navbarmenu.onclick = function () {
+
+    function navbarMenuClose1 () {
+        console.log("q" , event.target.classList)
         if (event.target.classList[0] == 'navbar-menu-wrapper')
             navbarmenu.classList = 'navbar-menu-wrapper'
         navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
         navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
     }
+    navbarmenu.addEventListener("mouseover" , navbarMenuClose1)
+
 
     function navbarMenuTopCLoseHandler() {
         console.log(1)
