@@ -102,11 +102,16 @@
   width: 32%
   justify-content: space-between
 
-.item-main-info-buttons
+.item-main-info-buttons > div:first-child
   display: flex
   flex-direction: row
   align-items: center
   margin-top: 20px
+
+.item-main-info-buttons
+  display: flex
+  flex-direction: column
+  position: relative
 
 .item-main-info-buttons-prize, .item-main-info-buttons-delivery
   height: 32px
@@ -572,11 +577,44 @@ textarea.article-reviews-hidden-r2::placeholder
 
 .article-reviews-mobileonly
   display: none
+.item-main-info-buttons-hidden
+  display: none
 
+.item-main-info-buttons-hidden.item-main-info-buttons-hidden-active
+  position: absolute
+  display: flex
+  background: white
+  width: 322px
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+  top: 64px
+  border-radius: 8px
+  flex-direction: column
+  padding-bottom: 37px
 
-
-
-
+.item-main-info-buttons-hidden-element
+  margin-top: 20px
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-around
+.item-main-info-buttons-hidden-element-r1, .item-main-info-buttons-hidden-element-r2
+  display: flex
+  justify-content: center
+  align-items: end
+  flex-direction: column
+.item-main-info-buttons-hidden-element-r2-name,  .item-main-info-buttons-hidden-element-r2-price
+  font-size: 16px
+  line-height: 150%
+.item-main-info-buttons-hidden-close
+  display: none
+  justify-content: center
+  margin-top: 32px
+  padding-bottom: 20px
+  font-size: 16px
+  line-height: 150%
+  color: #0094D9
+  border-bottom: 1px solid #DEDFE0
+  width: 100%
 
 
 
@@ -890,3 +928,12 @@ textarea.article-reviews-hidden-r2::placeholder
   .article-reviews-hidden-buttons-send
     width: 86%
     margin: 0 auto
+
+  .item-main-info-buttons-hidden.item-main-info-buttons-hidden-active
+    position: relative
+    top: 0
+    box-shadow: none
+    padding-bottom: 0
+    width: 100%
+  .item-main-info-buttons-hidden-close
+    display: flex

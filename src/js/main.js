@@ -232,6 +232,25 @@ window.onload = function () {
         }
     }
 
+    const prizeButton = document.getElementById("prizeButton")
+
+    if (prizeButton) {
+        prizeButton.onclick = function () {
+            document.getElementById("prizePopup").classList += ' item-main-info-buttons-hidden-active'
+            $(document).mouseup(function (e){
+                var div = $("#prizePopup");
+                if (!div.is(e.target)
+                    && div.has(e.target).length === 0) {
+                    document.getElementById("prizePopup").classList = 'item-main-info-buttons-hidden'
+                }
+            });
+        }
+        document.getElementById("prizeCloseButton").onclick = function () {
+            document.getElementById("prizePopup").classList = 'item-main-info-buttons-hidden'
+        }
+    }
+
+
 
 
 

@@ -85,8 +85,33 @@
                             path(d='M0 12.5C0 11.6716 0.671573 11 1.5 11C2.32843 11 3 11.6716 3 12.5V18H0V12.5Z', fill='black')
 
             .item-main-info-buttons
-                .item-main-info-buttons-prize + подарок
-                .item-main-info-buttons-delivery доставим через час
+                div
+                    .item-main-info-buttons-prize#prizeButton + подарок
+                    .item-main-info-buttons-delivery доставим через час
+                div
+                    .item-main-info-buttons-hidden#prizePopup
+                        .item-main-info-buttons-hidden-element
+                            .item-main-info-buttons-hidden-element-r1
+                                img.item-main-info-buttons-hidden-element-r1-img(src="./img/img502.png")
+                            .item-main-info-buttons-hidden-element-r2
+                                .item-main-info-buttons-hidden-element-r2-name Weinmann Prisma 25ST
+                                .item-main-info-buttons-hidden-element-r2-price 87 500 ₽
+
+                        .item-main-info-buttons-hidden-element
+                            .item-main-info-buttons-hidden-element-r1
+                                img.item-main-info-buttons-hidden-element-r1-img(src="./img/img502.png")
+                            .item-main-info-buttons-hidden-element-r2
+                                .item-main-info-buttons-hidden-element-r2-name Weinmann Prisma 25ST
+                                .item-main-info-buttons-hidden-element-r2-price 87 500 ₽
+
+                        .item-main-info-buttons-hidden-element
+                            .item-main-info-buttons-hidden-element-r1
+                                img.item-main-info-buttons-hidden-element-r1-img(src="./img/img502.png")
+                            .item-main-info-buttons-hidden-element-r2
+                                .item-main-info-buttons-hidden-element-r2-name Weinmann Prisma 25ST
+                                .item-main-info-buttons-hidden-element-r2-price 87 500 ₽
+
+                        .item-main-info-buttons-hidden-close#prizeCloseButton Свернуть
             .item-main-info-specs
                 p.item-main-info-specs-p 0,5–5 литров в минуту
                 p.item-main-info-specs-p Ресурс работы 40 000 часов
