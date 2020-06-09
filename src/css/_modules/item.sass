@@ -275,6 +275,160 @@
   color: #0094D9
   margin-left: 5px
 
+.item-main-info-checkout-info-price-current.item-main-info-checkout-info-price-normal
+  margin-top: 40px
+  color: black !important
+
+.item-main-info-checkout-button.item-main-info-checkout-button-gotocart
+  background: white
+  border: 2px solid #4FBBEB
+  color: #4FBBEB
+
+.item-saving
+  background: #F4F4F4
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-bottom: 40px
+
+.item-saving-h
+  font-weight: bold
+  font-size: 36px
+  line-height: 100%
+  margin-top: 48px
+  margin-bottom: 32px
+
+.item-saving-container
+  display: flex
+  flex-direction: row
+  width: calc(100% - 60px)
+  margin-top: 17px
+  background: white
+  padding: 30px
+
+.item-saving-container-main-element
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  width: 270px
+
+.item-saving-container-c
+  width: 35%
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+
+.item-saving-container-main-element-text
+  width: 170px
+  font-size: 18px
+  line-height: 130%
+
+.item-saving-container-action
+  margin-top: 20px
+
+.item-saving-container-action.item-saving-container-action-equal
+  margin-top: 25px
+
+.item-saving-container-main-element:not(:first-child)
+  margin-top: 17px
+.item-saving-container-c.item-saving-container-c-result
+  width: 30%
+
+.item-saving-container-c-result-price
+  display: flex
+  flex-direction: column
+  height: 70px
+  justify-content: space-between
+
+.item-saving-container-c-result-price-discount
+  font-size: 20px
+  line-height: 28px
+  text-decoration-line: line-through
+  color: #86888B
+
+.item-saving-container-c-result-price-current
+  font-weight: bold
+  font-size: 24px
+  line-height: 110%
+  color: #DD2333
+
+.item-saving-container-c-result-price-saving
+  font-size: 16px
+  line-height: 28px
+
+.item-saving-container-c-result-button
+  height: 40px
+  width: 102px
+  background: #4FBBEB
+  border-radius: 4px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 16px
+  line-height: 24px
+  color: #FFFFFF
+
+.item-saving-container-c.item-saving-container-c-result
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  height: 70px
+
+.item-flex-container
+  width: calc(84%)
+  display: flex
+  flex-direction: column
+
+.article-specs-table
+  display: flex
+  flex-direction: column
+
+.article-specs-table-el
+  width: 100%
+  display: flex
+  flex-direction: row
+  padding: 20px 0
+  border-top: 1px solid #D9D9D9
+
+.article-specs-table-el-r
+  width: 50%
+.article-specs-table-el-r:first-child
+  font-weight: 500
+  font-size: 20px
+  line-height: 26px
+  color: #929497
+
+.article-specs-table-el-r:last-child
+  font-weight: 500
+  font-size: 20px
+  line-height: 28px
+  color: #000000
+
+.article-specs-table-el:last-child
+  border-bottom: 1px solid #D9D9D9
+
+.article-specs-equipment-h
+  margin-top: 42px
+  font-size: 18px
+  font-weight: bold
+  line-height: 130%
+
+.article-specs-equipment-text
+  font-weight: normal
+
+.article-specs-equipment-ul
+  list-style: none
+.article-specs-equipment-ul-li
+  margin-top: 3px
+
+.article-specs-equipment
+  margin-bottom: 80px
+
+
+
+
 @media (max-width: 1280px)
   .item
     padding-left: 50px
@@ -294,6 +448,14 @@
     width: 50px
   .item-main-info-rating-c:last-child
     width: 40%
+  .item-saving-container
+    width: calc(100% - 32px)
+    padding: 16px
+
+  .item-flex-container
+    width: 90%
+
+
 
 @media (max-width: 1024px)
   .item-menu
@@ -316,7 +478,47 @@
     font-size: 14px
   .item-main-info-rating-c-stars-comment-count, .item-main-info-rating-c-stars-count , .item-main-info-rating-c-stars-code
     font-size: 14px
+  .item-saving-container
+    flex-direction: column
+    width: 260px
+    height: max-content
+  .item-saving-container-c
+    flex-direction: column
+    width: 100%
+  .item-saving-container-action > svg
+    height: 18px
 
+  .item-saving
+    min-height: 666px
+
+  .item-saving-container-action.item-saving-container-action-equal > svg
+    height: 12px
+  .item-saving-container-c.item-saving-container-c-result
+    width: 100%
+    flex-direction: column
+    margin-top: 16px
+    justify-content: unset
+
+  .item-saving-container-main-element-img > img, .item-saving-container-main-element-img
+    width: 55px
+    height: 55px
+  .item-saving-container-main-element-text
+    font-size: 16px
+
+  .item-saving-container-c.item-saving-container-c-result
+    justify-content: space-around
+    align-items: end
+    height: 142px
+
+  .item-saving-h
+    font-size: 24px
+    margin-top: 32px
+    margin-bottom: 24px
+
+  .item-flex-container
+    flex-direction: row
+    margin-right: 17px
+    justify-content: space-around
 
 @media (max-width: 768px)
   .item
@@ -430,8 +632,30 @@
     font-size: 16px
     margin-top: 15px
 
+  .item-saving-container
+    margin-right: 20px
+    width: calc(260px - 32px)
+  .item-saving-container-main-element
+    width: calc(260px - 32px)
+  .item-saving-container-main-element-text
+    width: 155px
+
+  .item-flex-container
+    overflow-x: scroll
+    justify-content: unset
+
+  .article-specs-table-el
+    padding: 9px 0
+    flex-direction: column
+  .article-specs-table-el-r
+    width: 100%
+    font-size: 16px
 
 
-
-
-
+  .article-specs-equipment-ul-li
+    margin-top: 12px
+    font-size: 16px
+  .article-specs-equipment-h
+    font-size: 16px
+  .article-specs-equipment
+    margin-bottom: 40px

@@ -317,6 +317,7 @@ window.onload = function () {
 
     var scrollPos2 = 0;
     $(window).scroll(function(){
+
         console.log(scrollPos2)
         var st = $(this).scrollTop();
         if (document.documentElement.clientWidth > 752) {
