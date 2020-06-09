@@ -84,10 +84,13 @@ window.onload = function () {
             }
         }
     }
-    document.getElementById("navbarMenuSlideTopClose").onclick = function () {
-        navbarmenu.className = 'navbar-menu-wrapper'
-        navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
-        navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+    const navbarMenuSlideTopClose = document.getElementById("navbarMenuSlideTopClose");
+    if (navbarMenuSlideTopClose) {
+        navbarMenuSlideTopClose.onclick = function () {
+            navbarmenu.className = 'navbar-menu-wrapper'
+            navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+            navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+        }
     }
 
     if (navbarmenuLinks) {
@@ -156,7 +159,10 @@ window.onload = function () {
         navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
         navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
     }
-    navbarmenu.addEventListener("mouseover", navbarMenuClose1)
+
+    if (navbarmenu) {
+        navbarmenu.addEventListener("mouseover", navbarMenuClose1)
+    }
 
 
     function navbarMenuTopCLoseHandler() {
@@ -273,7 +279,6 @@ window.onload = function () {
             const slider = new Flickity(el);
             const prevEl = document.querySelector(`${selector}Prev`);
             const nextEl = document.querySelector(`${selector}Next`);
-            console.log(slider, prevEl, nextEl);
     
             if (prevEl && nextEl) {
                 nextEl.onclick = function () {
@@ -286,5 +291,14 @@ window.onload = function () {
         }
     })
 
+
+    // --- popups ---
+
+    $("#item-cart-popup-trigger").magnificPopup({
+      items: {
+        src: "#item-cart-popup",
+        type: "inline",
+      },
+    });
 
 }
