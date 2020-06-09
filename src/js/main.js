@@ -193,7 +193,6 @@ window.onload = function () {
                 navbarBurgerIco[1].setAttribute('src', './img/close-ico.svg')
 
             } else {
-                console.log("1")
                 navbarmenu.className = 'navbar-menu-wrapper'
                 navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
                 navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
@@ -209,7 +208,6 @@ window.onload = function () {
     if (navbarmenuLinks) {
 
         function navbarMenuOnclickMobile(index) {
-            console.log(this.id[4])
             for (let i = 0; i < navbarmenuSlide.length; i++) {
                 navbarmenuSlide[i].removeAttribute('style')
             }
@@ -218,7 +216,6 @@ window.onload = function () {
 
 
         function navbarMenuOnHover(index) {
-            console.log(this.id[4], navbarmenuLinks[0].className)
             for (let i = 0; i < navbarmenuSlide.length; i++) {
                 navbarmenuSlide[i].removeAttribute('style')
             }
@@ -226,7 +223,6 @@ window.onload = function () {
                 navbarmenuLinks[i].className = 'navbar-menu-c1-link'
             }
             navbarmenuLinks[(this.id[4])].classList += ' navbar-menu-c1-link-active'
-            console.log(this.id[4])
             navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: 9999")
         }
 
@@ -270,7 +266,6 @@ window.onload = function () {
 
 
     function navbarMenuClose1 () {
-        console.log("q" , event.target.classList)
         if (event.target.classList[0] == 'navbar-menu-wrapper')
             navbarmenu.classList = 'navbar-menu-wrapper'
         navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
@@ -280,7 +275,6 @@ window.onload = function () {
 
 
     function navbarMenuTopCLoseHandler() {
-        console.log(1)
         for (let i = 0; i < navbarMenuTopCLose.length; i++) {
             navbarmenuSlide[i].removeAttribute("style")
         }
@@ -297,7 +291,6 @@ window.onload = function () {
     }
 
     function clickHandler(event) {
-        console.log(this.index);
         if (customerChoiceCardCompare[this.index].classList.length == 1) {
                 customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
                 customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
@@ -322,24 +315,19 @@ window.onload = function () {
     var scrollPos2 = 0;
     $(window).scroll(function(){
 
-        console.log(scrollPos2)
         var st = $(this).scrollTop();
         if (document.documentElement.clientWidth > 752) {
             if (st > scrollPos2) {
-                console.log('down')
                 itemMenu.setAttribute("style", "")
             } else if (st < scrollPos2 && scrollPos2 > 800) {
-                console.log('up')
                 itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
             }
         } else {
             if (st > scrollPos2) {
-                console.log('down')
                 itemMenu.setAttribute("style", "")
             } else if (st < scrollPos2 && scrollPos2 > 700) {
-                console.log('up')
                 itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
@@ -350,7 +338,6 @@ window.onload = function () {
     const createReview = document.getElementById("createReview");
     if(createReview) {
         createReview.onclick = function () {
-            console.log("11")
             document.getElementById("createReviewHidden").classList += ' article-reviews-hidden-active'
             createReview.setAttribute("style" , "opacity: 0")
         }
