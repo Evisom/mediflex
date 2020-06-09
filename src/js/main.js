@@ -29,6 +29,9 @@ window.onload = function () {
     const navbarmenuLinks = document.getElementsByClassName('navbar-menu-c1-link')
     const navbarmenuSlide = document.getElementsByClassName('navbar-menu-c2-slide')
 
+    const itemSliderPrev = document.getElementById('itemSliderPrev')
+    const itemSliderNext = document.getElementById('itemSliderNext')
+    const itemSlider = new Flickity('#itemSlider');
 
     const needtoknowPrev = document.getElementById("needtoknowPrev")
     const needtoknowNext = document.getElementById("needtoknowNext")
@@ -300,6 +303,47 @@ window.onload = function () {
             }
         event.preventDefault();
     }
+
+    if (itemSliderNext) {
+        itemSliderNext.onclick = function () { // Кнопки управления слайдера товара
+            itemSlider.next();
+        }
+        itemSliderPrev.onclick = function () {
+            itemSlider.previous();
+        }
+    }
+
+    const itemMenu = document.getElementById("itemMenu")
+
+    var scrollPos2 = 0;
+    $(window).scroll(function(){
+        console.log(scrollPos2)
+        var st = $(this).scrollTop();
+        if (document.documentElement.clientWidth > 752) {
+            if (st > scrollPos2) {
+                console.log('down')
+                itemMenu.setAttribute("style", "")
+            } else if (st < scrollPos2 && scrollPos2 > 800) {
+                console.log('up')
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -12px; z-index: 999999; border-top: 2px solid rgba(146,148,151, 0.3)')
+            } else {
+                itemMenu.setAttribute("style", "")
+            }
+        } else {
+            if (st > scrollPos2) {
+                console.log('down')
+                itemMenu.setAttribute("style", "")
+            } else if (st < scrollPos2 && scrollPos2 > 700) {
+                console.log('up')
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -72px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
+            } else {
+                itemMenu.setAttribute("style", "")
+            }
+        }
+        scrollPos2 = st;
+    });
+
+
 
 
 }

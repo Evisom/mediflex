@@ -1,0 +1,358 @@
+.item
+  padding-top: 23px
+  padding-left: 115px
+  padding-right: 115px
+
+.item-main
+  display: flex
+  flex-direction: row
+
+.item-main-info
+  margin-left: 80px
+
+.item-main-preview
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 470px
+
+.item-main-preview-main
+  width: 470px
+  height: 470px
+
+.item-main-preview-main-el
+  width: 470px
+  height: 470px
+  background: #8DD7F7
+
+.item-main-preview-nav-container-el
+  width: 70px
+  height: 70px
+  margin-right: 8px
+
+.item-main-preview-nav-container-el > img
+  width: 70px
+  height: 70px
+  border: 2px solid #929497
+
+
+.item-main-preview-nav-container
+  margin: 0 16px
+  width: 234px
+
+
+.item-main-preview-nav
+  margin-top: 8px
+  display: flex
+  flex-direction: row
+  align-items: center
+.item-main-preview-nav-arrow
+  height: 20px
+
+.item-main-preview-nav-play
+  height: 70px
+  width: 70px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+  border: 2px solid #4FBBEB
+  margin-left: 20px
+
+.item-main-preview-nav-container  > div
+  height: 74px !important
+
+.item-main-preview-nav-container-el
+  &.is-nav-selected > img
+    border: 2px solid #4FBBEB
+    margin: 0
+
+.item-main-info-name
+  font-weight: bold
+  font-size: 36px
+  line-height: 110%
+  margin-left: 2px
+  width: 100%
+  word-spacing: 0px
+
+.item-main-info-rating
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  margin-top: 10px
+  width: 100%
+.item-main-info-rating-c
+  display: flex
+  flex-direction: row
+  align-items: center
+
+.item-main-info-rating-c-stars-comment-count, .item-main-info-rating-c-stars-count , .item-main-info-rating-c-stars-code
+  font-size: 16px
+  line-height: 150%
+  color: #86888B
+
+.item-main-info-rating-c-stars
+  margin-right: 8px
+.item-main-info-rating-c-stars-comment
+  margin-right: 5px
+  margin-left: 5px
+
+.item-main-info-rating-c:last-child
+  width: 32%
+  justify-content: space-between
+
+.item-main-info-buttons
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-top: 20px
+
+.item-main-info-buttons-prize, .item-main-info-buttons-delivery
+  height: 32px
+  padding: 0 16px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: bold
+  font-size: 14px
+  line-height: 13px
+  text-transform: uppercase
+  color: white
+  margin-right: 8px
+
+.item-main-info-buttons-prize
+  background: #DD2333
+.item-main-info-buttons-delivery
+  background: #929497
+
+.item-main-info-specs
+  margin-top: 16px
+  font-size: 18px
+  line-height: 130%
+
+.item-main-info-specs-showmore
+  color: #4FBBEB
+
+.item-main-info-checkout
+  display: flex
+  flex-direction: column
+  margin-top: 16px
+  background: white
+  z-index: 9999999
+
+.item-main-info-checkout-info
+  display:  flex
+  flex-direction: row
+  align-items: flex-end
+
+.item-main-info-checkout-info-price
+  display: flex
+  flex-direction: column
+
+.item-main-info-checkout-info-price-discount
+  font-size: 16px
+  line-height: 28px
+  text-decoration-line: line-through
+  color: #929497
+  margin-bottom: -5px
+
+.item-main-info-checkout-info-price-current
+  font-weight: bold
+  font-size: 32px
+  line-height: 100%
+  color: #DD2333
+
+.item-main-info-checkout-info-saving
+  font-size: 16px
+  line-height: 28px
+  margin-left: 25px
+
+.item-main-info-checkout-button
+  width: 64%
+  height: 48px
+  background: #4FBBEB
+  border-radius: 4px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: bold
+  font-size: 16px
+  line-height: 24px
+  color: #FFFFFF
+  margin-top: 16px
+
+.item-main-info-delivery
+  margin-top: 24px
+  font-size: 16px
+  line-height: 150%
+
+.item-main-info-delivery-p > span:last-child
+  color: #4FBBEB
+  margin-left: 5px
+
+.item-menu
+  margin-top: 70px
+  width: 58%
+  padding: 0 21%
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid rgba(146,148,151, 0.3)
+  background: white
+
+.item-menu-link
+  height: 100%
+  padding: 21px 0
+  font-weight: bold
+  font-size: 18px
+  line-height: 110%
+  color: #000000
+
+.item-menu-link-active
+  padding-bottom: 19px
+  border-bottom: 2px solid #0094D9
+
+
+
+
+@media (max-width: 1280px)
+  .item
+    padding-left: 50px
+    padding-right: 50px
+  .item-main-preview-main, .item-main-preview-main-el, .item-main-preview-main-el > img
+    width: 300px
+    height: 300px
+  .item-main-preview-nav-container-el>img , .item-main-preview-nav-container-el
+    width: 50px
+    height: 50px
+  .item-main-preview-nav-container
+    width: 173px
+  .item-main-preview-nav-container
+    height: 55px
+  .item-main-preview-nav-play
+    height: 50px
+    width: 50px
+  .item-main-info-rating-c:last-child
+    width: 40%
+
+@media (max-width: 1024px)
+  .item-menu
+    padding: 0 5%
+    width: 90%
+  .item-main-info-name
+    font-size: 20px
+  .item-main-info-buttons-delivery:last-child
+    display: none
+  .item-main-info-specs-p
+    font-size: 16px
+  .item-main-info-checkout-info-price-current
+    font-size: 16px
+  .item-main-info-checkout-info-price-discount
+    font-size: 14px
+  .item-main-info-checkout-button
+    height: 40px
+    font-size: 16px
+  .item-main-info-checkout-info-saving
+    font-size: 14px
+  .item-main-info-rating-c-stars-comment-count, .item-main-info-rating-c-stars-count , .item-main-info-rating-c-stars-code
+    font-size: 14px
+
+
+@media (max-width: 768px)
+  .item
+    padding-left: 25px
+    padding-right: 25px
+
+  .item-main-preview
+    width: 100%
+    flex-direction: row-reverse
+
+  .item-main-preview-nav
+    transform: rotate(90deg)
+    position: absolute
+    left: -47px
+    top: 135px
+
+  .item-main-preview-nav-container
+    width: 120px
+    height: 39px
+  .item-main-preview-main-el, .item-main-preview-main-el > img
+    width: 202px
+    height: 202px
+
+  .item-main-preview-main
+    width: 202px
+    height: 202px
+    position: absolute !important
+    left: 79px
+    top: 56px
+
+  .item-main-preview-nav-container-el , .item-main-preview-nav-container-el > img
+    width: 32px
+    height: 32px
+
+  .item-main-preview-nav-container-el > img
+    transform: rotate(-90deg)
+  .item-main-preview-nav-play
+    position: absolute
+    top: -78vw
+    transform: rotate(-90deg)
+    width: 32px
+    height: 32px
+    left: 50px
+  .item-main-preview-nav-play > svg
+    width: 11px
+    height: 11px
+  .item-main-preview-nav-container > div
+    height: 36px !important
+
+  .item-main
+    min-height: 225px
+    flex-direction: column
+  .item-main-preview-nav-arrow > svg
+    height: 16px
+    width: 16px
+
+  .item-main-info
+    margin-top: 200px
+    margin-left: 0
+  .item-main-info-rating-c-stars-comment-count, .item-main-info-rating-c-stars-count , .item-main-info-rating-c-stars-code
+    font-size: 16px
+  .item-main-info-rating-c-stars-compare
+    display: none
+  .item-main-info-checkout
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    height: 56px
+    box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.06)
+    flex-direction: row
+  .item-main-info-checkout-info-saving
+    display: none
+  .item-main-info-checkout-button
+    width: 150px
+    margin: auto
+  .item-main-info-checkout-info
+    margin: auto
+  .item-menu
+    padding: 0
+    justify-content: end
+    overflow-x: scroll
+    width: 100%
+  .item-menu-link
+    margin-left: 25px
+    white-space: pre
+
+
+
+
+
+
+
+
+
+
+
+
+
