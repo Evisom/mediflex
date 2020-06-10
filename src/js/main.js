@@ -179,14 +179,16 @@ window.onload = function () {
         navbarMenuTopCLose[i].addEventListener('click', navbarMenuTopCLoseHandler);
     }
 
+    if (document.documentElement.clientWidth > 752) {
+        $(".customerchoice__slider-element").hover(
+            function () {
+                this.children[2].className += ' customerchoice-element-open'
+            },
+            function () {
+                this.children[2].className = 'customerchoice__slider-element__info'
+            });
+    }
 
-    $(".customerchoice__slider-element").hover(
-        function () {
-            this.children[2].className += ' customerchoice-element-open'
-        },
-        function () {
-            this.children[2].className = 'customerchoice__slider-element__info'
-        });
 
 
     const itemMenu = document.getElementById("itemMenu")
@@ -345,21 +347,5 @@ window.onload = function () {
     } else {
         $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
     }
-
-    // const sortpopup = document.getElementById("ddcl-filtersSort-ddw")
-    // var target = document.getElementById('filtersSortContainer');
-    //
-    // const observer = new MutationObserver( (mutationsList , observer ) => {
-    //     for (let mutation of mutationsList) {
-    //         if ($(sortpopup).attr("style") == 'position: absolute; left: 25px; top: 96px; height: 159px; width: 296px; z-index: 1;') {
-    //             $(sortpopup).attr("style", "position: fixed !important; left: 0 !important; right: 0 !important; top: 88vh !important")
-    //         }
-    //     }
-    // });
-    // observer.observe(target, {
-    //     attributes: true,
-    //     childList: true,
-    //     subtree: true
-    // });
 
 }

@@ -7,15 +7,65 @@
 .supersection-category > div
   margin: auto auto !important
 
+.supersection-grid
+  padding-left: 100px
+  padding-right: 100px
+  padding-bottom: 40px
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  background: #F9FCFE
+  grid-row-gap: 30px
+
+.search-result-h
+  padding-top: 48px !important
+
+.search-result-h > span
+  color: #86888B
+  margin-left: 7px
+.supersection-h, .search-result-h
+  font-weight: bold
+  font-size: 36px
+  line-height: 110%
+  padding-top: 24px
+  padding-left: 115px
+  background: #F9FCFE
+  padding-bottom: 24px
+
 @media (max-width: 1372px)
   .supersection-category
     grid-template-columns: repeat(2, 1fr)
     grid-row-gap: 30px
 
+  .supersection-grid
+    grid-template-columns: repeat(3, 1fr)
 
+@media (max-width: 1280px)
+  .supersection-grid
+    padding-left: 50px
+    padding-right: 50px
 
 @media (max-width: 1024px)
   .supersection-category
     grid-template-columns: 1fr
     grid-row-gap: 16px
     padding: 32px 24px
+
+  .supersection-grid
+    grid-template-columns: repeat(2, 1fr)
+
+
+@media (max-width: 768px)
+  .supersection-grid
+    padding-left: 0
+    padding-right: 0
+    padding-bottom: 32px
+  .supersection-h
+    font-weight: bold
+    font-size: 24px
+    line-height: 110%
+    padding-top: 24px
+    padding-left: 24px
+    background: #F9FCFE
+    padding-bottom: 24px
+
+

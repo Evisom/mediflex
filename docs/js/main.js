@@ -4,60 +4,30 @@ window.onload = function () {
     const phonePopup = document.getElementById("phonePopup");
     const phonePopupBlackout = document.getElementById("phonePopupBlackout");
     const navbar = document.getElementById("navbar");
-
-    const pcategorySliderNext = document.getElementById("pcslider-next");
-    const pcategorySliderPrev = document.getElementById("pcslider-prev");
-    const customerChoiceSliderNext = document.getElementById("ccsliderNext");
-    const customerChoiceSliderPrev = document.getElementById("ccsliderPrev");
-    const reviewsNext = document.getElementById("reviewsNext")
-    const reviewsPrev = document.getElementById("reviewsPrev")
-    const catalogcategory1Next = document.getElementById("catalogcategory1Next")
-    const catalogcategory1Prev = document.getElementById("catalogcategory1Prev")
-    const catalogcategory2Next = document.getElementById("catalogcategory2Next")
-    const catalogcategory2Prev = document.getElementById("catalogcategory2Prev")
-    const compareSliderPrev = document.getElementById("compareSliderPrev")
-    const compareSliderNext = document.getElementById("compareSliderNext")
     const compareNavbarButton = document.getElementById("compareNavbarButton")
     const compareWrapper = document.getElementById("compareWrapper")
     const comparePopup = document.getElementById("comparePopup")
-    const lettersSliderPrev = document.getElementById("letterSliderPrev")
-    const letterSliderNext = document.getElementById("lettersSliderNext")
     const navbarr3links = document.getElementsByClassName('navbar__r3-link')
-    const aboutreviewsPrev = document.getElementById("aboutReviewsPrev")
-    const aboutreviewsNext = document.getElementById("aboutReviewsNext")
     const navbarMenuTopCLose = document.getElementsByClassName('navbar-menu-c2-slide-top-close')
     const navbarmenuLinks = document.getElementsByClassName('navbar-menu-c1-link')
     const navbarmenuSlide = document.getElementsByClassName('navbar-menu-c2-slide')
-
-    const itemSliderPrev = document.getElementById('itemSliderPrev')
-    const itemSliderNext = document.getElementById('itemSliderNext')
-    const itemSlider = new Flickity('#itemSlider');
-
-    const needtoknowPrev = document.getElementById("needtoknowPrev")
-    const needtoknowNext = document.getElementById("needtoknowNext")
     const navbarBurgerIco = document.getElementsByClassName('navbar-menu-burger-ico')
-    const aboutreviewsSlider = new Flickity('#aboutreviewsSlider');
-    const catalogcategory1 = new Flickity('#catalogcategory1');
-    const lettersSlider = new Flickity('#lettersSlider');
-    const compareSlider = new Flickity('#compareSlider');
-    const catalogcategory2 = new Flickity('#catalogcategory2');
-    const pcategorySlider = new Flickity('.pcategory__slider');
-    const customerChoiceSlider = new Flickity('#ccslider');
-    const needtoknowSlider = new Flickity('#needtoknowSlider');
     const navbarmenu = document.getElementById("navbar-menu")
     const navbarMenuBurger = document.getElementById("navbar-menu-burger")
     const navbarMenuBurgerScrollup = document.getElementById("navbar-menu-burger-scrollup")
     let customerChoiceCardCompare = document.querySelectorAll('.customerchoice__slider-element-compare'),
-        index, button;
+        index
+    let itemCard = document.getElementsByClassName("customerchoice__slider-element")
     let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
+    const filtersTrigger = document.getElementById("filtersTrigger")
+    const filtersR = document.getElementById("filtersR")
 
-    const reviewsSlider = new Flickity('#reviewsSlider');
 
     let scrollPos = 0;
 
     if (mobileMenuPhoneButton) {
         mobileMenuPhoneButton.onclick = function () { // Поп-ап с телефоном
-            if ( phonePopup.classList.length == 1 ) {
+            if (phonePopup.classList.length == 1) {
                 phonePopup.classList += " hidden__phone-popup-active";
                 phonePopupBlackout.classList += " hidden__phone-popup-active";
                 mobileMenuPhoneButton.classList += " hidden__phone-popup-active";
@@ -73,100 +43,19 @@ window.onload = function () {
 
 
 
-    $(window).scroll(function(){ // Поведение меню при скролле
-            if (document.documentElement.clientWidth > 752) {
-                var st = $(this).scrollTop();
-                if (st > scrollPos || scrollPos < 160) {
-                    navbar.className = 'navbar';
-                    navbarmenu.classList.remove('navbar-menu-scrollup')
-                } else if (scrollPos > 160 ) {
-                    navbar.className = 'navbar navbar-scrollup';
-                    navbarmenu.classList.add('navbar-menu-scrollup');
-                }
-                scrollPos = st;
+    $(window).scroll(function () { // Поведение меню при скролле
+        if (document.documentElement.clientWidth > 752) {
+            var st = $(this).scrollTop();
+            if (st > scrollPos || scrollPos < 160) {
+                navbar.className = 'navbar';
+                navbarmenu.classList.remove('navbar-menu-scrollup')
+            } else if (scrollPos > 160) {
+                navbar.className = 'navbar navbar-scrollup';
+                navbarmenu.classList.add('navbar-menu-scrollup');
             }
-        });
-
-    if (pcategorySliderNext) {
-        pcategorySliderNext.onclick = function ( ) { // Кнопки управления слайдера Популярные категории
-            pcategorySlider.next();
+            scrollPos = st;
         }
-        pcategorySliderPrev.onclick = function ( ) {
-            pcategorySlider.previous();
-        }
-    }
-
-
-    if (customerChoiceSliderNext) {
-        customerChoiceSliderNext.onclick = function ( ) { // Кнопки управления слайдера Выбор покупателей
-            customerChoiceSlider.next();
-        }
-        customerChoiceSliderPrev.onclick = function ( ) {
-            customerChoiceSlider.previous();
-        }
-    }
-
-
-    if (reviewsNext) {
-        reviewsNext.onclick = function ( ) { // Кнопки управления слайдера Отзывы
-            reviewsSlider.next();
-        }
-        reviewsPrev.onclick = function ( ) {
-            reviewsSlider.previous();
-        }
-    }
-
-    if (catalogcategory1Next) {
-        catalogcategory1Next.onclick = function ( ) { // Кнопки управления слайдера каталога
-            catalogcategory1.next();
-        }
-        catalogcategory1Prev.onclick = function ( ) {
-            catalogcategory1.previous();
-        }
-    }
-
-    if (catalogcategory2Next) {
-        catalogcategory2Next.onclick = function ( ) { // Кнопки управления слайдера каталога
-            catalogcategory2.next();
-        }
-        catalogcategory2Prev.onclick = function ( ) {
-            catalogcategory2.previous();
-        }
-    }
-
-    if (needtoknowPrev) {
-        needtoknowNext.onclick = function ( ) { // Кнопки управления слайдера Нужно знать
-            needtoknowSlider.next();
-        }
-        needtoknowPrev.onclick = function ( ) {
-            needtoknowSlider.previous();
-        }
-    }
-    if (compareSliderNext) {
-        compareSliderNext.onclick = function () { // Кнопки управления слайдера сравнений
-            compareSlider.next();
-        }
-        compareSliderPrev.onclick = function () {
-            compareSlider.previous();
-        }
-    }
-    if (letterSliderNext) {
-        letterSliderNext.onclick = function () { // Кнопки управления слайдера с письмами
-            lettersSlider.next();
-        }
-        letterSliderPrev.onclick = function () {
-            lettersSlider.previous();
-        }
-    }
-
-    if (aboutreviewsNext) {
-        aboutreviewsNext.onclick = function () { // Кнопки управления слайдера с письмами
-            aboutreviewsSlider.next();
-        }
-        aboutreviewsPrev.onclick = function () {
-            aboutreviewsSlider.previous();
-        }
-    }
+    });
 
     if (compareNavbarButton && compareWrapper) {
         compareNavbarButton.onclick = function () {
@@ -199,10 +88,13 @@ window.onload = function () {
             }
         }
     }
-    document.getElementById("navbarMenuSlideTopClose").onclick = function () {
-        navbarmenu.className = 'navbar-menu-wrapper'
-        navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
-        navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+    const navbarMenuSlideTopClose = document.getElementById("navbarMenuSlideTopClose");
+    if (navbarMenuSlideTopClose) {
+        navbarMenuSlideTopClose.onclick = function () {
+            navbarmenu.className = 'navbar-menu-wrapper'
+            navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+            navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+        }
     }
 
     if (navbarmenuLinks) {
@@ -265,13 +157,16 @@ window.onload = function () {
     }
 
 
-    function navbarMenuClose1 () {
+    function navbarMenuClose1() {
         if (event.target.classList[0] == 'navbar-menu-wrapper')
             navbarmenu.classList = 'navbar-menu-wrapper'
         navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
         navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
     }
-    navbarmenu.addEventListener("mouseover" , navbarMenuClose1)
+
+    if (navbarmenu) {
+        navbarmenu.addEventListener("mouseover", navbarMenuClose1)
+    }
 
 
     function navbarMenuTopCLoseHandler() {
@@ -284,36 +179,25 @@ window.onload = function () {
         navbarMenuTopCLose[i].addEventListener('click', navbarMenuTopCLoseHandler);
     }
 
-
-    for (index = 0; index < customerChoiceCardCompare.length; index++) { // Меню карточек товара
-        button = customerChoiceCardCompare[index];
-        button.addEventListener('click', {handleEvent: clickHandler, index: index});
+    if (document.documentElement.clientWidth > 752) {
+        $(".customerchoice__slider-element").hover(
+            function () {
+                this.children[2].className += ' customerchoice-element-open'
+            },
+            function () {
+                this.children[2].className = 'customerchoice__slider-element__info'
+            });
     }
 
-    function clickHandler(event) {
-        if (customerChoiceCardCompare[this.index].classList.length == 1) {
-                customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
-                customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
-            } else {
-                customerChoiceCardCompare[this.index].classList = 'customerchoice__slider-element-compare'
-                customerChoiceCardInfo[this.index].classList = 'customerchoice__slider-element__info';
-            }
-        event.preventDefault();
-    }
 
-    if (itemSliderNext) {
-        itemSliderNext.onclick = function () { // Кнопки управления слайдера товара
-            itemSlider.next();
-        }
-        itemSliderPrev.onclick = function () {
-            itemSlider.previous();
-        }
-    }
 
     const itemMenu = document.getElementById("itemMenu")
 
     var scrollPos2 = 0;
-    $(window).scroll(function(){
+    $(window).scroll(function () {
+        if (!itemMenu) {
+            return;
+        }
 
         var st = $(this).scrollTop();
         if (document.documentElement.clientWidth > 752) {
@@ -336,14 +220,14 @@ window.onload = function () {
         scrollPos2 = st;
     });
     const createReview = document.getElementById("createReview");
-    if(createReview) {
+    if (createReview) {
         createReview.onclick = function () {
             document.getElementById("createReviewHidden").classList += ' article-reviews-hidden-active'
-            createReview.setAttribute("style" , "opacity: 0")
+            createReview.setAttribute("style", "opacity: 0")
         }
         function close() {
             document.getElementById("createReviewHidden").classList = 'article-reviews-hidden'
-            createReview.setAttribute("style" , "opacity: 1")
+            createReview.setAttribute("style", "opacity: 1")
         }
         document.getElementById("reviewClose").onclick = function () {
             close()
@@ -375,6 +259,93 @@ window.onload = function () {
 
 
 
+    // ----- sliders ---
 
+    [
+        '#itemSlider',  
+        '#aboutreviewsSlider', 
+        '#reviewsSlider', 
+        '#needtoknowSlider',
+        '#catalogcategory1',
+        '#catalogcategory2',
+        '#lettersSlider',
+        '#compareSlider',
+        '#pcslider',
+        '#ccslider'
+    ].forEach(function(selector) {
+        const el = document.querySelector(selector)
+        if (el) {
+            const slider = new Flickity(el);
+            const prevEl = document.querySelector(`${selector}Prev`);
+            const nextEl = document.querySelector(`${selector}Next`);
+    
+            if (prevEl && nextEl) {
+                nextEl.onclick = function () {
+                    slider.next();
+                };
+                prevEl.onclick = function () {
+                    slider.previous();
+                };
+            }
+        }
+    })
+
+
+    // --- popups ---
+
+    $("#item-cart-popup-trigger").magnificPopup({
+      items: {
+        src: "#item-cart-popup",
+        type: "inline",
+      },
+    });
+
+    if (document.documentElement.clientWidth > 1023) {
+        $("#filtersMultiselect1").dropdownchecklist({
+            firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function (options) {
+                return "Бренд"
+            }
+        });
+    } else {
+        $("#filtersMultiselect1").dropdownchecklist({
+            firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function(options) {
+                var selectedOptions = options.filter(":selected");
+                var countOfSelected = selectedOptions.size();
+                var size = options.size();
+                var selected = selectedOptions.text().replace(/([A-Z]+)*([A-Z][a-z])/g, "$1 $2").split(" ")
+                switch (countOfSelected) {
+                    case 0:
+                        return "Бренд";
+                    case 1:
+                        return selectedOptions.text();
+                    case options.size():
+                        return "Все";
+                    default:
+                        return selected[1] + "<span class='filtersBrandSpan'> и еще " + (selected.length - 2 ) + '</span>'
+                }
+            }
+        })
+    }
+    $("#filtersMultiselect2").dropdownchecklist({ firstItemChecksAll: true , emptyText: "Поток кислорода", icon: {}, textFormatFunction: function(options) {
+            return "Покот кислорода"
+    }});
+    filtersR.className = 'filters-r1'
+    if (filtersTrigger) {
+        filtersTrigger.onclick = function () {
+            filtersR.classList += ' filters-r1-active'
+        }
+        document.getElementById("filtersResult").onclick = function () {
+            filtersR.className = 'filters-r1'
+        }
+        document.getElementById("filtersClose").onclick = function () {
+            filtersR.className = 'filters-r1'
+        }
+    }
+
+    if (document.documentElement.clientWidth > 1023) {
+        $("#filtersSort").dropdownchecklist({ icon: {} });
+    } else {
+        $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
+    }
 
 }
