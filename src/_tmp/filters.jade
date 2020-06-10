@@ -1,0 +1,48 @@
+.filters
+    .filters-r1#filtersR.filters-r1-active
+
+        .filters-r1-mobileonly
+            | Фильтры
+            svg(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')#filtersClose
+                path(d='M2 14L14 2', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M2 2L13.9998 13.9999', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+
+        .filters-r1-price
+            .filters-r1-p Цена
+            div
+                .filters-r1-price-input
+                    label.filters-r1-price-input-label от
+                    input.filters-r1-price-input-el(placeholder="78 000" type="text")
+                | -
+                .filters-r1-price-input
+                    label.filters-r1-price-input-label до
+                    input.filters-r1-price-input-el(placeholder="100 000" type="text")
+        select#filtersMultiselect1(multiple).filters-r1-brand
+            option(value='All ') Все / Ни одного
+            option(value='Atmung') Atmung
+            option(value='Bitmos') Bitmos
+            option(value='Invacar') Invacare
+            option(value='Nidek-Medical') Nidek-Medical
+            option(value='Philips') Philips
+            option(value='Ventum') Ventum
+        select#filtersMultiselect2(multiple).filters-r1-brand
+            option(value='1') Все / Ни одного
+            option(value='2') 1 - 3 литра/мин
+            option(value='3') 3 - 5 литра/мин
+            option(value='4') 6 - 10 литра/мин
+        .filters-r1-reset
+            svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M2 12L12 2', stroke='#DD2333', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M2 2L11.9998 11.9999', stroke='#DD2333', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+            | Сбросить
+        button.filters-r1-seeall-mobileonlu#filtersResult Посмотреть 34 предложений
+    .filters-r2
+        .filters-r2-sort#filtersSortContainer
+            .filters-r2-sort-text Сортировать по:
+            select.filters-r2-sort-select#filtersSort
+                option по возрастанию цены
+                option по убыванию цены
+                option по рейтингу
+        .filters-mobileonly#filtersTrigger
+            | Фильтры
+            span 2

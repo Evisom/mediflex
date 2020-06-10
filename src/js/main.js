@@ -19,6 +19,9 @@ window.onload = function () {
         index
     let itemCard = document.getElementsByClassName("customerchoice__slider-element")
     let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
+    const filtersTrigger = document.getElementById("filtersTrigger")
+    const filtersR = document.getElementById("filtersR")
+
 
     let scrollPos = 0;
 
@@ -294,5 +297,69 @@ window.onload = function () {
         type: "inline",
       },
     });
+
+    if (document.documentElement.clientWidth > 1023) {
+        $("#filtersMultiselect1").dropdownchecklist({
+            firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function (options) {
+                return "Бренд"
+            }
+        });
+    } else {
+        $("#filtersMultiselect1").dropdownchecklist({
+            firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function(options) {
+                var selectedOptions = options.filter(":selected");
+                var countOfSelected = selectedOptions.size();
+                var size = options.size();
+                var selected = selectedOptions.text().replace(/([A-Z]+)*([A-Z][a-z])/g, "$1 $2").split(" ")
+                switch (countOfSelected) {
+                    case 0:
+                        return "Бренд";
+                    case 1:
+                        return selectedOptions.text();
+                    case options.size():
+                        return "Все";
+                    default:
+                        return selected[1] + "<span class='filtersBrandSpan'> и еще " + (selected.length - 2 ) + '</span>'
+                }
+            }
+        })
+    }
+    $("#filtersMultiselect2").dropdownchecklist({ firstItemChecksAll: true , emptyText: "Поток кислорода", icon: {}, textFormatFunction: function(options) {
+            return "Покот кислорода"
+    }});
+    filtersR.className = 'filters-r1'
+    if (filtersTrigger) {
+        filtersTrigger.onclick = function () {
+            filtersR.classList += ' filters-r1-active'
+        }
+        document.getElementById("filtersResult").onclick = function () {
+            filtersR.className = 'filters-r1'
+        }
+        document.getElementById("filtersClose").onclick = function () {
+            filtersR.className = 'filters-r1'
+        }
+    }
+
+    if (document.documentElement.clientWidth > 1023) {
+        $("#filtersSort").dropdownchecklist({ icon: {} });
+    } else {
+        $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
+    }
+
+    // const sortpopup = document.getElementById("ddcl-filtersSort-ddw")
+    // var target = document.getElementById('filtersSortContainer');
+    //
+    // const observer = new MutationObserver( (mutationsList , observer ) => {
+    //     for (let mutation of mutationsList) {
+    //         if ($(sortpopup).attr("style") == 'position: absolute; left: 25px; top: 96px; height: 159px; width: 296px; z-index: 1;') {
+    //             $(sortpopup).attr("style", "position: fixed !important; left: 0 !important; right: 0 !important; top: 88vh !important")
+    //         }
+    //     }
+    // });
+    // observer.observe(target, {
+    //     attributes: true,
+    //     childList: true,
+    //     subtree: true
+    // });
 
 }

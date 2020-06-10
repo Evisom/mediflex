@@ -1,0 +1,344 @@
+.filters
+  display: flex
+  flex-direction: column
+  padding: 0 115px
+  padding-top: 32px
+  background: #F9FCFE
+
+.filters-r1
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 24px
+.filters-r1-price , .filters-r1-price > div
+  display: flex
+  flex-direction: row
+  align-items: center
+.filters-r1-price-input
+  display: flex
+  width: 10vw
+  flex-direction: row
+  align-items: center
+  background: #FFFFFF
+  border: 1px solid rgba(146, 148, 151, 0.5)
+  border-radius: 8px
+  height: 48px
+  margin-right: 5px
+  margin-left: 5px
+
+.filters-r1-price-input-el
+  height: 100%
+  margin-top: 3px
+  padding-left: 6px
+  height: calc(100% - 3px)
+  width: calc(100% - 50px)
+  outline: none
+
+.filters-r1-price-input-el[type="text"]
+  font-size: 20px
+  color: black
+.filters-r1-price-input-label
+  font-size: 20px
+  line-height: 26px
+  margin-left: 14px
+
+input.filters-r1-price-input-el::placeholder
+  font-weight: 500
+  font-size: 20px
+  color: #929497
+
+.filters-r1-reset
+  width: 15vw
+  text-align: right
+  font-size: 20px
+.filters-r1-reset > svg
+  margin-right: 8px
+
+#ddcl-filtersMultiselect1, #ddcl-filtersMultiselect2
+  width: 19vw
+  background: #FFFFFF
+  border: 1px solid rgba(146, 148, 151, 0.5)
+  box-sizing: border-box
+  border-radius: 8px
+  height: 50px
+  position: relative
+
+#ddcl-filtersMultiselect1 > span , #ddcl-filtersMultiselect2 > span
+  border: none
+  background: white
+  height: 100%
+  width: 100% !important
+  border: none
+#ddcl-filtersMultiselect1 > span > span
+  width: 100% !important
+
+.ui-dropdownchecklist-text
+  margin-top: 11px
+  font-weight: 500
+  font-size: 20px
+  line-height: 26px
+  color: black
+  margin-left: 14px
+
+.ui-dropdownchecklist-selector.ui-state-default
+  outline: none
+
+.filtersBrandSpan
+  color: #4FBBEB
+
+.filters-r2-sort-text
+  font-size: 20px
+#ddcl-filtersMultiselect1-ddw , #ddcl-filtersMultiselect2-ddw
+  top: 280px !important
+  background: white !important
+  border: none
+  border-radius: 0 0 8px 8px
+  border-left: 1px solid rgba(146, 148, 151, 0.5)
+  border-right: 1px solid rgba(146, 148, 151, 0.5)
+  border-bottom: 1px solid rgba(146, 148, 151, 0.5)
+  padding-bottom: 25px
+  padding-top: 16px
+  width: calc(19vw - 2px) !important
+
+.ui-dropdownchecklist-item.ui-state-default
+  padding-left: 14px
+  display: flex
+  flex-direction: row
+  align-items: baseline
+  background: white !important
+  border: none
+.ui-icon
+  top: 16px
+  position: absolute
+  right: 14px
+  background-image: url('./../img/filter-close.svg') !important
+  background-position: center center
+  background-size: 100% 100%
+
+.ui-icon.ui-icon-triangle-1-s
+  transform: rotate(180deg)
+
+label.ui-dropdownchecklist-text
+  font-size: 20px
+  font-weight: normal
+  line-height: 26px
+
+.ui-dropdownchecklist-item.ui-state-default > input[type="checkbox"]
+  width: 16px
+  height: 16px
+  background-color: #F4F4F5 !important
+  border: 1px solid rgba(146, 148, 151, 0.5)
+
+.ui-dropdownchecklist-dropcontainer
+  border: none
+  margin: 1px
+
+.ui-dropdownchecklist-item.ui-state-default > input:checked
+  background-image: url("./../img/filter-select.svg") !important
+
+.filters-r1-p
+  font-size: 20px
+  margin-right: 20px
+.filters-mobileonly
+  display: none
+.filters-r1-mobileonly
+  display: none
+.filters-r1-seeall-mobileonlu
+  display: none
+
+.filters-r2
+  margin-bottom: 50px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-direction: row
+.filters-r2-sort
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+.filters-r2-sort > span
+  background: none !important
+  border: none !important
+  height: 50px !important
+  width: 255px !important
+
+
+
+.filters-r2-sort > span > span
+  background: none !important
+  border: none !important
+  height: 50px !important
+  position: relative
+  width: 255px !important
+
+.filters-r2-sort > span > span > span
+  background: none !important
+  font-size: 20px
+  height: 50px !important
+  color: #4FBBEB
+
+#ddcl-filtersSort-ddw > div
+  background: #FFFFFF
+  border: 1px solid rgba(146, 148, 151, 0.5)
+  box-sizing: border-box
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
+  border-radius: 8px
+  padding-top: 20px
+  padding-bottom: 26px
+  padding-left: 14px
+  padding-right: 32px
+@media (max-width: 1260px)
+  .filters
+    padding: 0 50px
+
+  .filters-r1-price-input
+    width: 13vw
+  #ddcl-filtersMultiselect1, #ddcl-filtersMultiselect2
+    width: 21.5vw
+  .filters-r1-reset
+    width: 12vw
+  .filters-r1-p
+    margin-right: 7px
+
+@media (max-width: 1024px)
+  .filters-r1.filters-r1-active
+    z-index: 9
+    top: 160px !important
+  .filters-mobileonly
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 40px
+    border-radius: 8px
+    font-size: 16px
+    background: #D9DADB
+    width: 42vw
+  .filters-mobileonly > span
+    width: 16px
+    height: 16px
+    color: #FFFFFF
+    font-size: 12px
+    margin-left: 5px
+    background: red
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+  .filters-r1
+    display: none
+  .filters-r1.filters-r1-active
+    display: flex
+    flex-direction: column
+    position: fixed
+    top: 56px
+    left: 0
+    right: 0
+    justify-content: unset
+    bottom: 0
+    background: white
+  .filters-r1-mobileonly
+    display: flex
+    height: 51px
+    justify-content: center
+    align-items: center
+    position: relative
+    width: 100%
+    font-size: 20px
+    margin-bottom: 40px
+  .filters-r1-mobileonly > svg
+    position: absolute
+    top: 16px
+    right: 16px
+
+  .filters-r1-price
+    flex-direction: column
+  .filters-r1-p
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    margin-bottom: 12px
+  .filters-r1-price-input
+    width: 41vw
+  #ddcl-filtersMultiselect1, #ddcl-filtersMultiselect2
+    width: 85vw
+    margin-top: 24px
+  #ddcl-filtersMultiselect1-ddw
+    width: calc(85vw - 2px) !important
+    top: 240px !important
+  #ddcl-filtersMultiselect2-ddw
+    width: calc(85vw - 2px) !important
+    top: 320px !important
+
+  .filters-r1-reset
+    width: 100vw
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 80px
+
+  .filters-r1-seeall-mobileonlu
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 40px
+    width: 85vw
+    background: #4FBBEB
+    border-radius: 8px
+    font-size: 16px
+    bottom: 32px
+    position: absolute
+    color: white
+
+  .filters-r2-sort-text
+    display: none
+
+  .filters-r2-sort > span
+    background: #D9DADB !important
+    border-radius: 8px !important
+    height: 40px !important
+    width: 42vw !important
+    display: flex !important
+    justify-content: center !important
+    align-items: center !important
+
+  .filters-r2-sort > span > span
+
+  .filters-r2-sort > span > span > span
+    font-size: 16px
+    color: black
+    font-weight: normal
+    text-overflow: clip
+
+  #ddcl-filtersSort-ddw
+    position: fixed
+    //height: 159px !important
+    //z-index: 0 !important
+    left: 0px !important
+    right: 0px
+    //top: 88vh !important
+    width: 100vw
+    margin-top: calc(100vh - 250px)
+
+    bottom: 0px
+  #ddcl-filtersSort-ddw > div
+    padding-bottom: 90px
+    border-radius: 24px !important
+    padding-top: 16px
+  #ddcl-filtersSort-ddw > div > div
+    display: flex !important
+    flex-direction: row-reverse !important
+    justify-content: space-between
+
+@media (max-width: 768px)
+  .filters
+    padding: 0 25px
+  .filters-r2-sort > span > span > span
+    width: 80% !important
+  .filters-r1.filters-r1-active
+    top: 56px !important
+@media (max-width: 480px)
+  .filters-r2-sort > span > span > span
+    width: 67% !important
