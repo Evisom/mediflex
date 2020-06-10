@@ -1,0 +1,28 @@
+{
+  "name": "mediflex",
+  "version": "1.0.0",
+  "description": "### Run `` ~$ harp server src``",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evisom/mediflex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evisom/mediflex/issues"
+  },
+  "homepage": "https://github.com/Evisom/mediflex#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-pretty-html": "^2.0.10"
+  }
+}

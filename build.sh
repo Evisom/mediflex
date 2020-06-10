@@ -4,4 +4,5 @@ rm docs/img/*
 rm docs/fonts/*
 rm docs/*.html
 harp compile ./src ./docs
+gulp prettify
 echo "mediflex.evisom.pw" > "./docs/CNAME"
