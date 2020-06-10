@@ -2,7 +2,6 @@
 != partial("_tmp/navbar")
 
 .map
-    script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d807253597a3e3d7c52827a8964c46ca25f4e174f8ff0380dc048cd66ff9e29&width=100%25&height=500&lang=ru_RU&scroll=false')
     .map__contacts
         != partial("_tmp/path")
         h1 Контакты
@@ -20,5 +19,35 @@
             | Мы работаем по будням
             br
             | с 10 до 18 часов
+    script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d807253597a3e3d7c52827a8964c46ca25f4e174f8ff0380dc048cd66ff9e29&width=100%25&height=500&lang=ru_RU&scroll=false')
+
+.office-gallery
+    h1 Наш офис
+    .office-gallery__buttons
+        #officeSliderPrev.office-gallery__buttons-btn
+            svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M2 10L10 2', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M2 10L9.99985 18', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+        #officeSliderNext.office-gallery__buttons-btn
+            svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M10 10.0002L2 18.0002', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M10 10.0002L2.00016 2.00028', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+    ul.office-gallery__slider#officeSlider(data-flickity='{ "pageDots" : false , "prevNextButtons" : false, "cellAlign": "left", "contain": true }')
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
 
 != partial("_tmp/footer")

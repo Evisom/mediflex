@@ -1,5 +1,4 @@
 .map 
-    height: 500px
     position: relative
     &__contacts
         position: absolute;
@@ -10,6 +9,11 @@
         background: #FFFFFF;
         padding: 24px 50px
         z-index: 1
+        @media (max-width: 768px)
+            position: static
+            width: 100%
+            height: auto
+            padding: 24px
         h1 
             font-size: 36px
             margin-bottom: 24px
@@ -25,3 +29,37 @@
             padding: 0
             width: 100%
             margin-bottom: 24px
+
+.office-gallery
+    padding: 64px 100px
+    position: relative
+    @media (max-width: 1260px)
+        padding: 40px 20px
+    h1 
+        font-size: 36px
+        margin-bottom: 24px
+
+    &__buttons
+        position: absolute
+        width: 130px
+        top: 50px
+        right: 120px
+        display: flex
+        justify-content: space-between
+        &-btn
+            width: 48px
+            height: 48px
+            display: flex
+            justify-content: center
+            align-items: center
+            background: #FFFFFF
+            box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.15)
+            border-radius: 50%
+            cursor: pointer
+    &__slider 
+        li  
+            list-style: none
+            display: block
+            margin-right: 30px
+            img
+                border: 10px solid #D9DADB
