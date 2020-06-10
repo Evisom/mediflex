@@ -1,3 +1,26 @@
 #item-cart-popup.popup.popup--item-cart
-    .mfp-close
-    .popup__inner test popup
+    button.mfp-close(title='Close (Esc)', type='button') ×
+    .popup__inner
+        .popup-content
+
+            .letters-slider-r1-text-h Помощь менеджера
+            .letters-slider-r1-text-p Заполните формы и наш менеджер поможет вам совершить покупку
+            .checkout-ainput-container
+                input.checkout-ainput-el(type='text', required onkeyup="checkout1();")
+                label.checkout-ainput-label Имя
+            .checkout-ainput-container
+                input.checkout-ainput-el(type='text', required onkeyup="checkout1();")
+                label.checkout-ainput-label Телефон
+            .checkout-ainput-container
+                input.checkout-ainput-el(type='text', required onkeyup="checkout1();")
+                label.checkout-ainput-label Email
+            .checkout-ainput-container
+                input.checkout-ainput-el(type='text', required onkeyup="checkout1();")
+                label.checkout-ainput-label Введите промокод
+            .checkout-stage-checkbox
+                input.checkout-stage-checkbox-el(type="checkbox")
+                p.checkout-stage-checkbox-p Скидка 15% на последующие покупки, за подписку на новости о новинках.
+            .checkout-stage-checkbox
+                input.checkout-stage-checkbox-el(type="checkbox")
+                p.checkout-stage-checkbox-p Скидка 15% на последующие покупки, за подписку на новости о новинках.
+            button.checkout-stage-button.checkout-stage-button-active(type="submit" onkeyup="checkout()1;")#checkoutButton1 Продолжить

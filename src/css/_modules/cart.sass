@@ -340,6 +340,36 @@
   line-height: 28px
   color: #000000
 
+//
+.cart-popup-add
+  display: flex
+  position: absolute
+  top: -33000px
+  width: 65vw
+
+.mfp-content > .cart-popup-add
+  position: static
+  top: 0
+  display: flex
+  height: 550px
+  background: white
+  margin: auto
+
+.cart-popup-add > div
+  width: 100%
+
+.cart-popup-add > div > customerchoice__r1
+  margin: 0 !important
+  width: 100%
+
+.cart-popup-add > .customerchoice > .customerchoice__r1 > .customerchoice__r1__buttons
+  width: 20% !important
+
+.cart-popup-add >   .customerchoice > .customerchoice__r1
+  margin: 0 25px
+
+cart-popup-add > div > div
+  //margin-right: 50px
 
 @media (max-width: 1280px)
   .cart-wrapper
@@ -398,6 +428,9 @@
   .cart-total
     width: 36%
 
+  .cart-popup-add > .customerchoice > .customerchoice__r1 > .customerchoice__r1__buttons
+    width: 25% !important
+
 @media (max-width: 768px)
   .cart-wrapper
     flex-direction: column
@@ -444,3 +477,25 @@
 
   .cart-code-r1
     align-items: end
+
+  .cart-popup-add
+    width: 100%
+
+  .mfp-content > .cart-popup-add
+    position: fixed !important
+    top: 120px !important
+    left: 0 !important
+    right: 0 !important
+    bottom: 0 !important
+    width: 100%
+    height: 100%
+
+  .mfp-bg
+    background: none
+  .cart-popup-add>div
+    height: 100%
+
+  .mfp-close-btn-in .mfp-close
+    right: 24px
+    color: #333
+    font-size: 43px

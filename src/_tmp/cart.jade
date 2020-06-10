@@ -1,3 +1,6 @@
+.cart-popup-add#caraddpopup
+    != partial("customerchoice", {sliderId: "ccslider",buttonPrev: "ccsliderPrev",buttonNext: "ccsliderNext",text: "К этому товару может пригодится"})
+
 .cart-wrapper
     .cart
         p.cart-h Корзина (5)
@@ -31,7 +34,7 @@
                     .cart-element-c2-price
                          .cart-element-c2-price-discount 150 000 ₽
                          .cart-element-c2-price-last 160 000 ₽
-                .cart-element-c2-r2 + Добавить необходимый аксессуар
+                .cart-element-c2-r2#cartpopupaddtrigger + Добавить необходимый аксессуар
             .cart-element-remove
                 svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
                     path(d='M10 13L10 25H22V13', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
@@ -77,7 +80,7 @@
                         .cart-element-c2-calc-price 135 000 ₽/шт
                     .cart-element-c2-price
                         .cart-element-c2-price-price 160 000 ₽
-                .cart-element-c2-r2 + Добавить необходимый аксессуар
+                .cart-element-c2-r2#cartpopupaddtrigger + Добавить необходимый аксессуар
 
 
 

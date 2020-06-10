@@ -300,6 +300,13 @@ window.onload = function () {
       },
     });
 
+    $("#cartpopupaddtrigger").magnificPopup({
+        items: {
+            src: "#caraddpopup",
+            type: "inline",
+        },
+    });
+
     if (document.documentElement.clientWidth > 1023) {
         $("#filtersMultiselect1").dropdownchecklist({
             firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function (options) {
@@ -329,7 +336,10 @@ window.onload = function () {
     $("#filtersMultiselect2").dropdownchecklist({ firstItemChecksAll: true , emptyText: "Поток кислорода", icon: {}, textFormatFunction: function(options) {
             return "Покот кислорода"
     }});
-    filtersR.className = 'filters-r1'
+    if (filtersR) {
+        filtersR.className = 'filters-r1'
+    }
+
     if (filtersTrigger) {
         filtersTrigger.onclick = function () {
             filtersR.classList += ' filters-r1-active'
