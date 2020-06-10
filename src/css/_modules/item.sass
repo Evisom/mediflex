@@ -616,9 +616,70 @@ textarea.article-reviews-hidden-r2::placeholder
   border-bottom: 1px solid #DEDFE0
   width: 100%
 
+.mfp-content > .item-cart-popup
+  position: relative
+  top: 0
+  width: 770px
+  background: white
+  margin: auto
+  padding: 40px
+  position: relative
+
+.item-cart-popup-h
+  font-weight: bold
+  font-size: 32px
+  line-height: 100%
+
+.item-saving-container-main-item
+  display: flex
+  flex-direction: row
+  margin-top: 24px
+
+.item-saving-container-main-item-c2-h
+  font-weight: 500
+  font-size: 20px
+  line-height: 130%
 
 
+.item-saving-container-main-item-c1
+  margin-right: 30px
 
+.item-saving-container-main-item-c2
+  display: flex
+  flex-direction: column
+  //align-items: center
+  width: 56%
+
+.item-saving-container-main-item-c2 >  .item-main-info-checkout-info
+  margin-top: 16px
+
+.item-saving-container-main-item-c2-r
+  display: flex
+  flex-direction: column
+
+.item-cart-popup-button
+  display: flex
+  flex-direction: row-reverse
+  justify-content: space-between
+  margin-top: 24px
+
+.item-cart-popup-button > button
+  width: 48%
+
+.item-cart-popup > .customerchoice
+  width: 100%
+  background: white
+
+.item-cart-popup > .customerchoice > .customerchoice__r1
+  margin: 0
+
+.item-cart-popup > .customerchoice > .customerchoice__r1 > .customerchoice__r1__buttons
+  width: 20%
+
+.item-cart-popup
+  position: absolute
+  top: -33000px
+  width: 770px
 @media (max-width: 1280px)
   .item
     padding-left: 50px
@@ -711,6 +772,9 @@ textarea.article-reviews-hidden-r2::placeholder
     justify-content: space-around
   .article-reviews-rating-r2
     width: 25%
+
+  .item-cart-popup
+    width: 90vw !important
 
 @media (max-width: 768px)
   .item
@@ -937,3 +1001,24 @@ textarea.article-reviews-hidden-r2::placeholder
     width: 100%
   .item-main-info-buttons-hidden-close
     display: flex
+  .mfp-content > .item-cart-popup
+    padding: 20px
+    position: fixed
+    top: 56px
+    left: 0
+    right: 0
+    bottom: 0
+    background: #F9FCFE
+  .item-cart-popup-button
+    flex-direction: column
+
+  .mfp-content > .item-cart-popup > .customerchoice
+    background: #F9FCFE
+  .item-saving-container-main-item-c2 > .item-main-info-checkout-info
+    width: 100%
+  .item-cart-popup-button > button
+    width: 100%
+    margin-bottom: 16px
+
+  .item-saving-container-main-item-c2>.item-main-info-checkout-info
+    margin-top: 0

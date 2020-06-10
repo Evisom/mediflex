@@ -271,7 +271,8 @@ window.onload = function () {
         '#lettersSlider',
         '#compareSlider',
         '#pcslider',
-        '#ccslider'
+        '#ccslider',
+        '#itpSlider'
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {
@@ -298,6 +299,13 @@ window.onload = function () {
         src: "#item-cart-popup",
         type: "inline",
       },
+    });
+
+    $("#cart-popup-trigger").magnificPopup({
+        items: {
+            src: "#cart-popup",
+            type: "inline",
+        },
     });
 
     $("#cartpopupaddtrigger").magnificPopup({
