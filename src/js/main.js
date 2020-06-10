@@ -16,7 +16,8 @@ window.onload = function () {
     const navbarMenuBurger = document.getElementById("navbar-menu-burger")
     const navbarMenuBurgerScrollup = document.getElementById("navbar-menu-burger-scrollup")
     let customerChoiceCardCompare = document.querySelectorAll('.customerchoice__slider-element-compare'),
-        index, button;
+        index
+    let itemCard = document.getElementsByClassName("customerchoice__slider-element")
     let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
 
     let scrollPos = 0;
@@ -176,21 +177,14 @@ window.onload = function () {
     }
 
 
-    for (index = 0; index < customerChoiceCardCompare.length; index++) { // Меню карточек товара
-        button = customerChoiceCardCompare[index];
-        button.addEventListener('click', { handleEvent: clickHandler, index: index });
-    }
+    $(".customerchoice__slider-element").hover(
+        function () {
+            this.children[2].className += ' customerchoice-element-open'
+        },
+        function () {
+            this.children[2].className = 'customerchoice__slider-element__info'
+        });
 
-    function clickHandler(event) {
-        if (customerChoiceCardCompare[this.index].classList.length == 1) {
-            customerChoiceCardCompare[this.index].classList += ' customerchoice-compare-active';
-            customerChoiceCardInfo[this.index].classList += ' customerchoice-element-open';
-        } else {
-            customerChoiceCardCompare[this.index].classList = 'customerchoice__slider-element-compare'
-            customerChoiceCardInfo[this.index].classList = 'customerchoice__slider-element__info';
-        }
-        event.preventDefault();
-    }
 
     const itemMenu = document.getElementById("itemMenu")
 
