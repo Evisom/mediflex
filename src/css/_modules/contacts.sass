@@ -33,12 +33,17 @@
 .office-gallery
     padding: 64px 100px
     position: relative
+    overflow: hidden
     @media (max-width: 1260px)
         padding: 40px 20px
     h1 
         font-size: 36px
         margin-bottom: 24px
 
+    .advantages
+        margin: 100px 0 0 0
+        @media (max-width: 768px)
+            display: none
     &__buttons
         position: absolute
         width: 130px
@@ -46,6 +51,8 @@
         right: 120px
         display: flex
         justify-content: space-between
+        @media (max-width: 768px)
+            display: none
         &-btn
             width: 48px
             height: 48px
@@ -57,9 +64,21 @@
             border-radius: 50%
             cursor: pointer
     &__slider 
+        @media (max-width: 768px)
+            display: flex
+            flex-wrap: wrap
+            flex-direction:row
+            margin: 0 -8px
         li  
             list-style: none
             display: block
             margin-right: 30px
+            @media (max-width: 768px)
+                width: 133px
+                margin: 0 8px 16px
             img
                 border: 10px solid #D9DADB
+                @media (max-width: 768px)
+                    border-width: 4px
+                    max-width: 100%
+                    box-sizing: border-box
