@@ -272,7 +272,9 @@ window.onload = function () {
         '#compareSlider',
         '#pcslider',
         '#ccslider',
-        '#itpSlider'
+        '#itpSlider',
+        "#item2slider",
+        "#item3Slider"
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {
