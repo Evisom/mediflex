@@ -4,6 +4,7 @@
   padding: 0 115px
   padding-top: 32px
   background: #F9FCFE
+  position: relative
 
 .filters-r1
   display: flex
@@ -95,7 +96,7 @@ input.filters-r1-price-input-el::placeholder
   font-size: 20px
 #ddcl-filtersMultiselect1-ddw , #ddcl-filtersMultiselect2-ddw
   z-index: 999999999999 !important
-  top: 375px !important
+  top: 78px !important
   background: white !important
   border: none
   border-radius: 0 0 8px 8px
@@ -209,6 +210,9 @@ label.ui-dropdownchecklist-text
     width: 12vw
   .filters-r1-p
     margin-right: 7px
+  #ddcl-filtersMultiselect1-ddw, #ddcl-filtersMultiselect2-ddw
+    top: 44px !important
+    width: 21.45vw !important
 
 @media (max-width: 1024px)
   .filters-r1.filters-r1-active
@@ -279,6 +283,7 @@ label.ui-dropdownchecklist-text
     width: calc(85vw - 2px) !important
     top: 320px !important
 
+
   .filters-r1-reset
     width: 100vw
     display: flex
@@ -320,15 +325,16 @@ label.ui-dropdownchecklist-text
     text-overflow: clip
 
   #ddcl-filtersSort-ddw
-    position: fixed
+    position: fixed !important
+    margin-top: calc( 95vh -  190px )
     left: 0px !important
     right: 0px
     width: 100% !important
-    margin-top: calc(100vh - 360px)
+    //margin-top: calc(100vh - 360px)
 
     bottom: 0px
   #ddcl-filtersSort-ddw > div
-    padding-bottom: 90px
+    padding-bottom: 120px
     border-radius: 24px !important
     padding-top: 16px
   #ddcl-filtersSort-ddw > div > div

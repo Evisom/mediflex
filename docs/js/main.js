@@ -46,12 +46,13 @@ window.onload = function () {
     $(window).scroll(function () { // Поведение меню при скролле
         if (document.documentElement.clientWidth > 752) {
             var st = $(this).scrollTop();
-            if (st > scrollPos || scrollPos < 160) {
-                navbar.className = 'navbar';
-                navbarmenu.classList.remove('navbar-menu-scrollup')
-            } else if (scrollPos > 160) {
+            if (st > scrollPos && scrollPos > 160 ) {
                 navbar.className = 'navbar navbar-scrollup';
                 navbarmenu.classList.add('navbar-menu-scrollup');
+
+            } else if (st < scrollPos) {
+                navbar.className = 'navbar';
+                navbarmenu.classList.remove('navbar-menu-scrollup')
             }
             scrollPos = st;
         }
@@ -77,12 +78,13 @@ window.onload = function () {
 
         function navbarMenuScrollupFunc(button) {
             if (navbarmenu.className === 'navbar-menu-wrapper' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-scrollup' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-active-l navbar-menu-scrollup' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-active-l') {
-                navbarmenu.className = 'navbar-menu-wrapper navbar-menu-active'
+                navbarmenu.className += ' navbar-menu-active'
+                console.log("q")
                 navbarBurgerIco[0].setAttribute('src', './img/close-ico.svg')
                 navbarBurgerIco[1].setAttribute('src', './img/close-ico.svg')
 
             } else {
-                navbarmenu.className = 'navbar-menu-wrapper'
+                $(navbarmenu).removeClass("navbar-menu-active")
                 navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
                 navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
             }
@@ -137,16 +139,33 @@ window.onload = function () {
             for (let i = 1; i < navbarr3links.length; i++) {
                 navbarr3links[i].className = 'navbar__r3-link'
             }
-            if (this.id[4] == 'a') {
+
+
+
+
+            let tid4 = this.id[4]
+            if (tid4 == 'a') {
                 navbarmenu.classList.add('navbar-menu-active');
                 navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
 
             } else {
 
-                navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
-                navbarmenu.classList.add('navbar-menu-active-l');
+                if (document.documentElement.clientWidth > 752) {
+                    ID = setTimeout(function(){
+                        navbarr3links[parseInt(tid4) + 1].classList += ' navbar__r3-link-active'
+                        navbarmenu.classList.add('navbar-menu-active-l');
+                        navbarmenuSlide[tid4].setAttribute("style", "z-index: " + zindex++)
+                    }, 500)
 
-                navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++)
+                } else {
+
+                    navbarr3links[parseInt(tid4) + 1].classList += ' navbar__r3-link-active'
+                    navbarmenu.classList.add('navbar-menu-active-l');
+                    navbarmenuSlide[tid4].setAttribute("style", "z-index: " + zindex++)
+                }
+
+
+
             }
 
         }
@@ -154,14 +173,29 @@ window.onload = function () {
         for (let i = 1; i < navbarr3links.length; i++) {
             navbarr3links[i].addEventListener("mouseover", navbarMenuOnclick)
         }
+        for (let i = 1; i < navbarr3links.length; i++) {
+            navbarr3links[i].addEventListener("mouseout",
+                function () {
+                    // for (let i = 1; i < navbarr3links.length; i++) {
+                    //     navbarr3links[i].className = 'navbar__r3-link'
+                    // }
+                    clearTimeout(ID)
+                })
+
+        }
+
     }
 
 
     function navbarMenuClose1() {
-        if (event.target.classList[0] == 'navbar-menu-wrapper')
+        if (event.target.classList[0] == 'navbar-menu-wrapper') {
             navbarmenu.classList = 'navbar-menu-wrapper'
-        navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
-        navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+            navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
+            navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+            for (let i = 1; i < navbarr3links.length; i++) {
+                navbarr3links[i].className = 'navbar__r3-link'
+            }
+        }
     }
 
     if (navbarmenu) {
@@ -195,23 +229,26 @@ window.onload = function () {
 
     var scrollPos2 = 0;
     $(window).scroll(function () {
+
         if (!itemMenu) {
             return;
         }
 
         var st = $(this).scrollTop();
+        console.log(st)
         if (document.documentElement.clientWidth > 752) {
-            if (st > scrollPos2) {
+            if (st > scrollPos2 && scrollPos2 > 800) {
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: 25px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3); padding-left: calc((100vw - 1210px) / 2) !important ; padding-right: calc((100vw - 1210px) / 2) !important ')
+            } else if (st < scrollPos2 ) {
                 itemMenu.setAttribute("style", "")
-            } else if (st < scrollPos2 && scrollPos2 > 800) {
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
+
             }
         } else {
-            if (st > scrollPos2) {
-                itemMenu.setAttribute("style", "")
-            } else if (st < scrollPos2 && scrollPos2 > 700) {
+            if (st > scrollPos2 && scrollPos2 > 1100) {
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: 25px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
+            } else if (st < scrollPos2 && scrollPos2 > 1100) {
                 itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
@@ -273,7 +310,10 @@ window.onload = function () {
         '#pcslider',
         '#ccslider',
         '#itpSlider',
-        '#officeSlider'
+        "#item2slider",
+        "#item3Slider",
+        '#officeSlider',
+        "#cpuslider"
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {
