@@ -1,14 +1,13 @@
 != partial("_tmp/navbar")
-!= partial("_tmp/path")
-
-!= partial("_tmp/item")
-
-.item-menu#itemMenu
-    a.item-menu-link.item-menu-link-active(href="item.html") Описание
-    a.item-menu-link(href="item-specs.html") Характеристики
-    a.item-menu-link(href="item-reviews.html") Отзывы (13)
-    a.item-menu-link Trade-in
-    a.item-menu-link Документация
+.wdtwrapper
+    != partial("_tmp/path")
+    != partial("_tmp/item")
+    .item-menu#itemMenu
+        a.item-menu-link.item-menu-link-active(href="item.html") Описание
+        a.item-menu-link(href="item-specs.html") Характеристики
+        a.item-menu-link(href="item-reviews.html") Отзывы (13)
+        a.item-menu-link Trade-in
+        a.item-menu-link Документация
 
 .article-a
 
@@ -50,8 +49,8 @@
 
 != partial("_tmp/customerchoice", {sliderId: "item2slider",buttonPrev: "item2sliderPrev",buttonNext: "item2sliderNext",text: "Выбор покупателей"})
 != partial("_tmp/customerchoice", {sliderId: "item3Slider",buttonPrev: "item3SliderPrev",buttonNext: "item3SliderNext",text: "Выбор покупателей"})
-
-!= partial("_tmp/advantages")
+.wdtwrapper
+    != partial("_tmp/advantages")
 != partial("_tmp/footer")
 
 

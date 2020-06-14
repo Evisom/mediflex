@@ -3,7 +3,8 @@
 .search-result-h
     a.search-result-a(href="./search.html") Маска
         span (63)
-!= partial("_tmp/filters")
+.wdtwrapper-b
+    != partial("_tmp/filters")
 
 .supersection-grid
     != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})

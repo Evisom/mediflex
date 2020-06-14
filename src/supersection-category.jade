@@ -1,9 +1,10 @@
 != partial("_tmp/navbar")
-!= partial("_tmp/path" , { background : "background : #F9FCFE"})
+.wdtwrapper-b
+    != partial("_tmp/path" , { background : "background : #F9FCFE"})
 
 .supersection-h Стационарные концентраторы
-!= partial("_tmp/filters")
-
+.wdtwrapper-b
+    != partial("_tmp/filters")
 .supersection-grid
     != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
     != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
@@ -21,6 +22,7 @@
 != partial("_tmp/supersection-seeall" , { background : "background : #F9FCFE"})
 != partial("_tmp/supersection-needtoknow")
 != partial("_tmp/supersection-seeall" , { background : "background : #FFFFFF"})
-!= partial("_tmp/advantages")
+.wdtwrapper
+    != partial("_tmp/advantages")
 != partial("_tmp/supersection-younedtoknow")
 != partial("_tmp/footer")
