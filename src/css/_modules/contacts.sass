@@ -9,11 +9,6 @@
         background: #FFFFFF;
         padding: 24px 50px
         z-index: 1
-        @media (max-width: 768px)
-            position: static
-            width: 100%
-            height: auto
-            padding: 24px
         h1 
             font-size: 36px
             margin-bottom: 24px
@@ -29,6 +24,13 @@
             padding: 0
             width: 100%
             margin-bottom: 24px
+        @media (max-width: 768px)
+            position: static
+            width: 100%
+            height: auto
+            padding: 24px
+            h1
+                font-size: 24px
 
 .office-gallery
     padding: 64px 100px
@@ -36,9 +38,12 @@
     overflow: hidden
     @media (max-width: 1260px)
         padding: 40px 20px
-    h1 
+    h2 
         font-size: 36px
         margin-bottom: 24px
+    @media (max-width: 768px)
+        h2
+            font-size: 20px
 
     .advantages
         margin: 100px 0 0 0
@@ -74,7 +79,7 @@
             display: block
             margin-right: 30px
             @media (max-width: 768px)
-                width: 133px
+                width: 153px
                 margin: 0 8px 16px
             img
                 border: 10px solid #D9DADB
