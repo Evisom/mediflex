@@ -137,16 +137,26 @@ window.onload = function () {
             for (let i = 1; i < navbarr3links.length; i++) {
                 navbarr3links[i].className = 'navbar__r3-link'
             }
-            if (this.id[4] == 'a') {
+
+
+
+
+            let tid4 = this.id[4]
+            if (tid4 == 'a') {
                 navbarmenu.classList.add('navbar-menu-active');
                 navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
 
             } else {
 
-                navbarr3links[parseInt(this.id[4]) + 1].classList += ' navbar__r3-link-active'
-                navbarmenu.classList.add('navbar-menu-active-l');
 
-                navbarmenuSlide[this.id[4]].setAttribute("style", "z-index: " + zindex++)
+                ID = setTimeout(function(){
+                    navbarr3links[parseInt(tid4) + 1].classList += ' navbar__r3-link-active'
+                    navbarmenu.classList.add('navbar-menu-active-l');
+                    navbarmenuSlide[tid4].setAttribute("style", "z-index: " + zindex++)
+                }, 500)
+
+
+
             }
 
         }
@@ -154,6 +164,17 @@ window.onload = function () {
         for (let i = 1; i < navbarr3links.length; i++) {
             navbarr3links[i].addEventListener("mouseover", navbarMenuOnclick)
         }
+        for (let i = 1; i < navbarr3links.length; i++) {
+            navbarr3links[i].addEventListener("mouseout",
+                function () {
+                    for (let i = 1; i < navbarr3links.length; i++) {
+                        navbarr3links[i].className = 'navbar__r3-link'
+                    }
+                    clearTimeout(ID)
+                })
+
+        }
+
     }
 
 
