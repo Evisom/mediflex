@@ -158,6 +158,7 @@ window.onload = function () {
                     }, 500)
 
                 } else {
+
                     navbarr3links[parseInt(tid4) + 1].classList += ' navbar__r3-link-active'
                     navbarmenu.classList.add('navbar-menu-active-l');
                     navbarmenuSlide[tid4].setAttribute("style", "z-index: " + zindex++)
@@ -175,9 +176,9 @@ window.onload = function () {
         for (let i = 1; i < navbarr3links.length; i++) {
             navbarr3links[i].addEventListener("mouseout",
                 function () {
-                    for (let i = 1; i < navbarr3links.length; i++) {
-                        navbarr3links[i].className = 'navbar__r3-link'
-                    }
+                    // for (let i = 1; i < navbarr3links.length; i++) {
+                    //     navbarr3links[i].className = 'navbar__r3-link'
+                    // }
                     clearTimeout(ID)
                 })
 
@@ -191,6 +192,9 @@ window.onload = function () {
             navbarmenu.classList = 'navbar-menu-wrapper'
             navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
             navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
+            for (let i = 1; i < navbarr3links.length; i++) {
+                navbarr3links[i].className = 'navbar__r3-link'
+            }
         }
     }
 
@@ -233,17 +237,18 @@ window.onload = function () {
         var st = $(this).scrollTop();
         console.log(st)
         if (document.documentElement.clientWidth > 752) {
-            if (st > scrollPos2) {
+            if (st > scrollPos2 && scrollPos2 > 800) {
+                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: 25px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3); padding-left: calc((100vw - 1210px) / 2) !important ; padding-right: calc((100vw - 1210px) / 2) !important ')
+            } else if (st < scrollPos2 ) {
                 itemMenu.setAttribute("style", "")
-            } else if (st < scrollPos2 && scrollPos2 > 800) {
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
+
             }
         } else {
             if (st > scrollPos2 && scrollPos2 > 1100) {
                 itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: 25px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
-            } else if (st < scrollPos2 && scrollPos2 > 1100``) {
+            } else if (st < scrollPos2 && scrollPos2 > 1100) {
                 itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
             } else {
                 itemMenu.setAttribute("style", "")
