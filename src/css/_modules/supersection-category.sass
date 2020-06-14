@@ -15,9 +15,10 @@
   grid-template-columns: repeat(4, 1fr)
   background: #F9FCFE
   grid-row-gap: 30px
+  padding-left: 100px
 
 .search-result-h
-  padding-top: 48px !important
+  padding-top: 72px !important
 
 .search-result-h > span
   color: #86888B
@@ -37,6 +38,19 @@
 .search-result-h
   padding-bottom: 55px
 
+.search-result-a
+  text-decoration: none
+  color: black
+
+
+.search-result-a > span
+  font-weight: normal
+  color: #929497
+  margin-left: 5px
+
+
+.search-result-h
+  padding-bottom: 0
 @media (max-width: 1372px)
   .supersection-category
     grid-template-columns: repeat(2, 1fr)
@@ -45,10 +59,14 @@
   .supersection-grid
     grid-template-columns: repeat(3, 1fr)
 
-@media (max-width: 1280px)
+@media (max-width: 1260px)
   .supersection-grid
     padding-left: 50px
     padding-right: 50px
+
+  .search-result-h
+    padding-left: 50px
+    padding-bottom: 16px
 
 @media (max-width: 1024px)
   .supersection-category
@@ -60,10 +78,11 @@
     grid-template-columns: repeat(2, 1fr)
 
 
+
 @media (max-width: 768px)
   .supersection-grid
-    padding-left: 0
-    padding-right: 0
+    padding-left: 24px
+    padding-right: 24px
     padding-bottom: 32px
   .supersection-h
     font-weight: bold
@@ -74,4 +93,15 @@
     background: #F9FCFE
     padding-bottom: 24px
 
-
+  .search-result-h
+    font-size: 24px
+    padding-top: 24px !important
+    padding-left: 24px !important
+    padding-bottom: 24px !important
+    text-decoration: none
+  .search-result-a
+    text-decoration: none
+    font-size: 24px
+    color: black
+  .supersection-category
+    padding: 50px 24px

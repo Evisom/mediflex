@@ -2,6 +2,7 @@
   background: #F9FCFE
   padding-top: 56px
   padding-bottom: 40px
+  position: relative
 
 .compare-slider-r1
   display: flex
@@ -70,9 +71,9 @@
   padding: 0
 
 .compare-slider-el-spec-t
-  position: absolute
-  top: 19px
-  left: 16px
+  //position: absolute
+  //top: 19px
+  //left: 16px
   font-weight: 500
   font-size: 20px
   line-height: 26px
@@ -198,7 +199,21 @@ input:checked + .slider:before
   margin-top: 20px
   margin-left: 24px
   margin-right: 24px
-  border-radius: 4px
+  border-radius: 4
+
+.compare-slider-spec-t
+  position: absolute
+  display: flex
+  flex-direction: column
+  top: 615px
+  left: 115px
+
+.compare-slider-el-spec-t:not(:first-child)
+  width: 100%
+  margin-top: 74px
+
+.compare-slider-el-spec-t:last-child
+  margin-top: 79px
 
 
 @media (max-width: 1260px)
@@ -206,12 +221,16 @@ input:checked + .slider:before
     width: 13%
   .compare-slider-r1
     margin: 0 50px
+  .compare-slider-spec-t
+    left: 65px
 
 @media (max-width: 1024px)
   .compare-slider-r1-buttons
     width: 17%
   .compare-slider-r1-showdif
     width: 52%
+  .compare-slider-spec-t
+    top: 630px
 
 @media (max-width: 768px)
   .compare-slider-r1-buttons
@@ -234,3 +253,6 @@ input:checked + .slider:before
     margin-left: 5px
   .compare-slider-r1-showdif
     display: none
+  .compare-slider-spec-t
+    top: 465px
+    left: 40px

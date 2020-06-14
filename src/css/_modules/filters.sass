@@ -52,6 +52,7 @@ input.filters-r1-price-input-el::placeholder
   width: 15vw
   text-align: right
   font-size: 20px
+  cursor: pointer
 .filters-r1-reset > svg
   margin-right: 8px
 
@@ -72,6 +73,9 @@ input.filters-r1-price-input-el::placeholder
   border: none
 #ddcl-filtersMultiselect1 > span > span
   width: 100% !important
+
+.ui-dropdownchecklist-selector 
+  cursor: pointer
 
 .ui-dropdownchecklist-text
   margin-top: 11px
@@ -159,6 +163,8 @@ label.ui-dropdownchecklist-text
   flex-direction: row
   align-items: center
   justify-content: center
+  position: relative
+  z-index: 2
 
 .filters-r2-sort > span
   background: none !important
@@ -216,7 +222,7 @@ label.ui-dropdownchecklist-text
     border-radius: 8px
     font-size: 16px
     background: #D9DADB
-    width: 42vw
+    width: 49%
   .filters-mobileonly > span
     width: 16px
     height: 16px
@@ -300,7 +306,7 @@ label.ui-dropdownchecklist-text
     background: #D9DADB !important
     border-radius: 8px !important
     height: 40px !important
-    width: 42vw !important
+    width: 42.77vw !important
     display: flex !important
     justify-content: center !important
     align-items: center !important
@@ -330,10 +336,13 @@ label.ui-dropdownchecklist-text
     flex-direction: row-reverse !important
     justify-content: space-between
 
+  .filters-r2-sort
+    width: 49%
 
 @media (max-width: 768px)
   .filters
-    padding: 0 16px
+    padding: 0 24px
+    height: 65px
   .filters-r2-sort > span > span > span
     width: 80% !important
   .filters-r1.filters-r1-active

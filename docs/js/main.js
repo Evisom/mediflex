@@ -271,13 +271,16 @@ window.onload = function () {
         '#lettersSlider',
         '#compareSlider',
         '#pcslider',
-        '#ccslider'
+        '#ccslider',
+        '#itpSlider',
+        '#officeSlider'
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {
             const slider = new Flickity(el);
             const prevEl = document.querySelector(`${selector}Prev`);
             const nextEl = document.querySelector(`${selector}Next`);
+            // console.log(slider, prevEl, nextEl)
     
             if (prevEl && nextEl) {
                 nextEl.onclick = function () {
@@ -286,6 +289,10 @@ window.onload = function () {
                 prevEl.onclick = function () {
                     slider.previous();
                 };
+            }
+
+            if (selector === '#officeSlider' && window.outerWidth <= 768) {
+                slider.destroy();
             }
         }
     })
@@ -298,6 +305,20 @@ window.onload = function () {
         src: "#item-cart-popup",
         type: "inline",
       },
+    });
+
+    $("#cart-popup-trigger").magnificPopup({
+        items: {
+            src: "#cart-popup",
+            type: "inline",
+        },
+    });
+
+    $("#cartpopupaddtrigger").magnificPopup({
+        items: {
+            src: "#caraddpopup",
+            type: "inline",
+        },
     });
 
     if (document.documentElement.clientWidth > 1023) {
@@ -329,7 +350,10 @@ window.onload = function () {
     $("#filtersMultiselect2").dropdownchecklist({ firstItemChecksAll: true , emptyText: "Поток кислорода", icon: {}, textFormatFunction: function(options) {
             return "Покот кислорода"
     }});
-    filtersR.className = 'filters-r1'
+    if (filtersR) {
+        filtersR.className = 'filters-r1'
+    }
+
     if (filtersTrigger) {
         filtersTrigger.onclick = function () {
             filtersR.classList += ' filters-r1-active'

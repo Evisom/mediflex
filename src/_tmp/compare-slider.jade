@@ -15,35 +15,23 @@
                 svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
                     path(d='M10 10.0002L2 18.0002', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
                     path(d='M10 10.0002L2.00016 2.00028', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-    .compare-slider-sl#compareSlider(data-flickity='{ "groupCells": true  , "wrapAround": false , "pageDots" : false , "prevNextButtons" : false }')
+    .compare-slider-sl#compareSlider(data-flickity='{ "groupCells": true  , "wrapAround": false , "pageDots" : false , "prevNextButtons" : false ,"cellAlign": "left" }')
+
         .compare-slider-sl-element
             .compare-slider-sl-element-card
                 != partial("item-card")
             .compare-slider-el-element-spec
-                span.compare-slider-el-spec-t Поток кислорода
-                    svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
+
                 | 0,5–5 литров/мин
             .compare-slider-el-element-spec
-                span.compare-slider-el-spec-t Производство
-                    svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
                 | Корея
             .compare-slider-el-element-spec
-                span.compare-slider-el-spec-t Мощность
-                    svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
                 | 500вт
             .compare-slider-el-element-spec
-                span.compare-slider-el-spec-t Уровень шума
-                    svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
                 | 45дб
 
             .compare-slider-el-element-spec
-                span.compare-slider-el-spec-t Гарантия
-                    svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
-                        path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
+
         .compare-slider-sl-element
             .compare-slider-sl-element-card
                 != partial("item-card")
@@ -140,3 +128,19 @@
             .compare-slider-el-element-spec
                 | 45дб
             .compare-slider-el-element-spec
+    .compare-slider-spec-t
+        span.compare-slider-el-spec-t Поток кислорода
+            svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
+        span.compare-slider-el-spec-t Производство
+            svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
+        span.compare-slider-el-spec-t Мощность
+            svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
+        span.compare-slider-el-spec-t Уровень шума
+            svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')
+        span.compare-slider-el-spec-t Гарантия
+            svg(width='14', height='9', viewBox='0 0 14 9', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M0.999396 7.65685L6.65625 2L12.3132 7.65673', stroke='#272727', stroke-width='2', stroke-linecap='round')

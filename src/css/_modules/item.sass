@@ -554,7 +554,7 @@ textarea.article-reviews-hidden-r2::placeholder
   flex-direction: row
   align-items: center
   justify-content: flex-end
-  margin-top: 27px
+  margin-top: 8.7vh
 
 .article-reviews-hidden-buttons-send
   background: #4FBBEB
@@ -680,6 +680,12 @@ textarea.article-reviews-hidden-r2::placeholder
   position: absolute
   top: -33000px
   width: 770px
+
+#itpSlider > div > div
+  margin-left: 0 !important
+#itpSlider > div > div > div :first-child
+  margin-left: 0 !important
+
 @media (max-width: 1280px)
   .item
     padding-left: 50px
@@ -846,6 +852,7 @@ textarea.article-reviews-hidden-r2::placeholder
     height: 56px
     box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.06)
     flex-direction: row
+    z-index: 1
   .item-main-info-checkout-info-saving
     display: none
   .item-main-info-checkout-button
@@ -953,17 +960,18 @@ textarea.article-reviews-hidden-r2::placeholder
     margin-top: 0
   .article-reviews-mobileonly
     border-top: 1px solid #D9D9D9
-    height: 51px
+    height: 60px
     display: flex
     justify-content: center
     align-items: center
     font-size: 20px
     line-height: 26px
     position: relative
+    margin-bottom: 20px
 
   .article-reviews-mobileonly-close
     position: absolute
-    top: 16px
+    top: 19px
     right: 16px
 
   .article-reviews-hidden-r1
@@ -982,7 +990,7 @@ textarea.article-reviews-hidden-r2::placeholder
 
   .article-reviews-hidden-stars
     flex-direction: column
-
+    margin-top: 7vh
   .article-reviews-hidden-stars > span
     margin-top: 16px
 
@@ -1024,3 +1032,5 @@ textarea.article-reviews-hidden-r2::placeholder
     margin-top: 0
   #item3Slider
     padding-bottom: 92px
+  .item-cart-popup
+    width: calc(100vw - 40px) !important

@@ -21,6 +21,7 @@
 @import "_modules/item"
 @import "_modules/popups"
 @import "_modules/filters"
+@import "_modules/contacts"
 
 *
   margin: 0
@@ -67,8 +68,19 @@
 button 
   cursor: pointer
 
+.flickity-slider
+  margin-left: 100px !important
+
+.item-main-preview-main > div > div ,   .item-main-preview-nav-container > div > .flickity-slider
+  margin-left: 0 !important
+
+#cpuslider  > div > div ,   #cpuslider  > div > .flickity-slider
+  margin-left: 25px !important
+
+
 @media (max-width: 1260px)
-  .article
+  .flickity-slider
+    margin-left: 50px !important
 
 @media (max-width: 1024px)
   .article
@@ -77,3 +89,9 @@ button
 
   .article
     padding-top: 56px
+  .flickity-slider
+    margin-left: 24px !important
+  .customerchoice__slider-element
+    margin: 0 8px !important
+  .reviews__slider-element:not(:first-child)
+    margin-left: 16px

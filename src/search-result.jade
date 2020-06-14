@@ -1,21 +1,23 @@
 != partial("_tmp/navbar")
 
-.search-result-h Маска
-    span (63)
+.search-result-h
+    a.search-result-a(href="./search.html") Маска
+        span (63)
 != partial("_tmp/filters")
 
 .supersection-grid
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
-    != partial("_tmp/item-card")
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card" , { gridclass: "customerchoice__slider-element-grid"})
 
 != partial("_tmp/footer")

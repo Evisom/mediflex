@@ -1,3 +1,4 @@
+//- примерная логика работы, можно выпилить
 script.
     function checkout1 () {
         const info  = [
@@ -159,7 +160,7 @@ script.
                     .checkout-stage-containerii-hidden
                         .checkout-stage-container-hidden-ico
                             svg(width='38', height='37', viewBox='0 0 38 37', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                path(d='M25.3354 19.3398L17.4326 28.3931L13.5195 24.48', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                                path(d='M25.3354 19.3398L17.4326 28.3931L13.5195 24.48', stroke='#4fbbeb', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
                                 path(fill-rule='evenodd', clip-rule='evenodd', d='M1 35.4353H37V11.957H1V35.4353Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
                                 path(fill-rule='evenodd', clip-rule='evenodd', d='M26.042 8.04348C26.042 4.15391 22.8866 1 18.9986 1C15.1074 1 11.9551 4.15391 11.9551 8.04348V11.9565H26.042V8.04348V8.04348Z', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
                                 path(d='M29.1621 8.80078L33.6731 8.82582L36.9992 11.9563', stroke='#4FBBEB', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
@@ -181,16 +182,17 @@ script.
                             .checkout-stage-container-ii-info-text-p
                                 span Стоимость:
                                 span Бесплатно
-                            .checkout-stage-container-ii-info-button#checkoutStageMapButton Выбрать этот способ
+                            button.checkout-stage-container-ii-info-button#checkoutStageMapButton Выбрать этот способ
 
                         .checkout-stage-container-ii-info-map
                             .checkout-stage-container-ii-info-map-el
-                                .checkout-stage-container-ii-info-map-el-close
-                                    svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                        rect(width='32', height='32', fill='white')
-                                        path(d='M14.5882 23.9984H8V17.4102', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-                                        path(d='M24.0003 14.5882V8H17.4121', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-                                        path(d='M8 24L24 8', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d807253597a3e3d7c52827a8964c46ca25f4e174f8ff0380dc048cd66ff9e29&width=100%25&height=180&lang=ru_RU&scroll=false')
+                                //- .checkout-stage-container-ii-info-map-el-close
+                                //-     svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                //-         rect(width='32', height='32', fill='white')
+                                //-         path(d='M14.5882 23.9984H8V17.4102', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                //-         path(d='M24.0003 14.5882V8H17.4121', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                //-         path(d='M8 24L24 8', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
 
 
 

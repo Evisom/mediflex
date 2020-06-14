@@ -274,13 +274,16 @@ window.onload = function () {
         '#ccslider',
         '#itpSlider',
         "#item2slider",
-        "#item3Slider"
+        "#item3Slider",
+        '#officeSlider',
+        "#cpuslider"
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {
             const slider = new Flickity(el);
             const prevEl = document.querySelector(`${selector}Prev`);
             const nextEl = document.querySelector(`${selector}Next`);
+            // console.log(slider, prevEl, nextEl)
     
             if (prevEl && nextEl) {
                 nextEl.onclick = function () {
@@ -289,6 +292,10 @@ window.onload = function () {
                 prevEl.onclick = function () {
                     slider.previous();
                 };
+            }
+
+            if (selector === '#officeSlider' && window.outerWidth <= 768) {
+                slider.destroy();
             }
         }
     })
