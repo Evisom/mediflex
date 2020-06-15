@@ -390,7 +390,7 @@ window.onload = function () {
         });
     } else {
         $("#filtersMultiselect1").dropdownchecklist({
-            firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function(options) {
+            firstItemChecksAll: true, emptyText: "Бренд", icon: {} ,textFormatFunction: function(options) {
                 var selectedOptions = options.filter(":selected");
                 var countOfSelected = selectedOptions.size();
                 var size = options.size();
@@ -428,7 +428,7 @@ window.onload = function () {
     }
 
     if (document.documentElement.clientWidth > 1023) {
-        $("#filtersSort").dropdownchecklist({ icon: {} });
+        $("#filtersSort").dropdownchecklist({ icon: {}  });
     } else {
         $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
     }
