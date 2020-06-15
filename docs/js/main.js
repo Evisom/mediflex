@@ -21,7 +21,7 @@ window.onload = function () {
     let customerChoiceCardInfo = document.querySelectorAll("#customerChoiceInfo")
     const filtersTrigger = document.getElementById("filtersTrigger")
     const filtersR = document.getElementById("filtersR")
-
+    const itemPopupTrigger = document.getElementById("item-cart-popup-trigger")
 
     let scrollPos = 0;
 
@@ -223,8 +223,11 @@ window.onload = function () {
             });
     }
 
-
-
+    if (itemPopupTrigger) {
+        itemPopupTrigger.onclick = function () {
+            $(itemMenu).removeClass('item-menu-active')
+        }
+    }
     const itemMenu = document.getElementById("itemMenu")
 
     var scrollPos2 = 0;
@@ -237,21 +240,23 @@ window.onload = function () {
         var st = $(this).scrollTop();
         console.log(st)
         if (document.documentElement.clientWidth > 752) {
-            if (st > scrollPos2 && scrollPos2 > 800) {
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: 25px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3); padding-left: calc((100vw - 1210px) / 2) !important ; padding-right: calc((100vw - 1210px) / 2) !important ')
+            if (st > scrollPos2 && scrollPos2 > 200) {
+                $(itemMenu).addClass('item-menu-active')
             } else if (st < scrollPos2 ) {
-                itemMenu.setAttribute("style", "")
+                $(itemMenu).removeClass('item-menu-active')
             } else {
-                itemMenu.setAttribute("style", "")
+                $(itemMenu).removeClass('item-menu-active')
 
             }
         } else {
-            if (st > scrollPos2 && scrollPos2 > 1100) {
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: 25px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
-            } else if (st < scrollPos2 && scrollPos2 > 1100) {
-                itemMenu.setAttribute('style', 'position: fixed; left: 0; right: 0; top: -30px; z-index: 99999999; border-top: 2px solid rgba(146,148,151, 0.3)')
+            if (st > scrollPos2 && scrollPos2 > 70) {
+                $(itemMenu).addClass('item-menu-active')
+                itemMenu.setAttribute('style', 'top: 24px !important')
+            } else if (st < scrollPos2 && scrollPos2 > 70) {
+                itemMenu.setAttribute('style', '')
+                $(itemMenu).addClass('item-menu-active')
             } else {
-                itemMenu.setAttribute("style", "")
+                $(itemMenu).removeClass('item-menu-active')
             }
         }
         scrollPos2 = st;
@@ -294,12 +299,10 @@ window.onload = function () {
 
 
 
-
-
     // ----- sliders ---
 
     [
-        '#itemSlider',  
+        '#itemSlider',
         '#aboutreviewsSlider', 
         '#reviewsSlider', 
         '#needtoknowSlider',
@@ -334,6 +337,9 @@ window.onload = function () {
             if (selector === '#officeSlider' && window.outerWidth <= 768) {
                 slider.destroy();
             }
+            // if (selector === "#itemSlider") {
+            //     slider.viewFullscreen();
+            // }
         }
     })
 
@@ -384,7 +390,7 @@ window.onload = function () {
         });
     } else {
         $("#filtersMultiselect1").dropdownchecklist({
-            firstItemChecksAll: true, emptyText: "Бренд", icon: {}, textFormatFunction: function(options) {
+            firstItemChecksAll: true, emptyText: "Бренд", icon: {} ,textFormatFunction: function(options) {
                 var selectedOptions = options.filter(":selected");
                 var countOfSelected = selectedOptions.size();
                 var size = options.size();
@@ -422,9 +428,21 @@ window.onload = function () {
     }
 
     if (document.documentElement.clientWidth > 1023) {
-        $("#filtersSort").dropdownchecklist({ icon: {} });
+        $("#filtersSort").dropdownchecklist({ icon: {}  });
     } else {
         $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
     }
+
+    $('#itemSliderPlay , .video-popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
+
+
 
 }
