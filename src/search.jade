@@ -1,2 +1,22 @@
 != partial("_tmp/navbar", { activeSearch: true })
 != partial("_tmp/search")
+
+script.
+    var searchInput = document.getElementById("searchInput")
+    var searchInputClose = document.getElementById("search-input-close")
+    var navbarButton = document.getElementsByClassName("navbar__r2__buttons-search is-active")[0]
+    $(searchInputClose).hide()
+    searchInput.onkeyup = function () {
+        if( searchInput.value != "") {
+            $(searchInputClose).show()
+        }
+    }
+    searchInput.onblur = function () {
+        if(searchInput.value == "") {
+            $(searchInputClose).hide()
+        }
+    }
+    navbarButton.onclick = function () {
+        history.back()
+        return false
+    }
