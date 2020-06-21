@@ -89,8 +89,10 @@
     padding-left: 24px
     padding-right: 24px
     padding-bottom: 32px
-    grid-column-gap: calc( 100vw - 148px - 148px - 24px - 24px )
-    grid-template-columns: repeat(2,148px)
+    grid-column-gap: 16px
+    grid-template-columns: repeat(2, 1fr)
+  .supersection-grid > div
+    width: 100%
   .supersection-h
     font-weight: bold
     font-size: 24px
@@ -115,3 +117,9 @@
 
   .supersection-category > div
     background-size: 115px !important
+
+@media (max-width: 369px)
+  .supersection-grid
+    grid-template-columns: repeat(2, 148px)
+  .supersection-grid > div
+    width: 148px

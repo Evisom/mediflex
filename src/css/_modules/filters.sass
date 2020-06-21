@@ -226,7 +226,7 @@ label.ui-dropdownchecklist-text
     border-radius: 8px
     font-size: 16px
     background: #D9DADB
-    width: 49%
+    width: calc( 50vw - 24px - 2px ) !important
   .filters-mobileonly > span
     width: 16px
     height: 16px
@@ -311,7 +311,8 @@ label.ui-dropdownchecklist-text
     background: #D9DADB !important
     border-radius: 8px !important
     height: 40px !important
-    width: 42.77vw !important
+    width: calc( 50vw - 24px - 2px ) !important
+    //width: 42.77vw !important
     display: flex !important
     justify-content: center !important
     align-items: center !important
@@ -335,7 +336,7 @@ label.ui-dropdownchecklist-text
     bottom: 0px
   #ddcl-filtersSort-ddw > div
     padding-bottom: 120px
-    border-radius: 24px !important
+    border-radius: 24px 24px 0 0 !important;
     padding-top: 16px
   #ddcl-filtersSort-ddw > div > div
     display: flex !important
@@ -343,9 +344,11 @@ label.ui-dropdownchecklist-text
     justify-content: space-between
 
   .filters-r2-sort
-    width: 49%
+    width: calc( 50vw - 24px - 2px ) !important
 
 @media (max-width: 768px)
+  .filters-r2-sort > span , .filters-mobileonly , .filters-r2-sort
+    width: calc( 50vw - 24px - 2px ) !important
   .filters
     padding: 0 24px
     height: 65px
