@@ -435,6 +435,12 @@ window.onload = function () {
         fixedContentPos: false
     });
 
+    if (document.documentElement.clientWidth > 768) {
+        $('.letters-slider-sl-element').magnificPopup({
+            type: 'image'
+        });
+    }
+
 
 
 }

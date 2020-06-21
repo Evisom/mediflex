@@ -61,14 +61,25 @@
 .about-reviews-buttons-btn:first-child
   margin-right: 27px
 
+#itemMenu ~ .article-a
+  padding: 0
+  width: 58%
+  margin: auto
+  padding-top: 32px
+
 @media (max-width: 1260px)
   .about-reviews-slider
     width: 80%
+  .article-reviews-rating-r2
+    width: 150px
+    text-align: center
 
 @media (max-width: 1024px)
   .about-reviews-slider
     width: 90%
     height: 300px
+  #itemMenu ~ .article-a
+    width: 90%
 
 @media (max-width: 768px)
   .about-reviews-slider-element-text
@@ -100,3 +111,9 @@
     height: 400px
   #aboutreviewsSlider > div > div
     margin-left: 0 !important
+  #itemMenu ~ .article-a
+    width: calc(100vw - 63px)
+
+@media (max-width: 400px)
+  #aboutreviewsSlider > div
+    height: 394px !important

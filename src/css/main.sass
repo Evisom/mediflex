@@ -89,7 +89,7 @@ button
 .wdtwrapper-b
   background: linear-gradient(0deg, #F9FCFE, #F9FCFE)
 #aboutreviewsSlider > div
-  height: 300px !important
+  height: 300px
 #aboutreviewsSlider > div > div
   margin-left: 0 !important
 
@@ -134,7 +134,8 @@ button
     padding-right: 0
 
   .compare-slider-spec-t
-    left: calc((100vw - 1180px) / 2) !important
+    left: calc((100vw - 1205px) / 2)!important
+
   .flickity-slider
     margin-left: calc((100vw - 1210px) / 2) !important
     //max-width: 1400px
@@ -154,8 +155,10 @@ button
     max-width: 62vw
   #caraddpopup > .customerchoice > div > div
 
-
-  #pcslider , .customerchoice__slider, #reviewsSlider, .needtoknow-slider, #lettersSlider, #officeSlider , #compareSlider
+  #compareSlider
+    max-width: 1470px
+    margin-left: calc((100vw - 1235px) / 2) !important
+  #pcslider , .customerchoice__slider, #reviewsSlider, .needtoknow-slider, #lettersSlider, #officeSlider
     max-width: 1170px
     margin-left: calc((100vw - 1210px) / 2) !important
   #pcslider > div > div , .customerchoice__slider > div > div , #reviewsSlider > div > div , .needtoknow-slider > div > div , #lettersSlider > div > div , #officeSlider > div > div , #compareSlider > div > div
@@ -193,7 +196,9 @@ button
   .article-quote
     margin: 0
   #itemMenu
-    max-width: 1200px
+    padding-left: calc( (100vw - 785px ) / 2)
+    padding-right: calc( (100vw - 785px ) / 2)
+    max-width: 770px
   .navbar__r3-link
     padding-right: 13px
     padding-left: 12px
@@ -217,7 +222,22 @@ button
     width: calc( 1400px / 100 * 17 ) !important
   .customerchoice__slider-element.customerchoice__slider-element-grid
     margin-left: 0
-
+  #aboutreviewsSlider > div
+    height: 300px !important
+  .article-reviews
+    width: 770px
+    margin: auto
+    padding-left: 16px
+  #itemMenu ~ .article-a
+    width: 100%
+    box-sizing: border-box
+  #itemMenu ~ .article-a > *
+    margin-left: auto
+    margin-right: auto
+    box-sizing: border-box
+    width: 770px
+  #itemMenu ~ .article-a > img
+    display: block
 @media (max-width: 1260px)
   .flickity-slider
     margin-left: 50px !important

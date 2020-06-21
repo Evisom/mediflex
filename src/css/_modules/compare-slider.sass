@@ -215,14 +215,22 @@ input:checked + .slider:before
 .compare-slider-el-spec-t:last-child
   margin-top: 79px
 
+.compare-slider-sl-element.is-selected + div + div + div + div
+  opacity: 0.15
+.compare-slider-sl-element.is-selected + div + div + div + div > div
+  border: none
 
+#compareSlider > div > div
+  margin-left: 100px !important
 @media (max-width: 1260px)
   .compare-slider-r1-buttons
     width: 13%
   .compare-slider-r1
     margin: 0 50px
   .compare-slider-spec-t
-    left: 65px
+    left: 50px
+  #compareSlider > div > div
+    margin-left: 36px !important
 
 @media (max-width: 1024px)
   .compare-slider-r1-buttons
@@ -233,6 +241,8 @@ input:checked + .slider:before
     top: 630px
 
 @media (max-width: 768px)
+  #compareSlider > div > div
+    margin-left: 16px !important
   .compare-slider-r1-buttons
     display: none
   .compare-slider-r1
@@ -255,4 +265,4 @@ input:checked + .slider:before
     display: none
   .compare-slider-spec-t
     top: 465px
-    left: 40px
+    left: 30px
