@@ -10,8 +10,13 @@ script.
 
         console.log(info)
         for(let i = 0 ; i < info.length ; i ++ ) {
-            if (info[i] == '' || info[i] == undefined) {
+            if (info[i] == '' || info[i] == undefined ) {
                 return
+            } else if ( ( info[1].length < 6 || info[3].length < 6)  && ( info[1].length > 0 || info[3].length > 0) )  {
+                $('#phoneEInput').addClass('checkout-error')
+                $('#emailEInput').addClass('checkout-error')
+                $('#phoneEInputText').text("Провертье номер").addClass('checkout-error')
+                $('#emailEInputText').text("Проверьте адрес").addClass('checkout-error')
             }
         }
         document.getElementById("checkoutButton1").className = 'checkout-stage-button checkout-stage-button-active'
@@ -62,7 +67,8 @@ script.
         stageContainer.onclick = function () {
             if (event.target.classList[0] != "checkout-stage-container-ii-info-button") {
                 $("#checkoutStageContainer").removeClass("checkout-stage-container-hidden")
-                stageContainer2.setAttribute("style", "display: none");
+                $("#checkoutStageContainer2").addClass("checkout-stage-container-hidden")
+                // stageContainer2.setAttribute("style", "display: none");
             }
         }
         stageMapButton.onclick = function () {
@@ -71,8 +77,10 @@ script.
 
         }
         stageContainer2.onclick = function () {
-            if (event.target.classList[0] != "checkout-stage-button")
+            if (event.target.classList[0] != "checkout-stage-button") {
                 $("#checkoutStageContainer2").removeClass("checkout-stage-container-hidden")
+                $("#checkoutStageContainer").addClass("checkout-stage-container-hidden")
+            }
         }
 
 
@@ -122,18 +130,18 @@ script.
 
                         .checkout-stage-container-inputs-r
                             div
-                                    .checkout-stage-container-inputs-c-einput
+                                    .checkout-stage-container-inputs-c-einput#phoneEInput
                                         .checkout-stage-container-inputs-c-einput-p Номер телефона
                                         input.checkout-stage-container-inputs-c-einput-el(placeholder="+7" , required type="phone" onkeyup="checkout1();")
 
-                                    .checkout-stage-container-inputs-p Для получения скидки плстоянным клиентам
+                                    .checkout-stage-container-inputs-p#phoneEInputText Для получения скидки плстоянным клиентам
                             div
 
 
-                                .checkout-ainput-container
+                                .checkout-ainput-container#emailEInput
                                     input.checkout-ainput-el(type='text', required onkeyup="checkout1();")
                                     label.checkout-ainput-label Почта
-                                .checkout-stage-container-inputs-p Пришлем информаицю о статусе заказа
+                                .checkout-stage-container-inputs-p#emailEInputText Пришлем информаицю о статусе заказа
                     button.checkout-stage-button(type="submit" onkeyup="checkout()1;")#checkoutButton1 Продолжить
                     .checkout-stage-checkbox
                         input.checkout-stage-checkbox-el(type="checkbox")

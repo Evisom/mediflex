@@ -11,9 +11,13 @@
     display: none
 
 .mfp-close
-    background: url('../img/popup-close.svg') no-repeat
-    width: 12px
-    height: 12px
+    //background: url('../img/popup-close.svg') no-repeat !important
+    width: 24px
+    height: 24px
+    background-size: 100% 100%
+    position: absolute
+    top: 16px !important
+    right: 32px !important
     //top: 14px
     //right: 12px
     cursor: pointer
@@ -46,6 +50,9 @@
         width: 70vw !important
 
 @media (max-width: 768px)
+    .mfp-close
+        width: 24px !important
+        height: 32px !important
 
     .mfp-content > .popup.popup--item-cart
         display: block
@@ -97,6 +104,9 @@
         width: 100%
     .popup-content >  .checkout-stage-button
         width: 100%
-        padding: 24px
         margin-bottom: 25px
-        height: 0
+        height: 48px
+
+    //.mfp-bg.mfp-ready ~ .article
+    //    height: 0
+    //    overflow: hidden !important

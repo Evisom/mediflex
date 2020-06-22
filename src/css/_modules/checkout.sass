@@ -473,6 +473,12 @@
 
 #checkoutStage3 > .checkout-stage-h
   margin-top: 40px
+
+.checkout-stage-container-inputs-c-einput.checkout-error , .checkout-ainput-container.checkout-error
+  border-radius: 3px
+  border: 1px solid #DD2333
+.checkout-stage-container-inputs-p.checkout-error
+  color: #DD2333
 @media (max-width: 1280px)
   .checkout-stage-container-main
     padding: 16px 16px!important
@@ -541,7 +547,8 @@
   .checkout-stage-container-hidden-c1-customer > span
     font-size: 18px
   .checkout-stage-container-hidden.checkout-hidden-active
-    width: 90%
+    width: 100% !important
+    box-sizing: border-box
     padding: 24px 17px
     flex-direction: column
     height: 150px
