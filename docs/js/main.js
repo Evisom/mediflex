@@ -341,7 +341,7 @@ window.onload = function () {
     if (map) {
         const widget = document.createElement('script');
         if (window.outerWidth <= 768) {
-            widget.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d807253597a3e3d7c52827a8964c46ca25f4e174f8ff0380dc048cd66ff9e29&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=false'
+            widget.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d807253597a3e3d7c52827a8964c46ca25f4e174f8ff0380dc048cd66ff9e29&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=false;';
         } else {
             widget.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d807253597a3e3d7c52827a8964c46ca25f4e174f8ff0380dc048cd66ff9e29&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false';
         }
@@ -414,7 +414,7 @@ window.onload = function () {
         })
     }
     $("#filtersMultiselect2").dropdownchecklist({ firstItemChecksAll: true , emptyText: "Поток кислорода", icon: {}, textFormatFunction: function(options) {
-            return "Покот кислорода"
+            return "Поток кислорода"
     }});
     if (filtersR) {
         filtersR.className = 'filters-r1'
@@ -435,7 +435,24 @@ window.onload = function () {
     if (document.documentElement.clientWidth > 1023) {
         $("#filtersSort").dropdownchecklist({ icon: {}  });
     } else {
-        $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
+        $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать", textFormatFunction: function(options) {
+            var txt = options.filter(":selected").text()
+            console.log(txt)
+            switch (txt) {
+                case "по возрастанию цены":
+                    return "По цене (по возрастанию)"
+                    break;
+                case "по убыванию цены":
+                    return "По цене (по убыванию)"
+                    break;
+                case "по рейтингу":
+                    return "По рейтингу"
+                    break;
+                default:
+                    return "Сортировать"
+            }
+
+            } });
     }
 
     $('#itemSliderPlay , .video-popup').magnificPopup({
