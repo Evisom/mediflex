@@ -414,7 +414,7 @@ window.onload = function () {
         })
     }
     $("#filtersMultiselect2").dropdownchecklist({ firstItemChecksAll: true , emptyText: "Поток кислорода", icon: {}, textFormatFunction: function(options) {
-            return "Покот кислорода"
+            return "Поток кислорода"
     }});
     if (filtersR) {
         filtersR.className = 'filters-r1'
@@ -435,7 +435,24 @@ window.onload = function () {
     if (document.documentElement.clientWidth > 1023) {
         $("#filtersSort").dropdownchecklist({ icon: {}  });
     } else {
-        $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать" });
+        $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать", textFormatFunction: function(options) {
+            var txt = options.filter(":selected").text()
+            console.log(txt)
+            switch (txt) {
+                case "по возрастанию цены":
+                    return "По цене (по возрастанию)"
+                    break;
+                case "по убыванию цены":
+                    return "По цене (по убыванию)"
+                    break;
+                case "по рейтингу":
+                    return "По рейтингу"
+                    break;
+                default:
+                    return "Сортировать"
+            }
+
+            } });
     }
 
     $('#itemSliderPlay , .video-popup').magnificPopup({

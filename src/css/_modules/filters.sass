@@ -139,9 +139,15 @@ label.ui-dropdownchecklist-text
 .ui-dropdownchecklist-dropcontainer
   border: none
   margin: 1px
+.ui-dropdownchecklist-item.ui-state-default > input:focus
+  outline: none
 
 .ui-dropdownchecklist-item.ui-state-default > input:checked
   background-image: url("./../img/filter-select.svg") !important
+  outline: none
+  background-position-x: 100% !important
+  background-size: contain
+  background-position-y: -25%
 
 .filters-r1-p
   font-size: 20px
@@ -198,6 +204,20 @@ label.ui-dropdownchecklist-text
   padding-bottom: 26px
   padding-left: 14px
   padding-right: 32px
+
+#ddcl-filtersSort-ddw > div > div > input
+  width: 16px !important
+  padding: 7px
+  background: rgba(217, 218, 219, 0.3)
+  border-radius: 50%
+  border: 1px solid #D9DADB
+  margin-top: 10px
+#ddcl-filtersSort-ddw > div > div > input:checked
+  background-image: url("./../img/filter-background1.svg") !important
+  background-position: center center !important
+  background-repeat: no-repeat
+
+
 @media (max-width: 1260px)
   .filters
     padding: 0 50px
@@ -358,8 +378,11 @@ label.ui-dropdownchecklist-text
     top: 56px !important
     margin-bottom: 0
 
+  #ddcl-filtersSort > span > span
+    margin-left: 8px !important
+    width: 75% !important
   .filters-r1-price>div
     //width: calc( 85vw - -10px ) !important
 @media (max-width: 480px)
   .filters-r2-sort > span > span > span
-    width: 67% !important
+    //width: 67% !important
