@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./fonts/CeraPro/stylesheet.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
     <link rel="stylesheet" href="./css/ui.dropdownchecklist.standalone.css">
     <link rel="stylesheet" href="./css/jquery-ui.min.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -15,6 +16,7 @@
     <script src="./js/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="./js/ui.dropdownchecklist-1.5-min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
     <script src="./js/main.js"></script>
 </head>
 
@@ -552,6 +554,11 @@
                 for (let i = 0; i < info.length; i++) {
                     if (info[i] == '' || info[i] == undefined) {
                         return
+                    } else if ((info[1].length < 6 || info[3].length < 6) && (info[1].length > 0 || info[3].length > 0)) {
+                        $('#phoneEInput').addClass('checkout-error')
+                        $('#emailEInput').addClass('checkout-error')
+                        $('#phoneEInputText').text("Провертье номер").addClass('checkout-error')
+                        $('#emailEInputText').text("Проверьте адрес").addClass('checkout-error')
                     }
                 }
                 document.getElementById("checkoutButton1").className = 'checkout-stage-button checkout-stage-button-active'
@@ -602,7 +609,8 @@
                 stageContainer.onclick = function() {
                     if (event.target.classList[0] != "checkout-stage-container-ii-info-button") {
                         $("#checkoutStageContainer").removeClass("checkout-stage-container-hidden")
-                        stageContainer2.setAttribute("style", "display: none");
+                        $("#checkoutStageContainer2").addClass("checkout-stage-container-hidden")
+                        // stageContainer2.setAttribute("style", "display: none");
                     }
                 }
                 stageMapButton.onclick = function() {
@@ -611,8 +619,10 @@
 
                 }
                 stageContainer2.onclick = function() {
-                    if (event.target.classList[0] != "checkout-stage-button")
+                    if (event.target.classList[0] != "checkout-stage-button") {
                         $("#checkoutStageContainer2").removeClass("checkout-stage-container-hidden")
+                        $("#checkoutStageContainer").addClass("checkout-stage-container-hidden")
+                    }
                 }
 
 
@@ -651,14 +661,14 @@
                                 </div>
                                 <div class="checkout-stage-container-inputs-r">
                                     <div>
-                                        <div class="checkout-stage-container-inputs-c-einput">
+                                        <div id="phoneEInput" class="checkout-stage-container-inputs-c-einput">
                                             <div class="checkout-stage-container-inputs-c-einput-p">Номер телефона</div><input placeholder="+7" required="required" type="phone" onkeyup="checkout1()" class="checkout-stage-container-inputs-c-einput-el">
                                         </div>
-                                        <div class="checkout-stage-container-inputs-p">Для получения скидки плстоянным клиентам</div>
+                                        <div id="phoneEInputText" class="checkout-stage-container-inputs-p">Для получения скидки плстоянным клиентам</div>
                                     </div>
                                     <div>
-                                        <div class="checkout-ainput-container"><input type="text" required="required" onkeyup="checkout1()" class="checkout-ainput-el"><label class="checkout-ainput-label">Почта</label></div>
-                                        <div class="checkout-stage-container-inputs-p">Пришлем информаицю о статусе заказа</div>
+                                        <div id="emailEInput" class="checkout-ainput-container"><input type="text" required="required" onkeyup="checkout1()" class="checkout-ainput-el"><label class="checkout-ainput-label">Почта</label></div>
+                                        <div id="emailEInputText" class="checkout-stage-container-inputs-p">Пришлем информаицю о статусе заказа</div>
                                     </div>
                                 </div>
                             </div><button type="submit" onkeyup="checkout()1" id="checkoutButton1" class="checkout-stage-button">Продолжить</button>
