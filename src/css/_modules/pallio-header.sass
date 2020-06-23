@@ -1,0 +1,79 @@
+.palliomed-theme
+  .pallio-header
+    box-sizing: border-box
+    width: 100%
+    padding-left: 115px
+    padding-right: 115px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding-top: 64px
+    padding-bottom: 84px
+
+  .pallio-header-text
+    margin-left: 64px
+    width: 570px
+
+  .pallio-header-text-h
+    font-weight: bold
+    font-size: 44px
+    line-height: 100%
+  .pallio-header-text-p
+    font-weight: normal
+    font-size: 18px
+    line-height: 130%
+    margin-top: 16px
+  .pallio-header-text-button
+    font-weight: bold
+    font-size: 16px
+    line-height: 24px
+    color: #FFFFFF
+    background: #9F66AA
+    border-radius: 4px
+    width: 370px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 34px
+
+
+@media (min-width: 1400px)
+  .palliomed-theme
+    .pallio-header
+      padding-right:  calc((100vw - 1210px) / 2)!important
+      padding-left:  calc((100vw - 1210px) / 2)!important
+
+@media (max-width: 1280px)
+  .palliomed-theme
+    .pallio-header
+      padding-left: 50px
+      padding-right: 50px
+    .pallio-header-text
+      margin-left: 0
+
+@media (max-width: 1024px)
+  .palliomed-theme
+    .pallio-header-text-h
+      font-size: 24px
+      line-height: 110%
+    .pallio-header-text-p
+      font-size: 16px
+      line-height: 150%
+    .pallio-header-img
+      width: 40vw
+
+@media (max-width: 768px)
+  .palliomed-theme
+    .pallio-header-img
+      display: none
+    .pallio-header-text-button
+      display: none
+    .pallio-header
+      padding-top: 32px
+      padding-left: 24px
+      padding-right: 24px
+      padding-bottom: 38px
+    .pallio-header-text-p
+      margin-top: 8px
