@@ -5,6 +5,32 @@
 .palliomed-theme .navbar__r2__buttons
   width: 432px
 
+.palliomed-theme .footer
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F8F8F8
+
+.palliomed-theme  .footer-r1-c:nth-child(1) > a , .footer-r1-c:nth-child(2) > a
+  color: #000000
+
+.palliomed-theme  .footer-r3
+  border-top: 1px solid #E5E5E5
+
+.palliomed-theme .footer-r3
+  margin-left: 100px
+  margin-right: 100px
+
+@media (min-width: 1400px)
+  .palliomed-theme .footer-r3
+    padding-left: 0 !important
+    padding-right: 0 !important
+    margin-left: calc((100vw - 1210px) / 2)!important
+    margin-right: calc((100vw - 1170px) / 2)!important
+
+
+@media (max-width: 1280px)
+  .palliomed-theme .footer-r3
+    margin-left: 25px
+    margin-right: 25px
+
 @media (max-width: 1024px)
   .palliomed-theme .navbar__r2__buttons
     width: 320px
