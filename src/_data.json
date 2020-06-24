@@ -1,5 +1,8 @@
 {
   "pallio-main" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-supersection" : {
+    "layout" : "_pallio-layout"
   }
 }
