@@ -4,5 +4,8 @@
   },
   "pallio-supersection" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-supersection-category" : {
+    "layout" : "_pallio-layout"
   }
 }
