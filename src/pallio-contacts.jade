@@ -1,0 +1,64 @@
+!= partial("_tmp/pallio-navbar")
+
+.map#map
+    .map__contacts
+        != partial("_tmp/path")
+        h1 Контакты
+        p
+            | Москва, Смоленский бульвар, д.24,
+            br
+            | стр 2., 3 подъезд
+            br
+            | Телефон:
+            strong +7 (495) 543-57-46
+            br
+            | E-mail:
+            a.tel(href="mailto:info@mf-hcr.ru") info@mf-hcr.ru
+        p
+            | Мы работаем по будням
+            br
+            | с 10 до 18 часов
+
+.contacts-requisites
+    .contacts-requisites-title Реквизиты
+    .contacts-requisites-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi atque cumque
+    .contacts-requisites-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum expedita laudantium nulla voluptatem voluptates voluptatum. Blanditiis labore laborum magnam rem sed sit voluptate. Atque aut dolorum ea suscipit tempora.
+    .contacts-requisites-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi atque cumque
+    .contacts-requisites-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum expedita laudantium nulla voluptatem voluptates voluptatum. Blanditiis labore laborum magnam rem sed sit voluptate. Atque aut dolorum ea suscipit tempora.
+    .contacts-requisites-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi atque cumque
+    .contacts-requisites-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum expedita laudantium nulla voluptatem voluptates voluptatum. Blanditiis labore laborum magnam rem sed sit voluptate. Atque aut dolorum ea suscipit tempora.
+    .contacts-requisites-text <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem, dolores eius fugit in ipsam, magnam natus nihil non officia officiis possimus quaerat quidem quos, tempora. Blanditiis porro quasi totam.</div><div>Et illum magni nobis odit quo. Aliquam, dignissimos dolorem! Aperiam delectus doloribus exercitationem illum incidunt iste maiores odio possimus ut vero? A aliquam corporis doloribus iusto nobis quibusdam quis reprehenderit.</div><div>Accusamus aspernatur eligendi, omnis unde voluptas voluptatibus? Ad cum eos et illo incidunt iste molestiae rerum saepe, sed velit. Dignissimos maxime necessitatibus nulla quae rem voluptatum? Atque molestias, saepe? Ullam.</div>
+
+.office-gallery
+    .wdtwrapper
+        h2 Наш офис
+    .office-gallery__buttons
+        #officeSliderPrev.office-gallery__buttons-btn
+            svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M2 10L10 2', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M2 10L9.99985 18', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+        #officeSliderNext.office-gallery__buttons-btn
+            svg(width='12', height='20', viewBox='0 0 12 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                path(d='M10 10.0002L2 18.0002', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M10 10.0002L2.00016 2.00028', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+    ul.office-gallery__slider#officeSlider(data-flickity='{ "pageDots" : false , "prevNextButtons" : false, "cellAlign": "left", "contain": true, "imagesLoaded": true }')
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+        li
+            img(src="img/office-dummy.jpg")
+    .wdtwrapper
+        != partial("_tmp/advantages")
+
+!= partial("_tmp/pallio-footer")

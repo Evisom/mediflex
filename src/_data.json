@@ -10,5 +10,11 @@
   },
   "pallio-for-business" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-article" : {
+    "layout" : "_pallio-layout"
+  },
+  "pallio-contacts" : {
+    "layout" : "_pallio-layout"
   }
 }
