@@ -7,5 +7,8 @@
   },
   "pallio-supersection-category" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-for-business" : {
+    "layout" : "_pallio-layout"
   }
 }
