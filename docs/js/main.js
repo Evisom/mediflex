@@ -316,7 +316,8 @@ window.onload = function () {
         "#item2slider",
         "#item3Slider",
         '#officeSlider',
-        "#cpuslider"
+        "#cpuslider",
+        "#projectSlider"
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {

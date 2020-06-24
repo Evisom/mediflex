@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Evisom/mediflex#readme",
   "dependencies": {
+    "cprint": "^1.2.0",
     "gulp": "^4.0.2"
   },
   "devDependencies": {

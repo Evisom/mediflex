@@ -1,0 +1,106 @@
+.project-slider
+  height: 655px
+  background: #F9F8FA
+  padding-top: 48px
+  box-sizing: border-box
+
+#projectSlider, #projectSlider > div
+  height: 390px !important
+#projectSlider
+  margin-top: 36px
+  margin-left: 115px
+  margin-right: 115px
+
+.project-card
+  width: 570px
+  height: 390px
+
+#projectSlider > div > div
+  margin-left: 0 !important
+
+img.project-card-image
+  height: 253px
+  width: 100%
+  border-radius: 8px  8px 0 0
+
+#projectSlider
+  max-width: 1170px
+
+#projectSlider .project-card
+  margin-right: 30px
+.project-card-info
+  margin-top: -5px
+  height: 137px
+  width: 100%
+  box-sizing: border-box
+  padding: 24px 32px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border-radius: 0 0 8px 8px
+.project-card-info-title
+  font-weight: 500
+  font-size: 20px
+  line-height: 26px
+
+.project-card-info-other
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.project-card-info-other-info
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.project-card-info-other-info-text
+  font-size: 16px
+  margin-right: 24px
+
+.project-card-info-other-more
+  font-weight: bold
+  font-size: 16px
+  text-decoration: none
+  color: #9F66AA
+
+.project-slider-flickity
+  margin-bottom: 36px
+@media (min-width: 1400px)
+  #projectSlider
+    margin-left: calc((100vw - 1210px) / 2)!important
+    margin-right: calc((100vw - 1170px) / 2)!important
+
+@media (max-width: 1280px)
+  #projectSlider
+    margin-left: 50px
+    margin-right: 50px
+
+@media (max-width: 768px)
+  #projectSlider
+    margin-left: 24px
+    margin-right: 0
+    margin-top: 16px
+
+  .project-slider
+    padding-top: 24px
+    height: 400px
+
+  .project-card
+    margin-right: 8px !important
+    width: 312px
+    height: 289px
+  img.project-card-image
+    height: 152px
+  .project-card-info
+    padding: 8px 16px 16px 16px
+  .project-card-info-title
+    line-height: 20px
+    font-size: 16px
+  .project-card-info-other-info
+    flex-direction: column
+  .project-card-info-other-more
+    margin-top: auto
+  .project-card-info-other-info-text:last-child
+    margin-top: 2px
+  #projectSlider, #projectSlider>div
+    height: 312px !important
