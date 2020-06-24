@@ -1,0 +1,97 @@
+.pallio-main-cards
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  margin-left: 115px
+  margin-right: 115px
+  padding-bottom: 9px
+
+.pallio-main-cards-element
+  box-sizing: border-box
+  width: 31%
+  padding: 40px 32px 32px 32px
+  height: 340px
+  border-radius: 8px
+  position: relative
+.pallio-main-cards-element:nth-child(1)
+  background: #DDB8D6
+.pallio-main-cards-element:nth-child(2)
+  background: #8DD7F7
+.pallio-main-cards-element:nth-child(3)
+  background: #B8DDBE
+
+.pallio-main-cards-element-h
+  font-weight: bold
+  font-size: 36px
+  line-height: 100%
+
+.pallio-main-cards-element-list-li
+  font-size: 18px
+  line-height: 130%
+
+.pallio-main-cards-element-list
+  margin-top: 24px
+  margin-left: 20px
+
+.pallio-main-cards-element-buttons
+  position: absolute
+  bottom: 32px
+  color: #FFFFFF
+  padding: 4px 16px
+  background: #9F66AA
+  border-radius: 4px
+  font-weight: bold
+  font-size: 16px
+  line-height: 24px
+  text-decoration: none
+
+.pallio-main-cards-element-arrow
+  display: none
+
+@media (min-width: 1400px)
+  .pallio-main-cards
+    margin-left: calc((100vw - 1210px) / 2)!important
+    margin-right: calc((100vw - 1170px) / 2)!important
+
+@media (max-width: 1280px)
+  .pallio-main-cards
+    margin-left: 50px
+    margin-right: 50px
+
+@media (max-width: 1024px)
+  .pallio-main-cards-element
+    height: auto
+  .pallio-main-cards-element-list
+    margin-bottom: 48px
+
+@media (max-width: 768px)
+  .pallio-main-cards
+    flex-direction: column
+    margin-left: 24px
+    margin-right: 24px
+  .pallio-main-cards-element
+    width: 100%
+    padding-left: 24px
+    padding-right: 24px
+    padding-bottom: 24px
+    padding-top: 24px
+  .pallio-main-cards-element > *:not(:first-child)
+    display: none
+  .pallio-main-cards-element:not(:first-child)
+    margin-top: 24px
+  .pallio-main-cards-element-h
+    font-size: 24px
+
+  .pallio-main-cards-element-arrow
+    display: block !important
+
+  .pallio-main-cards-element-h
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+
+
+
+
