@@ -52,6 +52,27 @@
     margin-top: -16px
   blockquote
     background: #DDB8D6
+  .pallio-news-wrapper
+    background: #F9F8FA
+    width: 100%
+    padding-left: 115px
+    padding-right: 115px
+    box-sizing: border-box
+  .pallio-news-title
+    font-weight: bold
+    font-size: 36px
+    padding-top:  24px
+    margin-bottom: 36px
+  .pallio-news-grid > a
+    margin-right: 0 !important
+  .pallio-news-grid
+    //grid-row-gap: au
+    display: grid
+    grid-template-columns: repeat(3 , 1fr)
+    grid-row-gap: 48px
+    padding-bottom: 72px
+    .needtoknow-slider-element-photo-button > svg > path
+      fill: #9F66AA
 @media (min-width: 1400px)
   .palliomed-theme
     .footer-r3
@@ -60,13 +81,21 @@
       margin-left: calc((100vw - 1210px) / 2)!important
       margin-right: calc((100vw - 1170px) / 2)!important
 
-
+    .pallio-news-wrapper
+      padding-left:  calc((100vw - 1210px) / 2)!important
+      padding-right: calc((100vw - 1210px) / 2)!important
+@media (max-width: 1380px)
+  .palliomed-theme
+    .pallio-news-grid
+      grid-template-columns: repeat(2 , 1fr)
 @media (max-width: 1280px)
   .palliomed-theme
     .footer-r3
       margin-left: 25px
       margin-right: 25px
-
+    .pallio-news-wrapper
+      padding-left: 50px
+      padding-right: 50px
 @media (max-width: 1024px)
   .palliomed-theme
     .navbar__r2__buttons
@@ -80,8 +109,29 @@
       font-weight: bold
     .filtersBrandSpan
       color: #9F66AA
+
 @media (max-width: 768px)
   .palliomed-theme
+    .pallio-news-title
+      font-size: 24px
+      margin-bottom: 24px
+    .pallio-news-grid
+      grid-template-columns: repeat(1 , 1fr)
+      .needtoknow-slider-element-photo-button
+        top: calc( (100vw - 166px ) / 1.55 )
+      .needtoknow-slider-element-type
+        margin-top: 24px
+
+      .needtoknow-slider-element-photo-button > svg
+        border-radius: 50%
+        border: 2px solid #9F66AA
+    .pallio-news-grid > a > div , .pallio-news-grid > a > div > img , .pallio-news-grid > a
+      height: auto
+      width: calc( 100vw - 63px )
+    .pallio-news-wrapper
+      padding-left: 24px
+      padding-right: 24px
+      padding-bottom: 58px
     .navbar__r2__buttons-links-el
       display: none
     .navbar__r2__buttons-links

@@ -16,5 +16,8 @@
   },
   "pallio-contacts" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-news" : {
+    "layout" : "_pallio-layout"
   }
 }
