@@ -25,5 +25,8 @@
   },
   "pallio-project" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-brands" : {
+    "layout" : "_pallio-layout"
   }
 }
