@@ -19,5 +19,8 @@
   },
   "pallio-news" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-project-catalog" : {
+    "layout" : "_pallio-layout"
   }
 }

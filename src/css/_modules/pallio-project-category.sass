@@ -1,0 +1,82 @@
+.project-catalog
+  background: #F9F8FA
+  padding-left: 115px
+  padding-right: 115px
+  padding-bottom: 20px
+  .supersection-seeall
+    margin-top: 48px
+  .path
+    padding-left: 0
+.project-catalog-title
+  font-weight: bold
+  font-size: 36px
+  margin-top: 24px
+.project-catalog-menu
+  margin-top: 40px
+  display: flex
+  flex-direction: row
+  align-items: center
+a.project-catalog-menu-element
+  text-decoration: none
+  font-weight: bold
+  font-size: 16px
+  line-height: 24px
+  color: black
+  margin-left: 8px
+  padding: 10px 24px
+  background: #FFFFFF
+  border-radius: 50px
+  word-break: normal
+  white-space: nowrap
+.project-catalog-menu-element-active
+  background: #9F66AA !important
+  color: white !important
+
+.project-catalog-grid
+  margin-top: 36px
+  display: grid
+  grid-template-columns: repeat( 2 , 1fr)
+  grid-column-gap: 30px
+  grid-row-gap: 30px
+  .project-card
+    width: 100%
+    height: auto
+    img
+      height: auto
+    .project-card-info-other-info-text
+      margin-right: 0
+
+@media (min-width: 1400px)
+  .project-catalog
+    padding-left: calc((100vw - 1210px) / 2)!important
+    padding-right: calc((100vw - 1210px) / 2)!important
+
+@media (max-width: 1320px)
+  .project-catalog-grid
+    grid-template-columns: repeat( 1 , 1fr)
+
+@media (max-width: 1280px)
+  .project-catalog
+    padding-left: 50px
+    padding-right: 50px
+
+@media (max-width: 768px)
+  .project-catalog
+    padding-right: 24px
+    padding-left: 24px
+    padding-top: 5px
+    padding-bottom: 53px
+    .supersection-seeall
+      margin-top: 40px
+  .project-catalog-menu
+    top: 100px
+    overflow-y: scroll
+    position: absolute
+    right: 0
+    left: 0px
+    a.project-catalog-menu-element:first-child
+      margin-left: 24px
+  .project-catalog-title
+    font-size: 24px
+  .project-catalog-grid
+    margin-top: 100px

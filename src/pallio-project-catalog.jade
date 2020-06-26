@@ -1,0 +1,21 @@
+!= partial("_tmp/pallio-navbar")
+.project-catalog
+    != partial("_tmp/path" , { background : "background: #F9F8FA;"})
+    .project-catalog-title Реализованные проекты
+    .project-catalog-menu
+        a.project-catalog-menu-element.project-catalog-menu-element-active(href="#") Все проекты
+        a.project-catalog-menu-element(href="#") Бизнес
+        a.project-catalog-menu-element(href="#") Фонды
+        a.project-catalog-menu-element(href="#") ЛПУ
+    .project-catalog-grid
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(185, 177, 190, 0.5), rgba(185, 177, 190, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(201, 202, 188, 0.5), rgba(201, 202, 188, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(185, 177, 190, 0.5), rgba(185, 177, 190, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(201, 202, 188, 0.5), rgba(201, 202, 188, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+        != partial("./_tmp/project-card", {style: "background: linear-gradient(0deg, rgba(185, 177, 190, 0.5), rgba(185, 177, 190, 0.5)), #FFFFFF;"})
+    != partial("./_tmp/supersection-seeall")
+!= partial("_tmp/pallio-provider-project")
+!= partial("_tmp/pallio-footer")
