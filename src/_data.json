@@ -31,5 +31,8 @@
   },
   "pallio-letters" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-brand" : {
+    "layout" : "_pallio-layout"
   }
 }

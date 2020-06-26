@@ -1,0 +1,119 @@
+.palliomed-theme
+  .pallio-brands-grid
+    padding-bottom: 86px
+    display: grid
+    grid-template-columns: repeat( 4 , 1fr)
+    grid-row-gap: 64px
+    .companies-element
+      margin: auto
+  .pallio-news-subtitle
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    width: 745px
+    margin-top: -16px
+  .pallio-letters-grid-element
+    display: flex
+    flex-direction: column
+    align-items: center
+  .pallio-letters-grid
+    margin-top: 80px
+    display: grid
+    grid-template-columns: repeat( 4 , 1fr )
+    grid-row-gap: 48px
+    margin-bottom: 58px
+    .letters-slider-sl-element
+      margin-right: 0
+    .letters-slider-sl-element-img
+      width: 19.3vw
+      margin-top: 24px
+    .letters-slider-sl-element-text
+      margin-top: 12px
+  .pallio-letters-grid + .supersection-seeall
+    padding-bottom: 69px
+  .pallio-brand-container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding-top: 24px
+    padding-bottom: 24px
+
+  .pallio-brand-container-text
+    width: 55vw
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    padding-bottom: 48px
+  img.pallio-brand-container-text-logo
+    height: 41px
+    width: auto
+    margin-bottom: 36px
+  .pallio-brand-container-letter-text
+    text-decoration: none
+    margin-top: 24px
+    font-size: 16px
+    line-height: 150%
+    color: #272727
+  .pallio-brand-container-letter-text
+    text-decoration: none
+  a.pallio-brand-container-letter , a.pallio-brand-container-letter > *
+    width: 270px
+    text-decoration: none
+  #brandContainer + .customerchoice
+    background: #F9F8FA
+@media (min-width: 1400px)
+  .pallio-letters-grid
+    grid-column-gap: 30px
+  .pallio-letters-grid-element
+    .letters-slider-sl-element-img
+      width: 270px !important
+
+@media (max-width: 768px)
+  .palliomed-theme
+    .pallio-brands-grid
+      margin-top: 84px
+      grid-template-columns: repeat(2 , 1fr)
+    .pallio-brands-grid > img
+      width: 59%
+    .pallio-letters-grid
+      grid-template-columns: repeat( 2 , 1fr )
+      grid-column-gap: 16px
+      grid-row-gap: 36px
+    .pallio-news-subtitle
+      width: 100%
+      font-size: 16px
+      line-height: 150%
+    .pallio-letters-grid-element
+      .letters-slider-sl-element-img
+        width: 100%
+      .companies-element
+        width: 42%
+
+    .pallio-letters-grid + .supersection-seeall
+      padding-bottom: 0
+    .pallio-brand-container
+      flex-direction: column
+    .pallio-brand-container-text
+      font-size: 14px
+      line-height: 150%
+      width: 100%
+      font-weight: normal
+      padding-bottom: 24px
+    a.pallio-brand-container-letter > img
+      width: 148px
+    a.pallio-brand-container-letter
+      width: 238px
+      text-decoration: none
+      display: flex
+      flex-direction: column
+      align-items: center
+    .pallio-brand-container-letter-text
+      width: 238px !important
+      font-size: 14px
+      line-height: 150%
+    #brandContainer
+      padding-bottom: 0 !important
+    img.pallio-brand-container-text-logo
+      height: 32px
+      margin-bottom: 24px
