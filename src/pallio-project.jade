@@ -1,0 +1,61 @@
+!= partial("_tmp/pallio-navbar")
+.wdtwrapper
+    != partial("_tmp/path" , { background : "background: none;"})
+.pallio-project-slider#projectPageSlider(data-flickity='{ "groupCells": false  , "wrapAround": true , "pageDots" : false , "prevNextButtons" : false ,"cellAlign": "center" , "cellSelector": ".pallio-project-slider-element" , "imagesLoaded": true }')
+    .pallio-project-slider-buttons
+        div#projectPageSliderPrev
+            svg(width='80', height='80', viewBox='0 0 80 80', fill='none', xmlns='http://www.w3.org/2000/svg')
+                g(filter='url(#filter0_d)')
+                    circle(cx='40', cy='35', r='24', fill='white')
+                path(d='M34 35L42 27', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M34 35L41.9998 43', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                defs
+                    filter#filter0_d(x='0', y='0', width='80', height='80', filterUnits='userSpaceOnUse', color-interpolation-filters='sRGB')
+                        feflood(flood-opacity='0', result='BackgroundImageFix')
+                        fecolormatrix(in='SourceAlpha', type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0')
+                        feoffset(dy='5')
+                        fegaussianblur(stdDeviation='8')
+                        fecolormatrix(type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0')
+                        feblend(mode='normal', in2='BackgroundImageFix', result='effect1_dropShadow')
+                        feblend(mode='normal', in='SourceGraphic', in2='effect1_dropShadow', result='shape')
+
+        div#projectPageSliderPlay
+            svg(width='70', height='70', viewBox='0 0 70 70', fill='none', xmlns='http://www.w3.org/2000/svg')
+                circle(cx='35', cy='35', r='34', fill='white', stroke='#9F66AA', stroke-width='2')
+                path(d='M26.9805 27.8879C26.9805 25.2046 29.8757 23.5193 32.2089 24.8444L44.1934 31.6508C46.5625 32.9963 46.5536 36.4134 44.1776 37.7466L32.1931 44.471C29.8601 45.7801 26.9805 44.0939 26.9805 41.4187V27.8879Z', fill='#9F66AA')
+        div#projectPageSliderNext
+            svg(width='80', height='80', viewBox='0 0 80 80', fill='none', xmlns='http://www.w3.org/2000/svg')
+                g(filter='url(#filter0_d)')
+                    circle(cx='40', cy='35', r='24', transform='rotate(-180 40 35)', fill='white')
+                path(d='M46 35L38 43', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                path(d='M46 35L38.0002 27', stroke='black', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                defs
+                    filter#filter0_d(x='0', y='0', width='80', height='80', filterUnits='userSpaceOnUse', color-interpolation-filters='sRGB')
+                        feflood(flood-opacity='0', result='BackgroundImageFix')
+                        fecolormatrix(in='SourceAlpha', type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0')
+                        feoffset(dy='5')
+                        fegaussianblur(stdDeviation='8')
+                        fecolormatrix(type='matrix', values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0')
+                        feblend(mode='normal', in2='BackgroundImageFix', result='effect1_dropShadow')
+                        feblend(mode='normal', in='SourceGraphic', in2='effect1_dropShadow', result='shape')
+
+    a.pallio-project-slider-element(href="./../img/img722.png")
+        img(src="./../img/img711.png")
+    a.pallio-project-slider-element(href="./../img/img722.png")
+        img(src="./../img/img711.png")
+    a.pallio-project-slider-element(href="./../img/img722.png")
+        img(src="./../img/img711.png")
+    a.pallio-project-slider-element(href="./../img/img722.png")
+        img(src="./../img/img711.png")
+    a.pallio-project-slider-element(href="./../img/img722.png")
+        img(src="./../img/img711.png")
+.article-a.article-for-business
+    h2.acticle-a-h2 Авторизация проектов
+    != partial("./_tmp/article-text")
+    h3.acticle-a-h3 Авторизация проектов
+    != partial("./_tmp/article-text")
+    h3.acticle-a-h3 Авторизация проектов
+    != partial("./_tmp/article-text")
+!= partial("_tmp/pallio-provider-project")
+!= partial("_tmp/project-slider")
+!= partial("_tmp/pallio-footer")

@@ -46,6 +46,40 @@ a.project-catalog-menu-element
     .project-card-info-other-info-text
       margin-right: 0
 
+
+.pallio-project-slider
+  margin-top: 24px
+  position: relative
+  height: 420px !important
+  .mfp-close
+    top: 60px !important
+  .flickity-viewport
+    height: 420px !important
+    .flickity-slider
+      margin-left: 0 !important
+.pallio-project-slider-element
+  margin-left: 30px !important
+.pallio-project-slider-element > img
+  border-radius: 16px
+
+.pallio-project-slider-buttons
+  position: absolute
+  right: 115px
+  left: 115px
+  z-index: 1
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  top: calc( 50% - 48px )
+h2.acticle-a-h2
+  font-weight: bold
+  font-size: 36px
+  line-height: 110%
+  margin-top: 32px
+
+.palliomed-theme.mfp-zoom-out-cur
+  .mfp-close
+    top: 55px !important
 @media (min-width: 1400px)
   .project-catalog
     padding-left: calc((100vw - 1210px) / 2)!important
@@ -59,6 +93,9 @@ a.project-catalog-menu-element
   .project-catalog
     padding-left: 50px
     padding-right: 50px
+  .pallio-project-slider-buttons
+    right: 50px
+    left: 50px
 
 @media (max-width: 768px)
   .project-catalog
@@ -80,3 +117,26 @@ a.project-catalog-menu-element
     font-size: 24px
   .project-catalog-grid
     margin-top: 100px
+
+  .pallio-project-slider-buttons > *:not(:nth-child(2))
+    display: none
+  #projectPageSliderPlay > svg
+    height: 48px
+    width: 48px
+  .pallio-project-slider-buttons
+    top: 100px
+    left: 24px
+  .pallio-project-slider
+    height: 180px !important
+    .flickity-viewport
+      height: 180px !important
+  .pallio-project-slider-element > img
+    //height: 217px
+    border-radius: 8px
+    width: 311px
+  .pallio-project-slider-element
+    margin-left: 8px !important
+  h2.acticle-a-h2
+    font-size: 24px
+    margin-top: 18px
+    line-height: 110%

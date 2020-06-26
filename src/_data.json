@@ -22,5 +22,8 @@
   },
   "pallio-project-catalog" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-project" : {
+    "layout" : "_pallio-layout"
   }
 }

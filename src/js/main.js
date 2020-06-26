@@ -317,7 +317,8 @@ window.onload = function () {
         "#item3Slider",
         '#officeSlider',
         "#cpuslider",
-        "#projectSlider"
+        "#projectSlider",
+        "#projectPageSlider"
     ].forEach(function(selector) {
         const el = document.querySelector(selector)
         if (el) {
@@ -499,6 +500,19 @@ window.onload = function () {
 
         });
     }
+
+    $('#projectPageSliderPlay').on('click', function(event) {
+        event.preventDefault();
+
+        $("#projectPageSlider").magnificPopup({
+            delegate: 'a',
+            type:'image',
+            gallery: {
+                enabled: true
+            }
+        }).magnificPopup('open');
+    });
+
 
 
 }
