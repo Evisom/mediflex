@@ -34,5 +34,8 @@
   },
   "pallio-brand" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-search" : {
+    "layout" : "_pallio-layout"
   }
 }

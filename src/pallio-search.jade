@@ -1,0 +1,67 @@
+!= partial("_tmp/navbar", { activeSearch: true })
+.search
+    .wdtwrapper
+        .search-input
+            input.search-input-el(placeholder="Хочу найти", type="text" autofocus)#searchInput
+            .search-input-close#search-input-close
+                svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd', clip-rule='evenodd', d='M0.991224 0.994719C1.53865 0.445351 2.4262 0.445351 2.97362 0.994719L30.8956 29.0158C31.443 29.5652 31.443 30.4559 30.8955 31.0053C30.3481 31.5547 29.4606 31.5547 28.9132 31.0053L0.991224 2.98416C0.443801 2.43479 0.443801 1.54409 0.991224 0.994719Z', fill='#D9DADB')
+                    path(fill-rule='evenodd', clip-rule='evenodd', d='M31.0088 0.994719C30.4614 0.445351 29.5738 0.445351 29.0264 0.994719L1.10445 29.0158C0.557028 29.5652 0.557027 30.4559 1.10445 31.0053C1.65187 31.5547 2.53942 31.5547 3.08684 31.0053L31.0088 2.98416C31.5562 2.43479 31.5562 1.54409 31.0088 0.994719Z', fill='#D9DADB')
+    .wdtwrapper-b
+        .search-info
+            .search-hints
+                a.search-hint-el(href="#") Кислородная терапия
+                a.search-hint-el(href="#") СРАР/BPAP аппараты
+                a.search-hint-el(href="#") Портативные концентраторы
+                a.search-hint-el(href="#") Откашливатели и инфузоматы
+                a.search-hint-el(href="#") Вспомогательная вентиляция легких
+                a.search-hint-el(href="#") Наполнительные станции и баллоны
+            .search-result
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/project-card", { style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/project-card", { style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+                != partial("./_tmp/item-card" , {gridclass: "customerchoice__slider-element-grid"})
+
+script.
+    window.onload = function () {
+
+        var searchInput = document.getElementById("searchInput")
+        var searchInputClose = document.getElementById("search-input-close")
+        var navbarButton = document.getElementsByClassName("navbar__r2__buttons-search is-active")[0]
+        var projectCard = document.getElementsByClassName("project-card")
+        if (document.documentElement.clientWidth < 780) {
+            console.log("1")
+            for (let i = 0; i < projectCard.length; i++) {
+                projectCard[i].style = 'grid-row: ' + (i + 1 ) * 2 + '!important'
+                console.log(i)
+            }
+        }
+        $(searchInputClose).hide()
+        searchInput.onkeyup = function () {
+            if (searchInput.value != "") {
+                $(searchInputClose).show()
+            }
+        }
+        searchInput.onblur = function () {
+            if (searchInput.value == "") {
+                $(searchInputClose).hide()
+            }
+        }
+        navbarButton.onclick = function () {
+            history.back()
+            return false
+        }
+    }

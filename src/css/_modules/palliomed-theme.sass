@@ -76,8 +76,25 @@
   #brandContainer + div + div
     background: #F9F8FA
     padding-bottom: 87px
-
-
+  .search-result
+    grid-template-columns: repeat( 3, 270px)
+    grid-column-gap: 30px
+    div
+      margin-left: 0px !important
+      margin-right: 0 !important
+    .customerchoice__slider-element
+      height: 390px
+      .customerchoice__slider-element__info-maininfo-name
+        font-weight: 500
+      .customerchoice__slider-element__info-price-discount
+        display: none
+      .customerchoice__slider-element__info-price-current.customerchoice-discountprice
+        color: black !important
+    .project-card
+      grid-column: 2 / 4
+      grid-row: auto
+  .search > .wdtwrapper-b , .search > .wdtwrapper-b > div
+    background: #F9F8FA !important
 @media (min-width: 1400px)
   .palliomed-theme
     .footer-r3
@@ -95,6 +112,14 @@
       grid-template-columns: repeat(2 , 1fr)
 @media (max-width: 1280px)
   .palliomed-theme
+    .search-info
+      flex-direction: column
+    .search-result
+      margin-left: calc( ( 100vw - 876px ) / 2 )
+      grid-column-gap: 16px
+      //width: 100%
+    .search-hints
+      width: 100%
     .footer-r3
       margin-left: 25px
       margin-right: 25px
@@ -153,3 +178,19 @@
       background: none !important
     #brandContainer + div + div
       padding-bottom: 57px
+    .search-result
+      grid-column-gap: 16px
+      margin-left: 0 !important
+      grid-template-columns: repeat( 2 , 1fr )
+      .customerchoice__slider-element
+        height: 264px
+      .project-card:last-child
+        grid-row: none !important
+      .project-card
+        height: auto
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row: auto
+        width: 100%
+        img
+          height: auto
