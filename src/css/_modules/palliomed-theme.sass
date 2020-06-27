@@ -95,8 +95,16 @@
       grid-row: auto
   .search > .wdtwrapper-b , .search > .wdtwrapper-b > div
     background: #F9F8FA !important
+  .search-projects
+    margin-right: 115px
+    margin-left: auto
+    //margin-top: 25px
+  .search-projects > div
+    margin-top: 25px
 @media (min-width: 1400px)
   .palliomed-theme
+    .search-projects
+      margin-right: 0
     .footer-r3
       padding-left: 0 !important
       padding-right: 0 !important
@@ -112,7 +120,9 @@
       grid-template-columns: repeat(2 , 1fr)
 @media (max-width: 1280px)
   .palliomed-theme
-    .search-info
+    .search-projects > div
+      margin-right: 50px
+    .search-info.pallio-search-info1
       flex-direction: column
     .search-result
       margin-left: calc( ( 100vw - 876px ) / 2 )
@@ -126,8 +136,16 @@
     .pallio-news-wrapper
       padding-left: 50px
       padding-right: 50px
+    .search-projects
+      margin-right: 24px !important
+    .search-hint-el
+      margin-left: 50px
+    .search-input
+      padding-left: 50px
+
 @media (max-width: 1024px)
   .palliomed-theme
+
     .navbar__r2__buttons
       width: 320px
     .navbar__r2__buttons-links
@@ -194,3 +212,14 @@
         width: 100%
         img
           height: auto
+    .search-projects
+      margin-left: 24px
+      margin-right: 24px
+    .search-projects > div
+      width: 100%
+      height: auto
+    .search-projects > div > img
+      width: 100%
+      height: auto
+
+
