@@ -1,4 +1,4 @@
-!= partial("_tmp/navbar", { activeSearch: true })
+!= partial("_tmp/pallio-navbar", { activeSearch: true })
 .search
     .wdtwrapper
         .search-input
@@ -43,10 +43,8 @@ script.
         var navbarButton = document.getElementsByClassName("navbar__r2__buttons-search is-active")[0]
         var projectCard = document.getElementsByClassName("project-card")
         if (document.documentElement.clientWidth < 780) {
-            console.log("1")
             for (let i = 0; i < projectCard.length; i++) {
                 projectCard[i].style = 'grid-row: ' + (i + 1 ) * 2 + '!important'
-                console.log(i)
             }
         }
         $(searchInputClose).hide()

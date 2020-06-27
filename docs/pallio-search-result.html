@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./fonts/CeraPro/stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <link rel="stylesheet" href="./css/ui.dropdownchecklist.standalone.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA=" crossorigin="anonymous"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="./js/ui.dropdownchecklist-1.5-min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body class="palliomed-theme">
+    <div class="article">
+        <div id="phonePopup" class="hidden__phone-popup">
+            <p class="hidden__phone-popup-text">Звоните</p><a href="#" class="hidden__phone-popup-phonelink">8 495 543-57-468</a>
+            <p class="hidden__phone-popup-text">Или пишите</p><img src="./img/phone-ico.svg" alt="" class="hidden__phone-popup-ico">
+        </div>
+        <div id="phonePopupBlackout" class="hidden_phone-popup-blackout"></div>
+        <div id="navbar-menu" class="navbar-menu-wrapper">
+            <div class="navbar-menu">
+                <div class="navbar-menu-c0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="navbarMenuSlideTopClose">
+                        <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                <div class="navbar-menu-c1"><a href="#" id="nmcl0" class="navbar-menu-c1-link">Кислородная терапия<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></a><a href="#" id="nmcl1" class="navbar-menu-c1-link">CPAP/BPAP<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></a><a href="#" id="nmcl2" class="navbar-menu-c1-link">Вентиляция легких<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></a><a href="#" id="nmcl3" class="navbar-menu-c1-link">Откашливатели<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></a><a href="#" id="nmcl4" class="navbar-menu-c1-link">Аспираторы<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></a><a href="#" id="nmcl5" class="navbar-menu-c1-link">Инфузоматы и перкуторы<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></a></div>
+                <div class="navbar-menu-c2">
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы 2</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы 3</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы 4</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы 5</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы 6</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                    <div class="navbar-menu-c2-slide">
+                        <div class="navbar-menu-c2-slide-top">
+                            <div class="navbar-menu-c2-slide-top-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7148 12L9.73194 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15.7148 12L9.73205 6.00002" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></div>
+                            <p class="navbar-menu-c2-slide-top-h">Кислородная терапия</p>
+                        </div>
+                        <div class="navbar-menu-c2-slide-links">
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Стационарные концентраторы 7</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Вспомогательная вентиляция легких</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Кислородная терапия</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Портативные концентраторы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 6 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">0 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Наполнительные станции и баллоны</p>
+                                </div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-collumn">
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Пульсометры и капнографы</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">1 - 3 литра/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">3 - 5 литров/мин</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">6 - 10 литров/мин</a>
+                                </div>
+                                <div class="navbar-menu-c2-slide-collumn-element">
+                                    <p class="navbar-menu-c2-slide-collumn-element-h">Расходники и комплектующие</p><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Маски, канюли. шланги</a><a href="#" class="navbar-menu-c2-slide-collumn-element-text">Фильтры, увлажнители</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-menu-c2-slide-item">
+                            <div class="navbar-menu-c2-slide-item-photo"><img src="./img/img61.png" class="navbar-menu-c2-slide-item-photo-el">
+                                <div class="navbar-menu-c2-slide-item-photo-panel">новинка</div>
+                            </div>
+                            <div class="navbar-menu-c2-slide-item-h">Возьми воздух под контроль!</div>
+                            <div class="navbar-menu-c2-slide-item-text">Портативный концентратор Invacare Perfect O2 LE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-menu-c3">
+                    <div class="navbar-menu-c3-links"><a href="#" class="navbar-menu-c3-link-el">Сервис</a><a href="#" class="navbar-menu-c3-link-el">Trade-in</a><a href="#" class="navbar-menu-c3-link-el">Оплата и доставка</a><a href="#" class="navbar-menu-c3-link-el">Партнерам</a><a href="#" class="navbar-menu-c3-link-el">О компании</a><a href="#" class="navbar-menu-c3-link-el">Контакты</a></div>
+                    <div class="navbar-menu-c3-contacts">
+                        <div class="navbar-menu-c3-contacts-text">Есть вопросы? Звоните!</div><a href="#" class="navbar-menu-c3-contacts-phone">8 (495) 543-57-46</a>
+                        <div class="navbar-menu-c3-contacts-mt">по будням, с 10.00 до 18.00</div>
+                        <div class="navbar-menu-c3-contacts-text">Или пишите!<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.611315 15.7057C0.611315 18.7432 1.45775 21.5688 2.96253 23.9706C2.75092 25.7601 0 32 0 32C0 32 5.94857 30.0692 8.55841 29.3628C10.8391 30.6578 13.496 31.4113 16.3174 31.4113C24.9699 31.4113 32 24.3709 32 15.7057C32 7.04047 24.9699 0 16.3174 0C7.66495 0 0.611315 7.04047 0.611315 15.7057Z" fill="url(#paint0_linear)"></path>
+                                <path d="M7.71289 11.821C7.71289 10.9262 7.99504 9.86658 8.62986 8.87762C8.95903 8.35959 9.38225 7.88866 9.87601 7.51191C10.1346 7.32354 10.3462 7.08807 10.5814 6.8997C10.8635 6.66423 11.1692 6.52295 11.5454 6.54649C11.8275 6.57004 12.0626 6.68778 12.2742 6.87615C12.5564 7.11162 12.815 7.39418 13.0031 7.70028C13.4028 8.3125 13.826 8.92471 14.1552 9.58402C14.2963 9.89013 14.4138 10.1962 14.4609 10.5494C14.5549 11.1852 14.3433 11.7032 13.8731 12.1506C13.6379 12.3625 13.4263 12.5509 13.1912 12.7628C13.0501 12.8806 12.9091 12.9748 12.768 13.0689C12.4388 13.3044 12.2037 13.6105 12.1567 14.0344C12.1332 14.2934 12.1567 14.5759 12.2272 14.8349C12.3683 15.3294 12.6269 15.8004 12.9091 16.2242C13.4028 16.9541 13.9671 17.637 14.5549 18.2728C15.0252 18.7672 15.5189 19.2617 16.0832 19.6385C16.4124 19.8739 16.7651 20.0623 17.1648 20.133C17.635 20.2271 18.0582 20.133 18.4109 19.8033C18.4814 19.7562 18.5285 19.6856 18.599 19.6149C18.9047 19.2617 19.2809 18.9556 19.6335 18.6731C20.2213 18.2021 20.8562 18.155 21.5145 18.4376C21.9612 18.626 22.3609 18.9085 22.7136 19.2146C23.1604 19.5914 23.6071 19.9917 24.0303 20.392C24.2419 20.5803 24.4065 20.7923 24.5241 21.0277C24.8532 21.6164 24.8062 22.1344 24.3124 22.6054C23.9127 23.0057 23.4895 23.3824 23.0428 23.7356C22.2904 24.3243 21.444 24.6775 20.5035 24.8188C19.3749 24.9836 18.2933 24.8423 17.2353 24.442C16.2008 24.0653 15.2603 23.5001 14.3668 22.8173C13.2382 21.9461 12.2272 20.9335 11.2867 19.8504C10.6754 19.144 10.0876 18.3905 9.57035 17.5899C8.95903 16.648 8.44177 15.6826 8.08909 14.623C7.87748 13.7989 7.71289 12.9512 7.71289 11.821Z" fill="white"></path>
+                                <defs>
+                                    <lineargradient id="paint0_linear" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#11BC3C"></stop>
+                                        <stop offset="1" stop-color="#27B64A"></stop>
+                                    </lineargradient>
+                                </defs>
+                            </svg></div>
+                        <hr class="navbar-menu-c3-contacts-hr">
+                        <div class="navbar-menu-c3-contacts-copyright">© 2014-2020 ООО «Медика Трейд»</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="compareWrapper" class="compare-popup-wrapper">
+            <div id="comparePopup" class="compare-popup">
+                <div class="compare-popup-arrow"><svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="10.1914" width="13" height="13" transform="rotate(-45 0 10.1914)" fill="white"></rect>
+                    </svg></div>
+                <div class="compare-popup-container">
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                    <div class="compare-popup-element"><img src="./img/img41.png" class="compare-popup-c1">
+                        <div class="compare-popup-c2">
+                            <p class="compare-popup-text">Invacare XPO2</p>
+                            <p class="compare-popup-price">179 500 ₽</p>
+                        </div>
+                        <div class="compare-popup-c3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 14L14 2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2 2L13.9998 13.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                    </div>
+                </div>
+                <div class="compare-popup-button">Сравнить товары</div>
+            </div>
+        </div>
+        <div id="navbar" class="navbar">
+            <div class="navbar__r1"></div>
+            <div class="navbar__r2">
+                <div class="navbar__r2__logo"><img src="./img/pallio-logo.svg" alt="" class="navbar__r2__logo-img"></div>
+                <div class="navbar__r2__scrollup">
+                    <div id="navbar-menu-burger-scrollup"><img src="./img/menu-ico.svg" alt="" class="navbar-menu-burger-ico"></div>
+                </div>
+                <div class="navbar__r2__phone"><a href="#" class="navbar__r2__phone-link">8 495 543-57-468</a><img src="./img/phone-ico.svg" alt="" class="navbar__r2__phone-ico"></div>
+                <div class="navbar__r2__buttons"><a href="./search.html" class="navbar__r2__buttons-search"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 14C22 17.8663 18.8656 21 15 21C11.1344 21 8 17.8663 8 14C8 10.1337 11.1344 7 15 7C18.8656 7 22 10.1337 22 14Z" stroke-width="2"></path>
+                            <path d="M20 19L26 25" stroke-width="2" stroke-linecap="round"></path>
+                        </svg></a>
+                    <div class="navbar__r2__buttons-links">
+                        <div class="navbar__r2__buttons-links-el">Бизнесу</div>
+                        <div class="navbar__r2__buttons-links-el">Фондам</div>
+                        <div class="navbar__r2__buttons-links-el">ЛПУ</div>
+                        <div class="navbar__r2__buttons-links-el">О компании</div>
+                        <div class="navbar__r2__buttons-links-el">Контакты</div><svg id="mobileMenuPhoneButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="navbar__r2__phone-ico-mobile">
+                            <path d="M7 11.9662C7 11.0394 7.29836 9.94177 7.96968 8.91735C8.31777 8.38075 8.76531 7.89293 9.28745 7.50267C9.56095 7.30754 9.78472 7.06363 10.0334 6.86851C10.3317 6.6246 10.6549 6.47825 11.0528 6.50264C11.3511 6.52703 11.5998 6.64899 11.8235 6.84412C12.1219 7.08803 12.3954 7.38072 12.5943 7.6978C13.017 8.33197 13.4645 8.96613 13.8126 9.64908C13.9618 9.96616 14.0861 10.2832 14.1358 10.6491C14.2353 11.3077 14.0115 11.8443 13.5143 12.3077C13.2656 12.5272 13.0418 12.7223 12.7932 12.9419C12.644 13.0638 12.4949 13.1614 12.3457 13.259C11.9976 13.5029 11.7489 13.8199 11.6992 14.259C11.6744 14.5273 11.6992 14.82 11.7738 15.0883C11.923 15.6005 12.1965 16.0883 12.4949 16.5273C13.017 17.2835 13.6137 17.9908 14.2353 18.6494C14.7326 19.1616 15.2547 19.6738 15.8514 20.064C16.1995 20.308 16.5725 20.5031 16.9952 20.5763C17.4924 20.6738 17.94 20.5763 18.3129 20.2348C18.3875 20.186 18.4372 20.1128 18.5118 20.0397C18.8351 19.6738 19.2329 19.3567 19.6058 19.064C20.2274 18.5762 20.8987 18.5274 21.5949 18.8201C22.0673 19.0152 22.49 19.3079 22.863 19.625C23.3354 20.0153 23.8078 20.4299 24.2553 20.8446C24.4791 21.0397 24.6531 21.2592 24.7775 21.5031C25.1255 22.1129 25.0758 22.6495 24.5537 23.1373C24.131 23.552 23.6835 23.9422 23.2111 24.3081C22.4154 24.9179 21.5203 25.2837 20.5258 25.4301C19.3323 25.6008 18.1886 25.4545 17.0697 25.0398C15.9758 24.6496 14.9812 24.0642 14.0364 23.3568C12.8429 22.4544 11.7738 21.4055 10.7793 20.2836C10.1328 19.5518 9.51122 18.7713 8.96422 17.942C8.31777 16.9664 7.77077 15.9664 7.39782 14.8688C7.17405 14.0151 7 13.137 7 11.9662Z" fill="black"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__r3">
+                <div id="navbar-menu-burger" class="navbar__r3-link navbar__r3-menu"><img src="./img/menu-ico.svg" alt="" class="navbar-menu-burger-ico"></div><a href="#" id="nr3l0" class="navbar__r3-link">Кислородная терапия</a><a href="#" id="nr3l1" class="navbar__r3-link">СРАР/ВРАР</a><a href="#" id="nr3l2" class="navbar__r3-link">Вентиляция легких</a><a href="#" id="nr3l3" class="navbar__r3-link">Откашливатели</a><a href="#" id="nr3l4" class="navbar__r3-link">Аспираторы</a><a href="#" id="nr3l5" class="navbar__r3-link">Удаление мокроты</a><a href="#" id="nr3l6" class="navbar__r3-link">Насосы</a>
+            </div>
+        </div>
+        <div class="search-result-h"><a href="./search.html" class="search-result-a">Маска<span>(63)</span></a></div>
+        <div class="wdtwrapper-b">
+            <div class="filters">
+                <div id="filtersR" class="filters-r1 filters-r1-active">
+                    <div class="filters-r1-mobileonly">Фильтры<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="filtersClose">
+                            <path d="M2 14L14 2" stroke="#929497" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 2L13.9998 13.9999" stroke="#929497" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    <div class="filters-r1-price">
+                        <div class="filters-r1-p">Цена</div>
+                        <div>
+                            <div class="filters-r1-price-input"><label class="filters-r1-price-input-label">от</label><input placeholder="78 000" type="text" class="filters-r1-price-input-el"></div>-<div class="filters-r1-price-input"><label class="filters-r1-price-input-label">до</label><input placeholder="100 000" type="text" class="filters-r1-price-input-el"></div>
+                        </div>
+                    </div><select id="filtersMultiselect1" multiple="multiple" class="filters-r1-brand">
+                        <option value="All ">Все / Ни одного</option>
+                        <option value="Atmung">Atmung</option>
+                        <option value="Bitmos">Bitmos</option>
+                        <option value="Invacar">Invacare</option>
+                        <option value="Nidek-Medical">Nidek-Medical</option>
+                        <option value="Philips">Philips</option>
+                        <option value="Ventum">Ventum</option>
+                    </select><select id="filtersMultiselect2" multiple="multiple" class="filters-r1-brand">
+                        <option value="1">Все / Ни одного</option>
+                        <option value="2">1 - 3 литра/мин</option>
+                        <option value="3">3 - 5 литра/мин</option>
+                        <option value="4">6 - 10 литра/мин</option>
+                    </select>
+                    <div class="filters-r1-reset"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12L12 2" stroke="#DD2333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 2L11.9998 11.9999" stroke="#DD2333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>Сбросить</div><button id="filtersResult" class="filters-r1-seeall-mobileonlu">Посмотреть 34 предложений</button>
+                </div>
+                <div class="filters-r2">
+                    <div id="filtersSortContainer" class="filters-r2-sort">
+                        <div class="filters-r2-sort-text">Сортировать по:</div><select id="filtersSort" class="filters-r2-sort-select">
+                            <option>по возрастанию цены</option>
+                            <option>по убыванию цены</option>
+                            <option>по рейтингу</option>
+                        </select>
+                    </div>
+                    <div id="filtersTrigger" class="filters-mobileonly">Фильтры<span>2</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="supersection-grid pallio-result-project">
+            <div id="cardsliderelement" class="customerchoice__slider-element customerchoice__slider-element-grid"><svg id="customeChoiceCompareButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="customerchoice__slider-element-compare">
+                    <path d="M23 9.5C23 8.67157 23.6716 8 24.5 8C25.3284 8 26 8.67157 26 9.5V26H23V9.5Z" fill="black"></path>
+                    <path d="M17 14.5C17 13.6716 17.6716 13 18.5 13C19.3284 13 20 13.6716 20 14.5V26H17V14.5Z" fill="black"></path>
+                    <path d="M11 13.5C11 12.6716 11.6716 12 12.5 12C13.3284 12 14 12.6716 14 13.5V26H11V13.5Z" fill="black"></path>
+                    <path d="M5 20.5C5 19.6716 5.67157 19 6.5 19C7.32843 19 8 19.6716 8 20.5V26H5V20.5Z" fill="black"></path>
+                </svg>
+                <div class="customerchoice__slider-element-photo"><img src="./img/img01.png" class="customerchoice__slider-element-photo-el"></div>
+                <div id="customerChoiceInfo" class="customerchoice__slider-element__info">
+                    <p class="customerchoice__slider-element__info-maininfo-name">BMC Resmart BPAP Super GII T-30T</p>
+                    <div class="customerchoice__slider-element__info-maininfo">
+                        <div class="customerchoice__slider-element__info-maininfo-rate"><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">64</span><span class="customerchoice__slider-element__info-maininfo-rate-comment"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5C0 7.05032 1.2341 8.8124 3 9.58396V13L6.75 10H8C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0H5Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">13</span></div>
+                    </div>
+                    <div class="customerchoice__slider-element__info-specs"><span class="customerchoice__slider-element__info-specs-r">0,5 - 5 литров в минуту</span><span class="customerchoice__slider-element__info-specs-r">Ресурс - 4000 часов</span><span class="customerchoice__slider-element__info-specs-r">Шумность ≤ 47 Дб</span><span class="customerchoice__slider-element__info-specs-r">Гарантия 3 года</span><span class="customerchoice__slider-element__info-specs-r">Германия</span></div>
+                    <div class="customerchoice__slider-element__info-price">
+                        <p class="customerchoice__slider-element__info-price-discount">395 000 ₽</p>
+                        <p class="customerchoice__slider-element__info-price-current customerchoice-discountprice">379 500 Р</p>
+                    </div>
+                    <div class="customerchoice__slider-element__info-showmore customerchoice__shomore-active">Подробне</div>
+                </div>
+            </div>
+            <div id="cardsliderelement" class="customerchoice__slider-element customerchoice__slider-element-grid"><svg id="customeChoiceCompareButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="customerchoice__slider-element-compare">
+                    <path d="M23 9.5C23 8.67157 23.6716 8 24.5 8C25.3284 8 26 8.67157 26 9.5V26H23V9.5Z" fill="black"></path>
+                    <path d="M17 14.5C17 13.6716 17.6716 13 18.5 13C19.3284 13 20 13.6716 20 14.5V26H17V14.5Z" fill="black"></path>
+                    <path d="M11 13.5C11 12.6716 11.6716 12 12.5 12C13.3284 12 14 12.6716 14 13.5V26H11V13.5Z" fill="black"></path>
+                    <path d="M5 20.5C5 19.6716 5.67157 19 6.5 19C7.32843 19 8 19.6716 8 20.5V26H5V20.5Z" fill="black"></path>
+                </svg>
+                <div class="customerchoice__slider-element-photo"><img src="./img/img01.png" class="customerchoice__slider-element-photo-el"></div>
+                <div id="customerChoiceInfo" class="customerchoice__slider-element__info">
+                    <p class="customerchoice__slider-element__info-maininfo-name">BMC Resmart BPAP Super GII T-30T</p>
+                    <div class="customerchoice__slider-element__info-maininfo">
+                        <div class="customerchoice__slider-element__info-maininfo-rate"><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">64</span><span class="customerchoice__slider-element__info-maininfo-rate-comment"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5C0 7.05032 1.2341 8.8124 3 9.58396V13L6.75 10H8C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0H5Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">13</span></div>
+                    </div>
+                    <div class="customerchoice__slider-element__info-specs"><span class="customerchoice__slider-element__info-specs-r">0,5 - 5 литров в минуту</span><span class="customerchoice__slider-element__info-specs-r">Ресурс - 4000 часов</span><span class="customerchoice__slider-element__info-specs-r">Шумность ≤ 47 Дб</span><span class="customerchoice__slider-element__info-specs-r">Гарантия 3 года</span><span class="customerchoice__slider-element__info-specs-r">Германия</span></div>
+                    <div class="customerchoice__slider-element__info-price">
+                        <p class="customerchoice__slider-element__info-price-discount">395 000 ₽</p>
+                        <p class="customerchoice__slider-element__info-price-current customerchoice-discountprice">379 500 Р</p>
+                    </div>
+                    <div class="customerchoice__slider-element__info-showmore customerchoice__shomore-active">Подробне</div>
+                </div>
+            </div>
+            <div class="project-card"><img src="./../img/img902.png" class="project-card-image">
+                <div style="background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF" class="project-card-info">
+                    <div class="project-card-info-title">Городская детская клиническая больница скорой медицинской помощи</div>
+                    <div class="project-card-info-other">
+                        <div class="project-card-info-other-info">
+                            <div class="project-card-info-other-info-text">Плошадь 39284 кв м</div>
+                            <div class="project-card-info-other-info-text">Бюджет 32984723 руб</div>
+                        </div><a href="#" class="project-card-info-other-more">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card"><img src="./../img/img902.png" class="project-card-image">
+                <div style="background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF" class="project-card-info">
+                    <div class="project-card-info-title">Городская детская клиническая больница скорой медицинской помощи</div>
+                    <div class="project-card-info-other">
+                        <div class="project-card-info-other-info">
+                            <div class="project-card-info-other-info-text">Плошадь 39284 кв м</div>
+                            <div class="project-card-info-other-info-text">Бюджет 32984723 руб</div>
+                        </div><a href="#" class="project-card-info-other-more">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cardsliderelement" class="customerchoice__slider-element customerchoice__slider-element-grid"><svg id="customeChoiceCompareButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="customerchoice__slider-element-compare">
+                    <path d="M23 9.5C23 8.67157 23.6716 8 24.5 8C25.3284 8 26 8.67157 26 9.5V26H23V9.5Z" fill="black"></path>
+                    <path d="M17 14.5C17 13.6716 17.6716 13 18.5 13C19.3284 13 20 13.6716 20 14.5V26H17V14.5Z" fill="black"></path>
+                    <path d="M11 13.5C11 12.6716 11.6716 12 12.5 12C13.3284 12 14 12.6716 14 13.5V26H11V13.5Z" fill="black"></path>
+                    <path d="M5 20.5C5 19.6716 5.67157 19 6.5 19C7.32843 19 8 19.6716 8 20.5V26H5V20.5Z" fill="black"></path>
+                </svg>
+                <div class="customerchoice__slider-element-photo"><img src="./img/img01.png" class="customerchoice__slider-element-photo-el"></div>
+                <div id="customerChoiceInfo" class="customerchoice__slider-element__info">
+                    <p class="customerchoice__slider-element__info-maininfo-name">BMC Resmart BPAP Super GII T-30T</p>
+                    <div class="customerchoice__slider-element__info-maininfo">
+                        <div class="customerchoice__slider-element__info-maininfo-rate"><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">64</span><span class="customerchoice__slider-element__info-maininfo-rate-comment"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5C0 7.05032 1.2341 8.8124 3 9.58396V13L6.75 10H8C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0H5Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">13</span></div>
+                    </div>
+                    <div class="customerchoice__slider-element__info-specs"><span class="customerchoice__slider-element__info-specs-r">0,5 - 5 литров в минуту</span><span class="customerchoice__slider-element__info-specs-r">Ресурс - 4000 часов</span><span class="customerchoice__slider-element__info-specs-r">Шумность ≤ 47 Дб</span><span class="customerchoice__slider-element__info-specs-r">Гарантия 3 года</span><span class="customerchoice__slider-element__info-specs-r">Германия</span></div>
+                    <div class="customerchoice__slider-element__info-price">
+                        <p class="customerchoice__slider-element__info-price-discount">395 000 ₽</p>
+                        <p class="customerchoice__slider-element__info-price-current customerchoice-discountprice">379 500 Р</p>
+                    </div>
+                    <div class="customerchoice__slider-element__info-showmore customerchoice__shomore-active">Подробне</div>
+                </div>
+            </div>
+            <div id="cardsliderelement" class="customerchoice__slider-element customerchoice__slider-element-grid"><svg id="customeChoiceCompareButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="customerchoice__slider-element-compare">
+                    <path d="M23 9.5C23 8.67157 23.6716 8 24.5 8C25.3284 8 26 8.67157 26 9.5V26H23V9.5Z" fill="black"></path>
+                    <path d="M17 14.5C17 13.6716 17.6716 13 18.5 13C19.3284 13 20 13.6716 20 14.5V26H17V14.5Z" fill="black"></path>
+                    <path d="M11 13.5C11 12.6716 11.6716 12 12.5 12C13.3284 12 14 12.6716 14 13.5V26H11V13.5Z" fill="black"></path>
+                    <path d="M5 20.5C5 19.6716 5.67157 19 6.5 19C7.32843 19 8 19.6716 8 20.5V26H5V20.5Z" fill="black"></path>
+                </svg>
+                <div class="customerchoice__slider-element-photo"><img src="./img/img01.png" class="customerchoice__slider-element-photo-el"></div>
+                <div id="customerChoiceInfo" class="customerchoice__slider-element__info">
+                    <p class="customerchoice__slider-element__info-maininfo-name">BMC Resmart BPAP Super GII T-30T</p>
+                    <div class="customerchoice__slider-element__info-maininfo">
+                        <div class="customerchoice__slider-element__info-maininfo-rate"><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">64</span><span class="customerchoice__slider-element__info-maininfo-rate-comment"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5C0 7.05032 1.2341 8.8124 3 9.58396V13L6.75 10H8C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0H5Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">13</span></div>
+                    </div>
+                    <div class="customerchoice__slider-element__info-specs"><span class="customerchoice__slider-element__info-specs-r">0,5 - 5 литров в минуту</span><span class="customerchoice__slider-element__info-specs-r">Ресурс - 4000 часов</span><span class="customerchoice__slider-element__info-specs-r">Шумность ≤ 47 Дб</span><span class="customerchoice__slider-element__info-specs-r">Гарантия 3 года</span><span class="customerchoice__slider-element__info-specs-r">Германия</span></div>
+                    <div class="customerchoice__slider-element__info-price">
+                        <p class="customerchoice__slider-element__info-price-discount">395 000 ₽</p>
+                        <p class="customerchoice__slider-element__info-price-current customerchoice-discountprice">379 500 Р</p>
+                    </div>
+                    <div class="customerchoice__slider-element__info-showmore customerchoice__shomore-active">Подробне</div>
+                </div>
+            </div>
+            <div id="cardsliderelement" class="customerchoice__slider-element customerchoice__slider-element-grid"><svg id="customeChoiceCompareButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="customerchoice__slider-element-compare">
+                    <path d="M23 9.5C23 8.67157 23.6716 8 24.5 8C25.3284 8 26 8.67157 26 9.5V26H23V9.5Z" fill="black"></path>
+                    <path d="M17 14.5C17 13.6716 17.6716 13 18.5 13C19.3284 13 20 13.6716 20 14.5V26H17V14.5Z" fill="black"></path>
+                    <path d="M11 13.5C11 12.6716 11.6716 12 12.5 12C13.3284 12 14 12.6716 14 13.5V26H11V13.5Z" fill="black"></path>
+                    <path d="M5 20.5C5 19.6716 5.67157 19 6.5 19C7.32843 19 8 19.6716 8 20.5V26H5V20.5Z" fill="black"></path>
+                </svg>
+                <div class="customerchoice__slider-element-photo"><img src="./img/img01.png" class="customerchoice__slider-element-photo-el"></div>
+                <div id="customerChoiceInfo" class="customerchoice__slider-element__info">
+                    <p class="customerchoice__slider-element__info-maininfo-name">BMC Resmart BPAP Super GII T-30T</p>
+                    <div class="customerchoice__slider-element__info-maininfo">
+                        <div class="customerchoice__slider-element__info-maininfo-rate"><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">64</span><span class="customerchoice__slider-element__info-maininfo-rate-comment"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5C0 7.05032 1.2341 8.8124 3 9.58396V13L6.75 10H8C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0H5Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">13</span></div>
+                    </div>
+                    <div class="customerchoice__slider-element__info-specs"><span class="customerchoice__slider-element__info-specs-r">0,5 - 5 литров в минуту</span><span class="customerchoice__slider-element__info-specs-r">Ресурс - 4000 часов</span><span class="customerchoice__slider-element__info-specs-r">Шумность ≤ 47 Дб</span><span class="customerchoice__slider-element__info-specs-r">Гарантия 3 года</span><span class="customerchoice__slider-element__info-specs-r">Германия</span></div>
+                    <div class="customerchoice__slider-element__info-price">
+                        <p class="customerchoice__slider-element__info-price-discount">395 000 ₽</p>
+                        <p class="customerchoice__slider-element__info-price-current customerchoice-discountprice">379 500 Р</p>
+                    </div>
+                    <div class="customerchoice__slider-element__info-showmore customerchoice__shomore-active">Подробне</div>
+                </div>
+            </div>
+            <div id="cardsliderelement" class="customerchoice__slider-element customerchoice__slider-element-grid"><svg id="customeChoiceCompareButton" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="customerchoice__slider-element-compare">
+                    <path d="M23 9.5C23 8.67157 23.6716 8 24.5 8C25.3284 8 26 8.67157 26 9.5V26H23V9.5Z" fill="black"></path>
+                    <path d="M17 14.5C17 13.6716 17.6716 13 18.5 13C19.3284 13 20 13.6716 20 14.5V26H17V14.5Z" fill="black"></path>
+                    <path d="M11 13.5C11 12.6716 11.6716 12 12.5 12C13.3284 12 14 12.6716 14 13.5V26H11V13.5Z" fill="black"></path>
+                    <path d="M5 20.5C5 19.6716 5.67157 19 6.5 19C7.32843 19 8 19.6716 8 20.5V26H5V20.5Z" fill="black"></path>
+                </svg>
+                <div class="customerchoice__slider-element-photo"><img src="./img/img01.png" class="customerchoice__slider-element-photo-el"></div>
+                <div id="customerChoiceInfo" class="customerchoice__slider-element__info">
+                    <p class="customerchoice__slider-element__info-maininfo-name">BMC Resmart BPAP Super GII T-30T</p>
+                    <div class="customerchoice__slider-element__info-maininfo">
+                        <div class="customerchoice__slider-element__info-maininfo-rate"><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#929497"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-star"><svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L8.97496 4.2817L13.6574 4.83688L10.1955 8.0383L11.1145 12.6631L7 10.36L2.8855 12.6631L3.80445 8.0383L0.342604 4.83688L5.02504 4.2817L7 0Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">64</span><span class="customerchoice__slider-element__info-maininfo-rate-comment"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5C0 7.05032 1.2341 8.8124 3 9.58396V13L6.75 10H8C10.7614 10 13 7.76142 13 5C13 2.23858 10.7614 0 8 0H5Z" fill="#D9D9D9"></path></svg></span><span class="customerchoice__slider-element__info-maininfo-rate-num">13</span></div>
+                    </div>
+                    <div class="customerchoice__slider-element__info-specs"><span class="customerchoice__slider-element__info-specs-r">0,5 - 5 литров в минуту</span><span class="customerchoice__slider-element__info-specs-r">Ресурс - 4000 часов</span><span class="customerchoice__slider-element__info-specs-r">Шумность ≤ 47 Дб</span><span class="customerchoice__slider-element__info-specs-r">Гарантия 3 года</span><span class="customerchoice__slider-element__info-specs-r">Германия</span></div>
+                    <div class="customerchoice__slider-element__info-price">
+                        <p class="customerchoice__slider-element__info-price-discount">395 000 ₽</p>
+                        <p class="customerchoice__slider-element__info-price-current customerchoice-discountprice">379 500 Р</p>
+                    </div>
+                    <div class="customerchoice__slider-element__info-showmore customerchoice__shomore-active">Подробне</div>
+                </div>
+            </div>
+            <div class="project-card"><img src="./../img/img902.png" class="project-card-image">
+                <div style="background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF" class="project-card-info">
+                    <div class="project-card-info-title">Городская детская клиническая больница скорой медицинской помощи</div>
+                    <div class="project-card-info-other">
+                        <div class="project-card-info-other-info">
+                            <div class="project-card-info-other-info-text">Плошадь 39284 кв м</div>
+                            <div class="project-card-info-other-info-text">Бюджет 32984723 руб</div>
+                        </div><a href="#" class="project-card-info-other-more">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-r1">
+                <div class="footer-r1-c">
+                    <p class="footer-r1-c-heading">Каталог</p><a href="#" class="footer-r1-c-link">Кислородная терапия</a><a href="#" class="footer-r1-c-link">Терапия ночного апноэ</a><a href="#" class="footer-r1-c-link">Вентиляция легких</a><a href="#" class="footer-r1-c-link">Откашливатели</a><a href="#" class="footer-r1-c-link">Виброперкуторы</a><a href="#" class="footer-r1-c-link">Аспираторы</a><a href="#" class="footer-r1-c-link">Инфузоматы и энтеральное питание</a>
+                </div>
+                <div class="footer-r1-c">
+                    <p class="footer-r1-c-heading">Покупателю</p><a href="#" class="footer-r1-c-link">Оплата и доставка</a><a href="#" class="footer-r1-c-link">Рассрочка</a><a href="#" class="footer-r1-c-link">Trade-in</a><a href="#" class="footer-r1-c-link">Аренда</a><a href="#" class="footer-r1-c-link">Индивидуальный подбор маски</a><a href="#" class="footer-r1-c-link">Бесплатный анализ СРАР терапии</a>
+                </div>
+                <div class="footer-r1-c">
+                    <p class="footer-r1-c-heading">Партнерам</p><a href="#" class="footer-r1-c-link">Как стать партнером</a><a href="#" class="footer-r1-c-link">Запросить прайс-лист</a><a href="#" class="footer-r1-c-link">Прайс-листы</a><a href="#" class="footer-r1-c-link">Рекламные материалы</a><a href="#" class="footer-r1-c-link">Регистрационные материалы</a><a href="#" class="footer-r1-c-link">Лицензии и авторизационные письма</a><a href="#" class="footer-r1-c-link">Предложение для врачей</a>
+                </div>
+                <div class="footer-r1-c">
+                    <p class="footer-r1-c-heading">О компании</p><a href="#" class="footer-r1-c-link">О компании</a><a href="#" class="footer-r1-c-link">Производители</a><a href="#" class="footer-r1-c-link">Авторизационные письма</a><a href="#" class="footer-r1-c-link">Блог > Новости</a><a href="#" class="footer-r1-c-link">Блог > О заболеваниях</a><a href="#" class="footer-r1-c-link">Блог > О приборах</a><a href="#" class="footer-r1-c-link">Блог > о лечении</a><a href="#" class="footer-r1-c-link">Контакты</a>
+                </div>
+            </div>
+            <div class="footer-r2">
+                <p class="footer-r2-phone">Есть вопросы? Звоните!<span class="footer-r2-bold"> 8 (495) 543-57-46, по будням, с 10.00 до 18.00</span><span class="footer-r2-phone-sp">Или пишите!<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.611315 15.7057C0.611315 18.7432 1.45775 21.5688 2.96253 23.9706C2.75092 25.7601 0 32 0 32C0 32 5.94857 30.0692 8.55841 29.3628C10.8391 30.6578 13.496 31.4113 16.3174 31.4113C24.9699 31.4113 32 24.3709 32 15.7057C32 7.04047 24.9699 0 16.3174 0C7.66495 0 0.611315 7.04047 0.611315 15.7057Z" fill="#27B64A"></path><path d="M7.71289 11.821C7.71289 10.9262 7.99504 9.86658 8.62986 8.87762C8.95903 8.35959 9.38225 7.88866 9.87601 7.51191C10.1346 7.32354 10.3462 7.08807 10.5814 6.8997C10.8635 6.66423 11.1692 6.52295 11.5454 6.54649C11.8275 6.57004 12.0626 6.68778 12.2742 6.87615C12.5564 7.11162 12.815 7.39418 13.0031 7.70028C13.4028 8.3125 13.826 8.92471 14.1552 9.58402C14.2963 9.89013 14.4138 10.1962 14.4609 10.5494C14.5549 11.1852 14.3433 11.7032 13.8731 12.1506C13.6379 12.3625 13.4263 12.5509 13.1912 12.7628C13.0501 12.8806 12.9091 12.9748 12.768 13.0689C12.4388 13.3044 12.2037 13.6105 12.1567 14.0344C12.1332 14.2934 12.1567 14.5759 12.2272 14.8349C12.3683 15.3294 12.6269 15.8004 12.9091 16.2242C13.4028 16.9541 13.9671 17.637 14.5549 18.2728C15.0252 18.7672 15.5189 19.2617 16.0832 19.6385C16.4124 19.8739 16.7651 20.0623 17.1648 20.133C17.635 20.2271 18.0582 20.133 18.4109 19.8033C18.4814 19.7562 18.5285 19.6856 18.599 19.6149C18.9047 19.2617 19.2809 18.9556 19.6335 18.6731C20.2213 18.2021 20.8562 18.155 21.5145 18.4376C21.9612 18.626 22.3609 18.9085 22.7136 19.2146C23.1604 19.5914 23.6071 19.9917 24.0303 20.392C24.2419 20.5803 24.4065 20.7923 24.5241 21.0277C24.8532 21.6164 24.8062 22.1344 24.3124 22.6054C23.9127 23.0057 23.4895 23.3824 23.0428 23.7356C22.2904 24.3243 21.444 24.6775 20.5035 24.8188C19.3749 24.9836 18.2933 24.8423 17.2353 24.442C16.2008 24.0653 15.2603 23.5001 14.3668 22.8173C13.2382 21.9461 12.2272 20.9335 11.2867 19.8504C10.6754 19.144 10.0876 18.3905 9.57035 17.5899C8.95903 16.648 8.44177 15.6826 8.08909 14.623C7.87748 13.7989 7.71289 12.9512 7.71289 11.821Z" fill="white"></path><defs><lineargradient id="paint0_linear" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#11BC3C"></stop><stop offset="1" stop-color="#27B64A"></stop></lineargradient></defs></svg></span></p>
+                <div class="footer-r2-links"><a href="#" class="footer-r2-link-el"><svg width="35" height="26" viewBox="0 0 35 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.1741 1.17291C32.6801 1.58616 33.8661 2.80381 34.2686 4.3501C35 7.15259 35 13 35 13C35 13 35 18.8472 34.2686 21.6499C33.8661 23.1962 32.6801 24.4138 31.1741 24.8273C28.4449 25.5781 17.5 25.5781 17.5 25.5781C17.5 25.5781 6.55514 25.5781 3.82574 24.8273C2.31974 24.4138 1.13372 23.1962 0.731222 21.6499C0 18.8472 0 13 0 13C0 13 0 7.15259 0.731222 4.3501C1.13372 2.80381 2.31974 1.58616 3.82574 1.17291C6.55514 0.421875 17.5 0.421875 17.5 0.421875C17.5 0.421875 28.4449 0.421875 31.1741 1.17291ZM14.2188 8.07812V19.0156L22.9688 13.5471L14.2188 8.07812Z" fill="black"></path>
+                        </svg></a><a href="#" class="footer-r2-link-el"><svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 511 511.9" width="32">
+                            <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"></path>
+                            <path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"></path>
+                            <path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"></path>
+                        </svg></a></div>
+            </div>
+            <div class="footer-r3">
+                <div class="footer-r3-c">© 2014-2020 ООО «Медика Трейд»</div>
+                <div class="footer-r3-c"><a class="footer-r3-c-el">Политика конфиденциальности</a><a class="footer-r3-c-el">Условия заказа и доставки</a></div>
+            </div>
+        </div>
+        <script>
+            var projectCard = document.getElementsByClassName("project-card")
+            if (document.documentElement.clientWidth > 1290) {
+                for (let i = 0; i < projectCard.length; i++) {
+                    projectCard[i].style = 'grid-row: ' + (i + 1) + '!important'
+                }
+            } else {
+                for (let i = 0; i < projectCard.length; i++) {
+                    projectCard[i].style = 'grid-row: ' + ((i * 2) + 2) + '!important'
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

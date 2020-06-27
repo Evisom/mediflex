@@ -40,5 +40,8 @@
   },
   "pallio-search-project" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-search-result" : {
+    "layout" : "_pallio-layout"
   }
 }

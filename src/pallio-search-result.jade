@@ -1,0 +1,33 @@
+!= partial("_tmp/pallio-navbar")
+
+.search-result-h
+    a.search-result-a(href="./search.html") Маска
+        span (63)
+.wdtwrapper-b
+    != partial("_tmp/filters")
+
+.supersection-grid.pallio-result-project
+    != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
+    != partial("./_tmp/project-card", { style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+    != partial("./_tmp/project-card", { style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+    != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
+    != partial("_tmp/item-card", {gridclass: "customerchoice__slider-element-grid"})
+    != partial("./_tmp/project-card", { style: "background: linear-gradient(0deg, rgba(136, 213, 232, 0.5), rgba(136, 213, 232, 0.5)), #FFFFFF;"})
+
+!= partial("_tmp/footer")
+
+script.
+    var projectCard = document.getElementsByClassName("project-card")
+    if (document.documentElement.clientWidth > 1290) {
+        for (let i = 0; i < projectCard.length; i++) {
+            projectCard[i].style = 'grid-row: ' + (i + 1) + '!important'
+        }
+    } else {
+        for (let i = 0; i < projectCard.length; i++) {
+            projectCard[i].style = 'grid-row: ' + ( (i * 2)  + 2 ) + '!important'
+        }
+    }
+
