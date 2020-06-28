@@ -1,0 +1,131 @@
+!= partial("_tmp/pallio-navbar")
+
+.wdtwrapper
+    != partial("_tmp/path")
+    != partial("_tmp/pallio-item")
+
+.item-menu#itemMenu
+    a.item-menu-link(href="pallio-item.html") Описание
+    a.item-menu-link(href="#") Характеристики
+    a.item-menu-link.item-menu-link-active(href="pallio-item-reviews.html") Отзывы (13)
+    a.item-menu-link Trade-in
+    a.item-menu-link Документация
+
+.article-a.item-article-a
+    .article-reviews
+        .article-reviews-rating
+            .article-reviews-rating-r1
+                .article-reviews-rating-r1-title Общий рейтинг
+                .article-reviews-rating-r1-stars
+                    svg(width='32', height='29', viewBox='0 0 32 29', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-rating-r1-stars-full
+                        path(d='M16 0L20.5142 9.78675L31.2169 11.0557L23.3041 18.3733L25.4046 28.9443L16 23.68L6.59544 28.9443L8.69589 18.3733L0.783095 11.0557L11.4858 9.78675L16 0Z', fill='#4FBBEB')
+                    svg(width='32', height='29', viewBox='0 0 32 29', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-rating-r1-stars-full
+                        path(d='M16 0L20.5142 9.78675L31.2169 11.0557L23.3041 18.3733L25.4046 28.9443L16 23.68L6.59544 28.9443L8.69589 18.3733L0.783095 11.0557L11.4858 9.78675L16 0Z', fill='#4FBBEB')
+                    svg(width='32', height='29', viewBox='0 0 32 29', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-rating-r1-stars-full
+                        path(d='M16 0L20.5142 9.78675L31.2169 11.0557L23.3041 18.3733L25.4046 28.9443L16 23.68L6.59544 28.9443L8.69589 18.3733L0.783095 11.0557L11.4858 9.78675L16 0Z', fill='#4FBBEB')
+                    svg(width='32', height='29', viewBox='0 0 32 29', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-rating-r1-stars-full
+                        path(d='M16 0L20.5142 9.78675L31.2169 11.0557L23.3041 18.3733L25.4046 28.9443L16 23.68L6.59544 28.9443L8.69589 18.3733L0.783095 11.0557L11.4858 9.78675L16 0Z', fill='#4FBBEB')
+                    svg(width='32', height='29', viewBox='0 0 32 29', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M16.0586 0L20.5728 9.78675L31.2755 11.0557L23.3627 18.3733L25.4632 28.9443L16.0586 23.68L6.65403 28.9443L8.75448 18.3733L0.841689 11.0557L11.5444 9.78675L16.0586 0Z', fill='#DEDFE0')
+
+
+            .article-reviews-rating-r2
+                b 4.2
+                |— на основании 64 оценок
+            .article-reviews-rating-r3#createReview
+                | Написать отзыв
+
+        .article-reviews-hidden#createReviewHidden
+            .article-reviews-mobileonly
+                .article-reviews-mobileonly-text Написать отзыв
+                .article-reviews-mobileonly-close#reviewCloseMobile
+                    svg(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M2 14L14 2', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                        path(d='M2 2L13.9998 13.9999', stroke='#929497', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+            .article-reviews-hidden-r1
+                input.article-reviews-hidden-r1-input(placeholder="Введите ваше имя")
+                input.article-reviews-hidden-r1-input(placeholder="Возраст пациента")
+            textarea.article-reviews-hidden-r2(placeholder="Расскажите впечатления о товаре и процессе покупки в нашей компании")
+            .article-reviews-hidden-stars
+                div
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                    svg(width='41', height='39', viewBox='0 0 41 39', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20.5214 0L26.5812 13.1377L40.9486 14.8412L30.3264 24.6643L33.1461 38.8548L20.5214 31.7881L7.89669 38.8548L10.7163 24.6643L0.0941982 14.8412L14.4615 13.1377L20.5214 0Z', fill='#DEDFE0')
+                span - Поставьте оценку
+            .article-reviews-hidden-buttons
+                .article-reviews-hidden-buttons-cancel#reviewClose Отменить
+                .article-reviews-hidden-buttons-send Отправить
+        .article-reviews-element
+            .article-reviews-element-r1
+                .article-reviews-elememt-r1-name Екатерина, 13 апр. 2020
+                .article-reviews-elememt-r1-stars
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M9.85978 0L12.7209 6.11661L19.5045 6.90971L14.4892 11.4831L15.8205 18.0899L9.85978 14.7997L3.89903 18.0899L5.23033 11.4831L0.215087 6.90971L6.99862 6.11661L9.85978 0Z', fill='#DEDFE0')
+
+            .article-reviews-element-r2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut consectetur culpa delectus dolorum explicabo, harum illum ipsum laudantium, minus necessitatibus neque odio perferendis quas ratione repellendus sapiente soluta tenetur!
+        .article-reviews-element
+            .article-reviews-element-r1
+                .article-reviews-elememt-r1-name Екатерина, 13 апр. 2020
+                .article-reviews-elememt-r1-stars
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M9.85978 0L12.7209 6.11661L19.5045 6.90971L14.4892 11.4831L15.8205 18.0899L9.85978 14.7997L3.89903 18.0899L5.23033 11.4831L0.215087 6.90971L6.99862 6.11661L9.85978 0Z', fill='#DEDFE0')
+
+            .article-reviews-element-r2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut consectetur culpa delectus dolorum explicabo, harum illum ipsum laudantium, minus necessitatibus neque odio perferendis quas ratione repellendus sapiente soluta tenetur!
+
+        .article-reviews-element
+            .article-reviews-element-r1
+                .article-reviews-elememt-r1-name Екатерина, 13 апр. 2020
+                .article-reviews-elememt-r1-stars
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg').article-reviews-elememt-r1-stars-full
+                        path(d='M9.68009 0L12.5412 6.11661L19.3248 6.90971L14.3095 11.4831L15.6408 18.0899L9.68009 14.7997L3.71934 18.0899L5.05064 11.4831L0.0353994 6.90971L6.81893 6.11661L9.68009 0Z', fill='#4FBBEB')
+
+                    svg(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                        path(d='M9.85978 0L12.7209 6.11661L19.5045 6.90971L14.4892 11.4831L15.8205 18.0899L9.85978 14.7997L3.89903 18.0899L5.23033 11.4831L0.215087 6.90971L6.99862 6.11661L9.85978 0Z', fill='#DEDFE0')
+
+            .article-reviews-element-r2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut consectetur culpa delectus dolorum explicabo, harum illum ipsum laudantium, minus necessitatibus neque odio perferendis quas ratione repellendus sapiente soluta tenetur!
+        .article-reviews-button Показать еще 12 из 64
+
+
+
+
+
+
+
+
+
+
+!= partial("_tmp/customerchoice", {sliderId: "item2slider",buttonPrev: "item2sliderPrev",buttonNext: "item2sliderNext",text: "Выбор покупателей"})
+!= partial("_tmp/pallio-provider-project")
+!= partial("_tmp/pallio-footer")
+!= partial("_tmp/item-cart-popup")

@@ -43,5 +43,11 @@
   },
   "pallio-search-result" : {
     "layout" : "_pallio-layout"
+  },
+  "pallio-item" : {
+    "layout" : "_pallio-layout"
+  },
+  "pallio-item-reviews" : {
+    "layout" : "_pallio-layout"
   }
 }

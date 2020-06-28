@@ -1,0 +1,51 @@
+!= partial("_tmp/pallio-navbar")
+.wdtwrapper
+    != partial("_tmp/path")
+    != partial("_tmp/pallio-item")
+
+
+.item-menu#itemMenu
+    a.item-menu-link.item-menu-link-active(href="pallio-item.html") Описание
+    a.item-menu-link(href="#") Характеристики
+    a.item-menu-link(href="pallio-item-reviews.html") Отзывы (13)
+    a.item-menu-link Trade-in
+    a.item-menu-link Документация
+
+.article-a.item-article-a
+
+    a.article-video.video-popup(href="https://www.youtube.com/watch?v=L7OLY4HCctQ")
+        .article-vide-play
+            svg(width='70', height='70', viewBox='0 0 70 70', fill='none', xmlns='http://www.w3.org/2000/svg')
+                circle(cx='35', cy='35', r='34', fill='white', stroke='#4FBBEB', stroke-width='2')
+                path(d='M26.9805 27.8879C26.9805 25.2046 29.8757 23.5193 32.2089 24.8444L44.1934 31.6508C46.5625 32.9963 46.5536 36.4134 44.1776 37.7466L32.1931 44.471C29.8601 45.7801 26.9805 44.0939 26.9805 41.4187V27.8879Z', fill='#4FBBEB')
+
+        img.article-image(src="./img/img202.png")
+    != partial("_tmp/article-text")
+    img.article-image(src="./img/img201.png")
+    != partial("_tmp/article-text")
+
+    .article-links
+        .article-links-h Полезные ссылки:
+        ul
+            li
+                a.article-links-a(href="#") Рекомендации по выбору кислородного оборудования.
+            li
+                a.article-links-a(href="#") Информация по методикам терапии при различных заболеваниях.
+            li
+                a.article-links-a(href="#") Маски, канюли и кислородные шланги для кислородной терапии.
+            li
+                a.article-links-a(href="#") Аксессуары и расходные материалы для концентратора PHILIPS SimplyGo.
+            li
+                a.article-links-a(href="#") Авторизационное письмо официального дистрибутора Philips Respironics в России.
+
+
+
+!= partial("_tmp/customerchoice", {sliderId: "item2slider",buttonPrev: "item2sliderPrev",buttonNext: "item2sliderNext",text: "Выбор покупателей"})
+!= partial("_tmp/pallio-provider-project")
+!= partial("_tmp/pallio-footer")
+
+
+!= partial("_tmp/item-cart-popup")
+
+
+
