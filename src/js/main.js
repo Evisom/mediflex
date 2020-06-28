@@ -79,7 +79,6 @@ window.onload = function () {
         function navbarMenuScrollupFunc(button) {
             if (navbarmenu.className === 'navbar-menu-wrapper' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-scrollup' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-active-l navbar-menu-scrollup' || navbarmenu.className === 'navbar-menu-wrapper navbar-menu-active-l') {
                 navbarmenu.className += ' navbar-menu-active'
-                console.log("q")
                 navbarBurgerIco[0].setAttribute('src', './img/close-ico.svg')
                 navbarBurgerIco[1].setAttribute('src', './img/close-ico.svg')
 
@@ -185,10 +184,14 @@ window.onload = function () {
         }
 
     }
-
-
+    $(".navbar__r2").hover(function () {
+        navbarMenuClose1()
+    })
+    $("#navbar").hover(function () {
+        navbarMenuClose1()
+    })
     function navbarMenuClose1() {
-        if (event.target.classList[0] == 'navbar-menu-wrapper') {
+        if (event.target.classList[0] == 'navbar-menu-wrapper' || event.target.classList[0] == 'navbar' ||  event.target.classList[0] == 'navbar__r2') {
             navbarmenu.classList = 'navbar-menu-wrapper'
             navbarBurgerIco[0].setAttribute('src', './img/menu-ico.svg')
             navbarBurgerIco[1].setAttribute('src', './img/menu-ico.svg')
@@ -238,7 +241,6 @@ window.onload = function () {
         }
 
         var st = $(this).scrollTop();
-        console.log(st)
         if (document.documentElement.clientWidth > 752) {
             if (st > scrollPos2 && scrollPos2 > 200) {
                 $(itemMenu).addClass('item-menu-active')
@@ -439,7 +441,6 @@ window.onload = function () {
     } else {
         $("#filtersSort").dropdownchecklist({ icon: {} , emptyText: "Сортировать", textFormatFunction: function(options) {
             var txt = options.filter(":selected").text()
-            console.log(txt)
             switch (txt) {
                 case "по возрастанию цены":
                     return "По цене (по возрастанию)"
