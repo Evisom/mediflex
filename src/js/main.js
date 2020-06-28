@@ -244,11 +244,13 @@ window.onload = function () {
         if (document.documentElement.clientWidth > 752) {
             if (st > scrollPos2 && scrollPos2 > 200) {
                 $(itemMenu).addClass('item-menu-active')
+                $("#itemFixed").addClass('item-fixed-active')
             } else if (st < scrollPos2 ) {
                 $(itemMenu).removeClass('item-menu-active')
+                $("#itemFixed").removeClass('item-fixed-active')
             } else {
                 $(itemMenu).removeClass('item-menu-active')
-
+                $("#itemFixed").removeClass('item-fixed-active')
             }
         } else {
             if (st > scrollPos2 && scrollPos2 > 70) {
