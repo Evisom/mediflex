@@ -378,6 +378,28 @@ window.onload = function () {
         }
 
     });
+    if (document.documentElement.clientWidth > 780) {
+        $("#getofferTriggerr").magnificPopup({
+            items: {
+                src: "#getoffer",
+                type: "inline",
+            },
+            callbacks: {
+                beforeOpen: function () {
+                    $('body').attr('style', 'overflow: hidden');
+                },
+                close: function () {
+                    $('body').removeAttr('style');
+                }
+            }
+
+        });
+    }
+    $('#getofferbtn').click(function () {
+        $("#getoffer").addClass("getoffer2")
+
+    })
+
 
     $("#cartpopupaddtrigger").magnificPopup({
         items: {
@@ -437,7 +459,9 @@ window.onload = function () {
             filtersR.className = 'filters-r1'
         }
     }
-
+    $("#getofferSelect").dropdownchecklist({ emptyText: "Выберите организацию" ,  icon: {}
+    });
+    $("#getofferSelect").val("qfsdf")
     if (document.documentElement.clientWidth > 1023) {
         $("#filtersSort").dropdownchecklist({ icon: {}  });
     } else {

@@ -1,0 +1,39 @@
+.getoffer#getoffer
+    .letters-slider-r1-text-h Получить предложение
+    .letters-slider-r1-text-p Отправляя заявку, вы получите индивидуальный подбор оборудования и учшие условия и цены.
+    select#getofferSelect.filters-r1-brand
+        option Выберите организацию
+        option 1
+        option 2
+        option 3
+    .checkout-ainput-container
+        input.checkout-ainput-el(type='text', required='required', onkeyup='checkout1()')
+        label.checkout-ainput-label Имя
+    .checkout-ainput-container.checkout-ainput-container-invalid
+        input.checkout-ainput-el(type='text', required='required', onkeyup='checkout1()')
+        label.checkout-ainput-label Email
+    .checkout-ainput-container
+        input.checkout-ainput-el(type='text', required='required', onkeyup='checkout1()')
+        label.checkout-ainput-label Телефон
+    textarea.textarea(placeholder="Комментарий" , type='text')
+    .getoffer-submit
+        .getoffer-submit-text
+            | Отправляя запрос, вы соглашаетесь 
+            a(href="#") с Политикой конфиденциальности
+        button.getoffer-submit-button#getofferbtn Отправить запрос
+
+    .getoffer-thx#getofferThx
+        .letters-slider-r1-text-h Ирина, спасибо, что отправили запрос!
+        .letters-slider-r1-text-p Мы свяжемся с вами для уточнения деталей по запросу в течение одного рабочего дня. В случае, если запрос был отправлен в выходной или праздничный день, то на связь выйдем в первый рабочий день
+        .getoffer2-thx-r
+            img.getoffer2-thx-r-img(src="./../img/img123.png")
+            .getoffer2-thx-r-text
+                | С уважением,
+                br
+                span Вадим Краснослабодцев,
+                br
+                | руководитель клиентской службы
+        .getoffer2-thx-r2
+            .letters-slider-r1-text-p У нас много нового!
+            button.getoffer-submit-button Отправить запрос
+
