@@ -1,13 +1,14 @@
 .navbar-menu-wrapper
   display: none
 
-  top: 162px
+  top: 160px
   background: white
   left: 0
   right: 0
   background: rgba(0, 0, 0, 0.3)
   bottom: 0
-  z-index: 99999999999
+  z-index: 1
+
 
 .navbar-menu-wrapper.navbar-menu-active
   display: flex
@@ -17,7 +18,7 @@
   display: flex
   position: fixed
 
-.navbar-menu-wrapper.navbar-menu-active.navbar-menu-scrollup
+.navbar-menu-wrapper.navbar-menu-active.navbar-menu-scrollup, .navbar-menu-wrapper.navbar-menu-active-l.navbar-menu-scrollup
   top: 58px
 
 .navbar-menu
