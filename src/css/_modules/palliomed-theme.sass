@@ -1,4 +1,28 @@
 .palliomed-theme
+  .pallio-brands-grid > a
+    display: flex
+    justify-content: center
+    align-items: center
+  .pallio-brand-container-letter
+    margin-right: 0 !important
+    margin-left: 48px
+  .navbar__r2__buttons-links-el
+    text-decoration: none
+    color: black
+  .project-card
+    background: white
+  .pallio-header-text-button
+    text-decoration: none
+  .customerchoice
+    height: 510px
+  .customerchoice__slider-element
+    height: 390px
+    .customerchoice__slider-element__info-price-discount
+      display: none
+    .customerchoice__slider-element__info-price-current
+      color: black !important
+    .customerchoice__slider-element__info-maininfo-name
+      font-weight: 500
   .supersection-category
     background: #F9F8FA
   .supersection-h
@@ -229,22 +253,25 @@
 
 @media (max-width: 768px)
   .palliomed-theme
+
     .pallio-news-title
       font-size: 24px
       margin-bottom: 24px
     .pallio-news-grid
       grid-template-columns: repeat(1 , 1fr)
       .needtoknow-slider-element-photo-button
-        top: calc( (100vw - 166px ) / 1.55 )
+        top: calc( (100vw - 140px ) / 1.55 )
       .needtoknow-slider-element-type
-        margin-top: 24px
+        margin-top: 12px
 
       .needtoknow-slider-element-photo-button > svg
         border-radius: 50%
+        width: 48px
+        height: 48px
         border: 2px solid #9F66AA
     .pallio-news-grid > a > div , .pallio-news-grid > a > div > img , .pallio-news-grid > a
       height: auto
-      width: calc( 100vw - 63px )
+      width: calc( 100vw - 48px )
     .pallio-news-wrapper
       padding-left: 24px
       padding-right: 24px
@@ -300,3 +327,5 @@
       padding-bottom: 32px
     .supersection-h
       padding-bottom: 24px
+    .pallio-brand-container-letter
+      margin-left: 0

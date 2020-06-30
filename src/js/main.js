@@ -540,6 +540,14 @@ window.onload = function () {
         }).magnificPopup('open');
     });
 
-
+    const projectCard = document.getElementsByClassName("project-card")
+    const projectCardInfo = document.getElementsByClassName("project-card-info")
+    for (let i = 0 ; i < projectCard.length ; i++ ) {
+        let fac = new FastAverageColor(),
+            container = projectCard[i],
+            color = fac.getColor(container.querySelector('img'));
+        projectCardInfo[i].style = "background: " + color.rgba.replace(",1)" , ",0.5)" + "!important")
+        console.log(color.rgba.replace(",1)" , ",0.5)"))
+    }
 
 }
